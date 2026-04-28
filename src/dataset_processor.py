@@ -1977,8 +1977,9 @@ class AgenticProcessor (DatasetProcessor):
         # Make the script executable
         os.chmod(script_path, 0o755)
 
-        # Ensure script file is flushed
-        os.sync()
+        # Ensure script file is flushed (os.sync is POSIX-only)
+        if hasattr(os, "sync"):
+            os.sync()
         time.sleep(0.1)
         
         print(f"Created agent script: {script_path}")
