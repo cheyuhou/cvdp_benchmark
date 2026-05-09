@@ -1,0 +1,27 @@
+{
+  "primary": {
+    "root_cause": "Compilation fails because the installed Icarus Verilog version lacks full support for SystemVerilog `always_comb` and `always_ff` constructs, triggering a syntax/compilation error (exit status 2).",
+    "evidence": [
+      "subprocess.CalledProcessError: Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'axis_upscale', '-g2012', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/axis_upscale.sv']' returned non-zero exit status 2."
+    ],
+    "affected_signals": [
+      "N/A (compilation failure)"
+    ],
+    "proposed_fix": "Replace `always_comb` with `always @(*)` and `always_ff` with `always @(posedge clk)` to ensure compatibility with older Icarus Verilog releases.",
+    "confidence": 0.9
+  },
+  "alternative": {
+    "root_cause": "Testbench assertions race the DUT's synchronous pipeline by checking registered outputs immediately after a falling clock edge, which will cause functional failures once compilation is resolved.",
+    "evidence": [
+      "await FallingEdge(dut.clk)",
+      "assert dut.m_axis_valid.value == s_axis_valid"
+    ],
+    "affected_signals": [
+      "m_axis_valid",
+      "m_axis_data",
+      "clk"
+    ],
+    "proposed_fix": "Advance the simulation by one clock cycle or switch to `await RisingEdge(dut.clk)` before evaluating registered outputs to allow the pipeline stage to settle.",
+    "confidence": 0.7
+  }
+}

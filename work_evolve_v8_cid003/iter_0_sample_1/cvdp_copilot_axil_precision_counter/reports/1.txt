@@ -1,0 +1,668 @@
+Running harness with project name: cvdp_copilot_axil_precision_counter_1_1778039506
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 9 items
+
+../../src/test_runner.py::test_axi_reg[32-8-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039507
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_precision_counter_axi.test_precision_counter_axi (1/1)
+   510.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x04
+   550.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x08
+   590.00ns INFO     cocotb.precision_counter_axi        Invalid register 0x50 read .
+   760.00ns ERROR    cocotb.precision_counter_axi       [FAIL] IRQ not triggered.
+   820.00ns WARNING  ..r_axi.test_precision_counter_axi Random countdown value 949785520: got 3484760738
+                                                        assert 3484760738 <= (949785520 - 1)
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_precision_counter_axi.py", line 184, in test_precision_counter_axi
+                                                            await test_random_countdown(dut,DATA_WIDTH)
+                                                          File "/src/test_precision_counter_axi.py", line 80, in test_random_countdown
+                                                            assert random_value - 10 <= _ctr <= random_value - 1, f"Random countdown value {random_value}: got {_ctr}"
+                                                        AssertionError: Random countdown value 949785520: got 3484760738
+                                                        assert 3484760738 <= (949785520 - 1)
+   820.00ns WARNING  cocotb.regression                  test_precision_counter_axi.test_precision_counter_axi failed
+   820.00ns INFO     cocotb.regression                  ***************************************************************************************************************
+                                                        ** TEST                                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************
+                                                        ** test_precision_counter_axi.test_precision_counter_axi   FAIL         820.00           0.00     220993.98  **
+                                                        ***************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                         820.00           0.01     113113.51  **
+                                                        ***************************************************************************************************************
+[DEBUG] Parameters: {'C_S_AXI_ADDR_WIDTH': 8, 'C_S_AXI_DATA_WIDTH': 32}
+FAILED
+../../src/test_runner.py::test_axi_reg[32-16-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039507
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_precision_counter_axi.test_precision_counter_axi (1/1)
+   510.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x04
+   550.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x08
+   590.00ns INFO     cocotb.precision_counter_axi        Invalid register 0x50 read .
+   760.00ns ERROR    cocotb.precision_counter_axi       [FAIL] IRQ not triggered.
+   820.00ns WARNING  ..r_axi.test_precision_counter_axi Random countdown value 949785520: got 3484760738
+                                                        assert 3484760738 <= (949785520 - 1)
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_precision_counter_axi.py", line 184, in test_precision_counter_axi
+                                                            await test_random_countdown(dut,DATA_WIDTH)
+                                                          File "/src/test_precision_counter_axi.py", line 80, in test_random_countdown
+                                                            assert random_value - 10 <= _ctr <= random_value - 1, f"Random countdown value {random_value}: got {_ctr}"
+                                                        AssertionError: Random countdown value 949785520: got 3484760738
+                                                        assert 3484760738 <= (949785520 - 1)
+   820.00ns WARNING  cocotb.regression                  test_precision_counter_axi.test_precision_counter_axi failed
+   820.00ns INFO     cocotb.regression                  ***************************************************************************************************************
+                                                        ** TEST                                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************
+                                                        ** test_precision_counter_axi.test_precision_counter_axi   FAIL         820.00           0.00     220018.51  **
+                                                        ***************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                         820.00           0.01     111287.15  **
+                                                        ***************************************************************************************************************
+[DEBUG] Parameters: {'C_S_AXI_ADDR_WIDTH': 16, 'C_S_AXI_DATA_WIDTH': 32}
+FAILED
+../../src/test_runner.py::test_axi_reg[32-32-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039507
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_precision_counter_axi.test_precision_counter_axi (1/1)
+   510.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x04
+   550.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x08
+   590.00ns INFO     cocotb.precision_counter_axi        Invalid register 0x50 read .
+   760.00ns ERROR    cocotb.precision_counter_axi       [FAIL] IRQ not triggered.
+   820.00ns WARNING  ..r_axi.test_precision_counter_axi Random countdown value 949785520: got 3484760738
+                                                        assert 3484760738 <= (949785520 - 1)
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_precision_counter_axi.py", line 184, in test_precision_counter_axi
+                                                            await test_random_countdown(dut,DATA_WIDTH)
+                                                          File "/src/test_precision_counter_axi.py", line 80, in test_random_countdown
+                                                            assert random_value - 10 <= _ctr <= random_value - 1, f"Random countdown value {random_value}: got {_ctr}"
+                                                        AssertionError: Random countdown value 949785520: got 3484760738
+                                                        assert 3484760738 <= (949785520 - 1)
+   820.00ns WARNING  cocotb.regression                  test_precision_counter_axi.test_precision_counter_axi failed
+   820.00ns INFO     cocotb.regression                  ***************************************************************************************************************
+                                                        ** TEST                                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************
+                                                        ** test_precision_counter_axi.test_precision_counter_axi   FAIL         820.00           0.00     216992.38  **
+                                                        ***************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                         820.00           0.01     110263.19  **
+                                                        ***************************************************************************************************************
+[DEBUG] Parameters: {'C_S_AXI_ADDR_WIDTH': 32, 'C_S_AXI_DATA_WIDTH': 32}
+FAILED
+../../src/test_runner.py::test_axi_reg[64-8-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039508
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_precision_counter_axi.test_precision_counter_axi (1/1)
+   510.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x04
+   550.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x08
+   590.00ns INFO     cocotb.precision_counter_axi        Invalid register 0x50 read .
+   760.00ns ERROR    cocotb.precision_counter_axi       [FAIL] IRQ not triggered.
+   820.00ns WARNING  ..r_axi.test_precision_counter_axi Random countdown value 12491313891790242601: got 13281816665339862043
+                                                        assert 13281816665339862043 <= (12491313891790242601 - 1)
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_precision_counter_axi.py", line 184, in test_precision_counter_axi
+                                                            await test_random_countdown(dut,DATA_WIDTH)
+                                                          File "/src/test_precision_counter_axi.py", line 80, in test_random_countdown
+                                                            assert random_value - 10 <= _ctr <= random_value - 1, f"Random countdown value {random_value}: got {_ctr}"
+                                                        AssertionError: Random countdown value 12491313891790242601: got 13281816665339862043
+                                                        assert 13281816665339862043 <= (12491313891790242601 - 1)
+   820.00ns WARNING  cocotb.regression                  test_precision_counter_axi.test_precision_counter_axi failed
+   820.00ns INFO     cocotb.regression                  ***************************************************************************************************************
+                                                        ** TEST                                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************
+                                                        ** test_precision_counter_axi.test_precision_counter_axi   FAIL         820.00           0.00     208912.67  **
+                                                        ***************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                         820.00           0.01     106877.85  **
+                                                        ***************************************************************************************************************
+[DEBUG] Parameters: {'C_S_AXI_ADDR_WIDTH': 8, 'C_S_AXI_DATA_WIDTH': 64}
+FAILED
+../../src/test_runner.py::test_axi_reg[64-16-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039508
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_precision_counter_axi.test_precision_counter_axi (1/1)
+   510.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x04
+   550.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x08
+   590.00ns INFO     cocotb.precision_counter_axi        Invalid register 0x50 read .
+   760.00ns ERROR    cocotb.precision_counter_axi       [FAIL] IRQ not triggered.
+   820.00ns WARNING  ..r_axi.test_precision_counter_axi Random countdown value 12491313891790242601: got 13281816665339862043
+                                                        assert 13281816665339862043 <= (12491313891790242601 - 1)
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_precision_counter_axi.py", line 184, in test_precision_counter_axi
+                                                            await test_random_countdown(dut,DATA_WIDTH)
+                                                          File "/src/test_precision_counter_axi.py", line 80, in test_random_countdown
+                                                            assert random_value - 10 <= _ctr <= random_value - 1, f"Random countdown value {random_value}: got {_ctr}"
+                                                        AssertionError: Random countdown value 12491313891790242601: got 13281816665339862043
+                                                        assert 13281816665339862043 <= (12491313891790242601 - 1)
+   820.00ns WARNING  cocotb.regression                  test_precision_counter_axi.test_precision_counter_axi failed
+   820.00ns INFO     cocotb.regression                  ***************************************************************************************************************
+                                                        ** TEST                                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************
+                                                        ** test_precision_counter_axi.test_precision_counter_axi   FAIL         820.00           0.00     213371.13  **
+                                                        ***************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                         820.00           0.01     111067.92  **
+                                                        ***************************************************************************************************************
+[DEBUG] Parameters: {'C_S_AXI_ADDR_WIDTH': 16, 'C_S_AXI_DATA_WIDTH': 64}
+FAILED
+../../src/test_runner.py::test_axi_reg[64-32-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039508
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_precision_counter_axi.test_precision_counter_axi (1/1)
+   510.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x04
+   550.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x08
+   590.00ns INFO     cocotb.precision_counter_axi        Invalid register 0x50 read .
+   760.00ns ERROR    cocotb.precision_counter_axi       [FAIL] IRQ not triggered.
+   820.00ns WARNING  ..r_axi.test_precision_counter_axi Random countdown value 12491313891790242601: got 13281816665339862043
+                                                        assert 13281816665339862043 <= (12491313891790242601 - 1)
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_precision_counter_axi.py", line 184, in test_precision_counter_axi
+                                                            await test_random_countdown(dut,DATA_WIDTH)
+                                                          File "/src/test_precision_counter_axi.py", line 80, in test_random_countdown
+                                                            assert random_value - 10 <= _ctr <= random_value - 1, f"Random countdown value {random_value}: got {_ctr}"
+                                                        AssertionError: Random countdown value 12491313891790242601: got 13281816665339862043
+                                                        assert 13281816665339862043 <= (12491313891790242601 - 1)
+   820.00ns WARNING  cocotb.regression                  test_precision_counter_axi.test_precision_counter_axi failed
+   820.00ns INFO     cocotb.regression                  ***************************************************************************************************************
+                                                        ** TEST                                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************
+                                                        ** test_precision_counter_axi.test_precision_counter_axi   FAIL         820.00           0.00     214810.40  **
+                                                        ***************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                         820.00           0.01     109039.67  **
+                                                        ***************************************************************************************************************
+[DEBUG] Parameters: {'C_S_AXI_ADDR_WIDTH': 32, 'C_S_AXI_DATA_WIDTH': 64}
+FAILED
+../../src/test_runner.py::test_axi_reg[48-8-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039509
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_precision_counter_axi.test_precision_counter_axi (1/1)
+   510.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x04
+   550.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x08
+   590.00ns INFO     cocotb.precision_counter_axi        Invalid register 0x50 read .
+   760.00ns ERROR    cocotb.precision_counter_axi       [FAIL] IRQ not triggered.
+   820.00ns WARNING  ..r_axi.test_precision_counter_axi Random countdown value 94891219623195: got 53610329096265
+                                                        assert (94891219623195 - 10) <= 53610329096265
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_precision_counter_axi.py", line 184, in test_precision_counter_axi
+                                                            await test_random_countdown(dut,DATA_WIDTH)
+                                                          File "/src/test_precision_counter_axi.py", line 80, in test_random_countdown
+                                                            assert random_value - 10 <= _ctr <= random_value - 1, f"Random countdown value {random_value}: got {_ctr}"
+                                                        AssertionError: Random countdown value 94891219623195: got 53610329096265
+                                                        assert (94891219623195 - 10) <= 53610329096265
+   820.00ns WARNING  cocotb.regression                  test_precision_counter_axi.test_precision_counter_axi failed
+   820.00ns INFO     cocotb.regression                  ***************************************************************************************************************
+                                                        ** TEST                                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************
+                                                        ** test_precision_counter_axi.test_precision_counter_axi   FAIL         820.00           0.00     213516.84  **
+                                                        ***************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                         820.00           0.01     110330.39  **
+                                                        ***************************************************************************************************************
+[DEBUG] Parameters: {'C_S_AXI_ADDR_WIDTH': 8, 'C_S_AXI_DATA_WIDTH': 48}
+FAILED
+../../src/test_runner.py::test_axi_reg[48-16-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039509
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_precision_counter_axi.test_precision_counter_axi (1/1)
+   510.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x04
+   550.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x08
+   590.00ns INFO     cocotb.precision_counter_axi        Invalid register 0x50 read .
+   760.00ns ERROR    cocotb.precision_counter_axi       [FAIL] IRQ not triggered.
+   820.00ns WARNING  ..r_axi.test_precision_counter_axi Random countdown value 94891219623195: got 53610329096265
+                                                        assert (94891219623195 - 10) <= 53610329096265
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_precision_counter_axi.py", line 184, in test_precision_counter_axi
+                                                            await test_random_countdown(dut,DATA_WIDTH)
+                                                          File "/src/test_precision_counter_axi.py", line 80, in test_random_countdown
+                                                            assert random_value - 10 <= _ctr <= random_value - 1, f"Random countdown value {random_value}: got {_ctr}"
+                                                        AssertionError: Random countdown value 94891219623195: got 53610329096265
+                                                        assert (94891219623195 - 10) <= 53610329096265
+   820.00ns WARNING  cocotb.regression                  test_precision_counter_axi.test_precision_counter_axi failed
+   820.00ns INFO     cocotb.regression                  ***************************************************************************************************************
+                                                        ** TEST                                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************
+                                                        ** test_precision_counter_axi.test_precision_counter_axi   FAIL         820.00           0.00     216051.84  **
+                                                        ***************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                         820.00           0.01     110899.60  **
+                                                        ***************************************************************************************************************
+[DEBUG] Parameters: {'C_S_AXI_ADDR_WIDTH': 16, 'C_S_AXI_DATA_WIDTH': 48}
+FAILED
+../../src/test_runner.py::test_axi_reg[48-32-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039509
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_precision_counter_axi.test_precision_counter_axi (1/1)
+   510.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x04
+   550.00ns INFO     cocotb.precision_counter_axi       Reading from dummy register 0x08
+   590.00ns INFO     cocotb.precision_counter_axi        Invalid register 0x50 read .
+   760.00ns ERROR    cocotb.precision_counter_axi       [FAIL] IRQ not triggered.
+   820.00ns WARNING  ..r_axi.test_precision_counter_axi Random countdown value 94891219623195: got 53610329096265
+                                                        assert (94891219623195 - 10) <= 53610329096265
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_precision_counter_axi.py", line 184, in test_precision_counter_axi
+                                                            await test_random_countdown(dut,DATA_WIDTH)
+                                                          File "/src/test_precision_counter_axi.py", line 80, in test_random_countdown
+                                                            assert random_value - 10 <= _ctr <= random_value - 1, f"Random countdown value {random_value}: got {_ctr}"
+                                                        AssertionError: Random countdown value 94891219623195: got 53610329096265
+                                                        assert (94891219623195 - 10) <= 53610329096265
+   820.00ns WARNING  cocotb.regression                  test_precision_counter_axi.test_precision_counter_axi failed
+   820.00ns INFO     cocotb.regression                  ***************************************************************************************************************
+                                                        ** TEST                                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************
+                                                        ** test_precision_counter_axi.test_precision_counter_axi   FAIL         820.00           0.00     210639.96  **
+                                                        ***************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                         820.00           0.01     109257.90  **
+                                                        ***************************************************************************************************************
+[DEBUG] Parameters: {'C_S_AXI_ADDR_WIDTH': 32, 'C_S_AXI_DATA_WIDTH': 48}
+FAILED
+
+=================================== FAILURES ===================================
+_____________________________ test_axi_reg[32-8-0] _____________________________
+
+test = 0, C_S_AXI_ADDR_WIDTH = 8, C_S_AXI_DATA_WIDTH = 32
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("C_S_AXI_ADDR_WIDTH", [8,16,32])
+    @pytest.mark.parametrize("C_S_AXI_DATA_WIDTH", [32,64,48])
+    def test_axi_reg(test,C_S_AXI_ADDR_WIDTH,C_S_AXI_DATA_WIDTH):
+>           runner(C_S_AXI_DATA_WIDTH = C_S_AXI_DATA_WIDTH ,C_S_AXI_ADDR_WIDTH = C_S_AXI_ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+C_S_AXI_ADDR_WIDTH = 8, C_S_AXI_DATA_WIDTH = 32
+
+    def runner(C_S_AXI_ADDR_WIDTH : int = 8 ,C_S_AXI_DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "C_S_AXI_ADDR_WIDTH": C_S_AXI_ADDR_WIDTH,
+            "C_S_AXI_DATA_WIDTH": C_S_AXI_DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s precision_counter_axi -g2012 -Pprecision_counter_axi.C_S_AXI_ADDR_WIDTH=8 -Pprecision_counter_axi.C_S_AXI_DATA_WIDTH=32 -f /code/rundir/sim_build/cmds.f /code/rtl/precision_counter_axi.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[32-16-0] _____________________________
+
+test = 0, C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("C_S_AXI_ADDR_WIDTH", [8,16,32])
+    @pytest.mark.parametrize("C_S_AXI_DATA_WIDTH", [32,64,48])
+    def test_axi_reg(test,C_S_AXI_ADDR_WIDTH,C_S_AXI_DATA_WIDTH):
+>           runner(C_S_AXI_DATA_WIDTH = C_S_AXI_DATA_WIDTH ,C_S_AXI_ADDR_WIDTH = C_S_AXI_ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32
+
+    def runner(C_S_AXI_ADDR_WIDTH : int = 8 ,C_S_AXI_DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "C_S_AXI_ADDR_WIDTH": C_S_AXI_ADDR_WIDTH,
+            "C_S_AXI_DATA_WIDTH": C_S_AXI_DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s precision_counter_axi -g2012 -Pprecision_counter_axi.C_S_AXI_ADDR_WIDTH=16 -Pprecision_counter_axi.C_S_AXI_DATA_WIDTH=32 -f /code/rundir/sim_build/cmds.f /code/rtl/precision_counter_axi.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[32-32-0] _____________________________
+
+test = 0, C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 32
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("C_S_AXI_ADDR_WIDTH", [8,16,32])
+    @pytest.mark.parametrize("C_S_AXI_DATA_WIDTH", [32,64,48])
+    def test_axi_reg(test,C_S_AXI_ADDR_WIDTH,C_S_AXI_DATA_WIDTH):
+>           runner(C_S_AXI_DATA_WIDTH = C_S_AXI_DATA_WIDTH ,C_S_AXI_ADDR_WIDTH = C_S_AXI_ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 32
+
+    def runner(C_S_AXI_ADDR_WIDTH : int = 8 ,C_S_AXI_DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "C_S_AXI_ADDR_WIDTH": C_S_AXI_ADDR_WIDTH,
+            "C_S_AXI_DATA_WIDTH": C_S_AXI_DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s precision_counter_axi -g2012 -Pprecision_counter_axi.C_S_AXI_ADDR_WIDTH=32 -Pprecision_counter_axi.C_S_AXI_DATA_WIDTH=32 -f /code/rundir/sim_build/cmds.f /code/rtl/precision_counter_axi.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_axi_reg[64-8-0] _____________________________
+
+test = 0, C_S_AXI_ADDR_WIDTH = 8, C_S_AXI_DATA_WIDTH = 64
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("C_S_AXI_ADDR_WIDTH", [8,16,32])
+    @pytest.mark.parametrize("C_S_AXI_DATA_WIDTH", [32,64,48])
+    def test_axi_reg(test,C_S_AXI_ADDR_WIDTH,C_S_AXI_DATA_WIDTH):
+>           runner(C_S_AXI_DATA_WIDTH = C_S_AXI_DATA_WIDTH ,C_S_AXI_ADDR_WIDTH = C_S_AXI_ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+C_S_AXI_ADDR_WIDTH = 8, C_S_AXI_DATA_WIDTH = 64
+
+    def runner(C_S_AXI_ADDR_WIDTH : int = 8 ,C_S_AXI_DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "C_S_AXI_ADDR_WIDTH": C_S_AXI_ADDR_WIDTH,
+            "C_S_AXI_DATA_WIDTH": C_S_AXI_DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s precision_counter_axi -g2012 -Pprecision_counter_axi.C_S_AXI_ADDR_WIDTH=8 -Pprecision_counter_axi.C_S_AXI_DATA_WIDTH=64 -f /code/rundir/sim_build/cmds.f /code/rtl/precision_counter_axi.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[64-16-0] _____________________________
+
+test = 0, C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 64
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("C_S_AXI_ADDR_WIDTH", [8,16,32])
+    @pytest.mark.parametrize("C_S_AXI_DATA_WIDTH", [32,64,48])
+    def test_axi_reg(test,C_S_AXI_ADDR_WIDTH,C_S_AXI_DATA_WIDTH):
+>           runner(C_S_AXI_DATA_WIDTH = C_S_AXI_DATA_WIDTH ,C_S_AXI_ADDR_WIDTH = C_S_AXI_ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 64
+
+    def runner(C_S_AXI_ADDR_WIDTH : int = 8 ,C_S_AXI_DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "C_S_AXI_ADDR_WIDTH": C_S_AXI_ADDR_WIDTH,
+            "C_S_AXI_DATA_WIDTH": C_S_AXI_DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s precision_counter_axi -g2012 -Pprecision_counter_axi.C_S_AXI_ADDR_WIDTH=16 -Pprecision_counter_axi.C_S_AXI_DATA_WIDTH=64 -f /code/rundir/sim_build/cmds.f /code/rtl/precision_counter_axi.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[64-32-0] _____________________________
+
+test = 0, C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 64
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("C_S_AXI_ADDR_WIDTH", [8,16,32])
+    @pytest.mark.parametrize("C_S_AXI_DATA_WIDTH", [32,64,48])
+    def test_axi_reg(test,C_S_AXI_ADDR_WIDTH,C_S_AXI_DATA_WIDTH):
+>           runner(C_S_AXI_DATA_WIDTH = C_S_AXI_DATA_WIDTH ,C_S_AXI_ADDR_WIDTH = C_S_AXI_ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 64
+
+    def runner(C_S_AXI_ADDR_WIDTH : int = 8 ,C_S_AXI_DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "C_S_AXI_ADDR_WIDTH": C_S_AXI_ADDR_WIDTH,
+            "C_S_AXI_DATA_WIDTH": C_S_AXI_DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s precision_counter_axi -g2012 -Pprecision_counter_axi.C_S_AXI_ADDR_WIDTH=32 -Pprecision_counter_axi.C_S_AXI_DATA_WIDTH=64 -f /code/rundir/sim_build/cmds.f /code/rtl/precision_counter_axi.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_axi_reg[48-8-0] _____________________________
+
+test = 0, C_S_AXI_ADDR_WIDTH = 8, C_S_AXI_DATA_WIDTH = 48
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("C_S_AXI_ADDR_WIDTH", [8,16,32])
+    @pytest.mark.parametrize("C_S_AXI_DATA_WIDTH", [32,64,48])
+    def test_axi_reg(test,C_S_AXI_ADDR_WIDTH,C_S_AXI_DATA_WIDTH):
+>           runner(C_S_AXI_DATA_WIDTH = C_S_AXI_DATA_WIDTH ,C_S_AXI_ADDR_WIDTH = C_S_AXI_ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+C_S_AXI_ADDR_WIDTH = 8, C_S_AXI_DATA_WIDTH = 48
+
+    def runner(C_S_AXI_ADDR_WIDTH : int = 8 ,C_S_AXI_DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "C_S_AXI_ADDR_WIDTH": C_S_AXI_ADDR_WIDTH,
+            "C_S_AXI_DATA_WIDTH": C_S_AXI_DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s precision_counter_axi -g2012 -Pprecision_counter_axi.C_S_AXI_ADDR_WIDTH=8 -Pprecision_counter_axi.C_S_AXI_DATA_WIDTH=48 -f /code/rundir/sim_build/cmds.f /code/rtl/precision_counter_axi.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[48-16-0] _____________________________
+
+test = 0, C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 48
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("C_S_AXI_ADDR_WIDTH", [8,16,32])
+    @pytest.mark.parametrize("C_S_AXI_DATA_WIDTH", [32,64,48])
+    def test_axi_reg(test,C_S_AXI_ADDR_WIDTH,C_S_AXI_DATA_WIDTH):
+>           runner(C_S_AXI_DATA_WIDTH = C_S_AXI_DATA_WIDTH ,C_S_AXI_ADDR_WIDTH = C_S_AXI_ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 48
+
+    def runner(C_S_AXI_ADDR_WIDTH : int = 8 ,C_S_AXI_DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "C_S_AXI_ADDR_WIDTH": C_S_AXI_ADDR_WIDTH,
+            "C_S_AXI_DATA_WIDTH": C_S_AXI_DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s precision_counter_axi -g2012 -Pprecision_counter_axi.C_S_AXI_ADDR_WIDTH=16 -Pprecision_counter_axi.C_S_AXI_DATA_WIDTH=48 -f /code/rundir/sim_build/cmds.f /code/rtl/precision_counter_axi.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[48-32-0] _____________________________
+
+test = 0, C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 48
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("C_S_AXI_ADDR_WIDTH", [8,16,32])
+    @pytest.mark.parametrize("C_S_AXI_DATA_WIDTH", [32,64,48])
+    def test_axi_reg(test,C_S_AXI_ADDR_WIDTH,C_S_AXI_DATA_WIDTH):
+>           runner(C_S_AXI_DATA_WIDTH = C_S_AXI_DATA_WIDTH ,C_S_AXI_ADDR_WIDTH = C_S_AXI_ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 48
+
+    def runner(C_S_AXI_ADDR_WIDTH : int = 8 ,C_S_AXI_DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "C_S_AXI_ADDR_WIDTH": C_S_AXI_ADDR_WIDTH,
+            "C_S_AXI_DATA_WIDTH": C_S_AXI_DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s precision_counter_axi -g2012 -Pprecision_counter_axi.C_S_AXI_ADDR_WIDTH=32 -Pprecision_counter_axi.C_S_AXI_DATA_WIDTH=48 -f /code/rundir/sim_build/cmds.f /code/rtl/precision_counter_axi.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_axi_reg[32-8-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[32-16-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[32-32-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[64-8-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[64-16-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[64-32-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[48-8-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[48-16-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[48-32-0] - SystemExit: 1
+============================== 9 failed in 2.56s ===============================
+Cleaning up Docker resources...

@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778038788" />
+    <testcase name="test_axi_register" classname="test_axi_register" file="/src/test_axi_register.py" lineno="161" time="0.0013685226440429688" sim_time_ns="110.0" ratio_time="80378.64808362369">
+      <failure error_type="ValueError" error_msg="Can't convert LogicArray to int: it contains non-0/1 values" />
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,35 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778043257" />
+    <testcase name="test1_write_read_data_output" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="69" time="0.0010895729064941406" sim_time_ns="140.0" ratio_time="128490.71334792122">
+      <failure error_type="ValueError" error_msg="Can't convert LogicArray to int: it contains non-0/1 values" />
+    </testcase>
+    <testcase name="test2_write_read_output_enable" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="110" time="0.0007023811340332031" sim_time_ns="159.99999999999997" ratio_time="227796.55125594023">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Output Enable Register mismatch. Expected: 0x3FFFFFFF, Got: 0x00000000&#10;assert False" />
+    </testcase>
+    <testcase name="test3_gpio_input_synchronization" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="185" time="0.0006566047668457031" sim_time_ns="219.99999999999994" ratio_time="335056.9644153957">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: GPIO Input Data mismatch. Expected: 0x0000003C, Got: 0x3FFFFFFF&#10;assert False" />
+    </testcase>
+    <testcase name="test4_configure_level_triggered_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="242" time="0.0009188652038574219" sim_time_ns="340.0" ratio_time="370021.62947586924">
+      <failure error_type="ValueError" error_msg="Cannot convert Logic('X') to int" />
+    </testcase>
+    <testcase name="test5_clear_level_triggered_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="312" time="0.0009570121765136719" sim_time_ns="399.9999999999999" ratio_time="417967.51370204275">
+      <failure error_type="ValueError" error_msg="Cannot convert Logic('X') to int" />
+    </testcase>
+    <testcase name="test6_configure_edge_triggered_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="389" time="0.0012531280517578125" sim_time_ns="540.0" ratio_time="430921.6438356164">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x3FFF5555, Got: 0x0000003C&#10;  FAIL: Edge-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x0000003C&#10;assert False" />
+    </testcase>
+    <testcase name="test7_mask_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="476" time="0.0010347366333007812" sim_time_ns="459.9999999999998" ratio_time="444557.56682027626">
+      <failure error_type="ValueError" error_msg="Cannot convert Logic('X') to int" />
+    </testcase>
+    <testcase name="test8_invalid_address_access" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="578" time="0.00043582916259765625" sim_time_ns="120.0" ratio_time="275337.2428884026">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C&#10;assert False" />
+    </testcase>
+    <testcase name="test9_multiple_simultaneous_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="625" time="0.0009987354278564453" sim_time_ns="440.0" ratio_time="440557.1162568632">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Not all interrupts captured. Expected: 0x000000FF, Got: 0x0000003C&#10;assert False" />
+    </testcase>
+    <testcase name="test10_reset_conditions" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="695" time="0.0010478496551513672" sim_time_ns="440.0" ratio_time="419907.56769055745">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Data Output Register not reset. Expected: 0x00000000, Got: 0x0000003C&#10;assert False" />
+    </testcase>
+  </testsuite>
+</testsuites>

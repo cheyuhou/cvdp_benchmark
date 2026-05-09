@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778039496" />
+    <testcase name="test_qam16_mapper_interpolated" classname="test_qam16_mapper_interpolated" file="/src/test_qam16_mapper_interpolated.py" lineno="7" time="0.001051187515258789" sim_time_ns="10.0" ratio_time="9513.050578362441">
+      <failure error_type="AssertionError" error_msg="Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]&#10;assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]" />
+    </testcase>
+  </testsuite>
+</testsuites>

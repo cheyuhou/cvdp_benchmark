@@ -1,0 +1,30 @@
+{
+  "primary": {
+    "root_cause": "slv_reg_v and slv_reg_t are declared as wire but driven procedurally in an always block, violating SystemVerilog data type rules and causing the compiler to abort.",
+    "evidence": [
+      "wire [C_S_AXI_DATA_WIDTH-1:0] slv_reg_v;",
+      "slv_reg_v <= slv_reg_v - 1'b1;",
+      "iverilog ... returned non-zero exit status 11."
+    ],
+    "affected_signals": [
+      "slv_reg_v",
+      "slv_reg_t",
+      "reg_array"
+    ],
+    "proposed_fix": "Change the declarations of slv_reg_v and slv_reg_t from wire to logic. Remove the continuous assignments to reg_array elements and drive the register array directly in the procedural blocks to eliminate conflicting drivers and syntax violations.",
+    "confidence": 0.85
+  },
+  "alternative": {
+    "root_cause": "The parameterized unpacked array of vectors triggers an internal segmentation fault in Icarus Verilog due to limited simulator support for this specific SystemVerilog construct.",
+    "evidence": [
+      "reg [C_S_AXI_DATA_WIDTH-1:0] reg_array [0:NUM_REGS-1];",
+      "iverilog ... returned non-zero exit status 11."
+    ],
+    "affected_signals": [
+      "reg_array",
+      "C_S_AXI_DATA_WIDTH"
+    ],
+    "proposed_fix": "Replace the parameterized unpacked array with a fixed-size unpacked array or a flat 1D array, such as logic [C_S_AXI_DATA_WIDTH-1:0] reg_array [0:15], to ensure compatibility with Icarus Verilog.",
+    "confidence": 0.75
+  }
+}

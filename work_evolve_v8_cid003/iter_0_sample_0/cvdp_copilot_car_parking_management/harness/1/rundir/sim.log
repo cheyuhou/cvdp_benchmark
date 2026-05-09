@@ -1,0 +1,11 @@
+/code/rtl/car_parking_system.sv:7: error: Unable to bind wire/reg/memory `TOTAL_SPACES' in `car_parking_system'
+/code/rtl/car_parking_system.sv:7: error: Dimensions must be constant.
+/code/rtl/car_parking_system.sv:7       : This MSB expression violates the rule: ($clog2(TOTAL_SPACES))-('sd1)
+/code/rtl/car_parking_system.sv:8: error: Unable to bind wire/reg/memory `TOTAL_SPACES' in `car_parking_system'
+/code/rtl/car_parking_system.sv:8: error: Dimensions must be constant.
+/code/rtl/car_parking_system.sv:8       : This MSB expression violates the rule: ($clog2(TOTAL_SPACES))-('sd1)
+/code/rtl/car_parking_system.sv:38: error: Unable to bind wire/reg/memory `avail_next' in `car_parking_system'
+/code/rtl/car_parking_system.sv:44:      : A symbol with that name was declared here. Check for declaration after use.
+/code/rtl/car_parking_system.sv:39: error: Unable to bind wire/reg/memory `count_next' in `car_parking_system'
+/code/rtl/car_parking_system.sv:44:      : A symbol with that name was declared here. Check for declaration after use.
+6 error(s) during elaboration.

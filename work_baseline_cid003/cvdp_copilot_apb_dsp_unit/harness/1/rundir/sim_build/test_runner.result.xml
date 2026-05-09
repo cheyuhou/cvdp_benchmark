@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777977837" />
+    <testcase name="test_apb_dsp_unit" classname="test_apb_dsp_unit" file="/src/test_apb_dsp_unit.py" lineno="56" time="0.002811431884765625" sim_time_ns="560.0" ratio_time="199186.75712347354">
+      <failure error_type="AssertionError" error_msg="Addition result should be 0xA5 (lowest 8 bits if overflow): Expected 165, but got 21&#10;assert 21 == 165" />
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,29 @@
+{
+  "primary": {
+    "root_cause": "The RTL concatenates 8 fill bits with the full 24-bit s_axis_data, leaving m_axis_data[23] as s_axis_data[23] instead of the computed fill_bit.",
+    "evidence": [
+      "m_axis_data_d = {8{fill_bit}, s_axis_data};",
+      "assert Logic('0') == ~Logic('0')"
+    ],
+    "affected_signals": [
+      "m_axis_data",
+      "fill_bit",
+      "s_axis_data"
+    ],
+    "proposed_fix": "Change the concatenation to {9{fill_bit}, s_axis_data[22:0]} to correctly place the sign/inverted bit at position 23 and extend it to bits 31:24.",
+    "confidence": 0.95
+  },
+  "alternative": {
+    "root_cause": "The s_axis_ready signal is assigned combinationaly, bypassing the required pipeline register stage and violating AXI-Stream back-pressure handshake conventions.",
+    "evidence": [
+      "assign s_axis_ready = m_axis_ready;",
+      "maintaining a single pipeline register stage"
+    ],
+    "affected_signals": [
+      "s_axis_ready",
+      "m_axis_ready"
+    ],
+    "proposed_fix": "Register the s_axis_ready output using a flip-flop synchronized to clk and resetn, or tie it to a constant 1'b1 if back-pressure is not supported.",
+    "confidence": 0.3
+  }
+}

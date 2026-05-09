@@ -1,0 +1,11 @@
+/code/rtl/cascaded_adder.sv:45: error: 'o_data' is not a valid l-value for a procedural assignment.
+/code/rtl/cascaded_adder.sv:10:      : 'o_data' is declared here as a wire.
+/code/rtl/cascaded_adder.sv:46: error: 'o_valid' is not a valid l-value for a procedural assignment.
+/code/rtl/cascaded_adder.sv:9:      : 'o_valid' is declared here as a wire.
+/code/rtl/cascaded_adder.sv:48: error: 'o_data' is not a valid l-value for a procedural assignment.
+/code/rtl/cascaded_adder.sv:10:      : 'o_data' is declared here as a wire.
+/code/rtl/cascaded_adder.sv:49: error: 'o_valid' is not a valid l-value for a procedural assignment.
+/code/rtl/cascaded_adder.sv:9:      : 'o_valid' is declared here as a wire.
+/code/rtl/cascaded_adder.sv:51: error: 'o_valid' is not a valid l-value for a procedural assignment.
+/code/rtl/cascaded_adder.sv:9:      : 'o_valid' is declared here as a wire.
+5 error(s) during elaboration.

@@ -1,0 +1,33 @@
+{
+  "primary": {
+    "root_cause": "Compilation failure caused by the `var` keyword or unpacked array syntax not being fully supported by the target iverilog version.",
+    "evidence": [
+      "returned non-zero exit status 8.",
+      "Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'qam16_mapper_interpolated', '-g2012', '-Pqam16_mapper_interpolated.N=10', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/16qam_mapper.sv']' returned non-zero exit status 8."
+    ],
+    "affected_signals": [
+      "bits",
+      "I",
+      "Q",
+      "i_map",
+      "i_int"
+    ],
+    "proposed_fix": "Remove the `var` keyword from procedural variable declarations to ensure compatibility with the iverilog parser. Replace unpacked array declarations with packed arrays or standard 2D logic declarations if syntax errors persist.",
+    "confidence": 0.85
+  },
+  "alternative": {
+    "root_cause": "Interpolated values are truncated due to insufficient bit width, violating the specification's requirement for an extra bit to hold addition results.",
+    "evidence": [
+      "The signals holding the interpolated samples need to have 1 bit more than OUT_WIDTH to accommodate the addition of two signed OUT_WIDTH signals.",
+      "i_int[k] = $unsigned(sum_i >>> 1);"
+    ],
+    "affected_signals": [
+      "i_int",
+      "q_int",
+      "I",
+      "Q"
+    ],
+    "proposed_fix": "Widen the `i_int` and `q_int` array declarations to `OUT_WIDTH + 1` bits to prevent truncation. Adjust the output packing logic to accommodate the wider interpolated values or truncate only after shifting if the spec implies fixed output width.",
+    "confidence": 0.75
+  }
+}

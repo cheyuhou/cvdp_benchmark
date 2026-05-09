@@ -1,0 +1,360 @@
+Running harness with project name: cvdp_copilot_cascaded_adder_1_1778038799
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 5 items
+
+../../src/test_runner.py::test_tree_adder[414-410]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778038800
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop1 via any registered implementation
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+    60.00ns WARNING  ..st cascaded_adder.cascaded_adder Valid output should have latency of 2 clk cycles
+                                                        assert 1 == 2
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_cascaded_adder.py", line 46, in cascaded_adder
+                                                            assert latency == 2, f"Valid output should have latency of 2 clk cycles"
+                                                        AssertionError: Valid output should have latency of 2 clk cycles
+                                                        assert 1 == 2
+    60.00ns WARNING  cocotb.regression                  test_cascaded_adder.cascaded_adder failed
+    60.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   FAIL          60.00           0.16        382.98  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       60.00           0.16        373.53  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 414, IN_DATA_WIDTH = 410
+FAILED
+../../src/test_runner.py::test_tree_adder[434-297]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778038800
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop1 via any registered implementation
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+    60.00ns WARNING  ..st cascaded_adder.cascaded_adder Valid output should have latency of 2 clk cycles
+                                                        assert 1 == 2
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_cascaded_adder.py", line 46, in cascaded_adder
+                                                            assert latency == 2, f"Valid output should have latency of 2 clk cycles"
+                                                        AssertionError: Valid output should have latency of 2 clk cycles
+                                                        assert 1 == 2
+    60.00ns WARNING  cocotb.regression                  test_cascaded_adder.cascaded_adder failed
+    60.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   FAIL          60.00           0.12        496.10  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       60.00           0.12        480.45  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 434, IN_DATA_WIDTH = 297
+FAILED
+../../src/test_runner.py::test_tree_adder[36-286]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778038801
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop1 via any registered implementation
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+    60.00ns WARNING  ..st cascaded_adder.cascaded_adder Valid output should have latency of 2 clk cycles
+                                                        assert 1 == 2
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_cascaded_adder.py", line 46, in cascaded_adder
+                                                            assert latency == 2, f"Valid output should have latency of 2 clk cycles"
+                                                        AssertionError: Valid output should have latency of 2 clk cycles
+                                                        assert 1 == 2
+    60.00ns WARNING  cocotb.regression                  test_cascaded_adder.cascaded_adder failed
+    60.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   FAIL          60.00           0.00      20231.39  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       60.00           0.01       8740.56  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 36, IN_DATA_WIDTH = 286
+FAILED
+../../src/test_runner.py::test_tree_adder[95-172]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778038801
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop1 via any registered implementation
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+    60.00ns WARNING  ..st cascaded_adder.cascaded_adder Valid output should have latency of 2 clk cycles
+                                                        assert 1 == 2
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_cascaded_adder.py", line 46, in cascaded_adder
+                                                            assert latency == 2, f"Valid output should have latency of 2 clk cycles"
+                                                        AssertionError: Valid output should have latency of 2 clk cycles
+                                                        assert 1 == 2
+    60.00ns WARNING  cocotb.regression                  test_cascaded_adder.cascaded_adder failed
+    60.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   FAIL          60.00           0.01      10217.96  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       60.00           0.01       6133.22  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 95, IN_DATA_WIDTH = 172
+FAILED
+../../src/test_runner.py::test_tree_adder[166-424]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778038801
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop1 via any registered implementation
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+    60.00ns WARNING  ..st cascaded_adder.cascaded_adder Valid output should have latency of 2 clk cycles
+                                                        assert 1 == 2
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_cascaded_adder.py", line 46, in cascaded_adder
+                                                            assert latency == 2, f"Valid output should have latency of 2 clk cycles"
+                                                        AssertionError: Valid output should have latency of 2 clk cycles
+                                                        assert 1 == 2
+    60.00ns WARNING  cocotb.regression                  test_cascaded_adder.cascaded_adder failed
+    60.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   FAIL          60.00           0.03       2116.93  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       60.00           0.03       1856.50  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 166, IN_DATA_WIDTH = 424
+FAILED
+
+=================================== FAILURES ===================================
+___________________________ test_tree_adder[414-410] ___________________________
+
+IN_DATA_NS = 414, IN_DATA_WIDTH = 410
+
+    @pytest.mark.parametrize("IN_DATA_NS ,IN_DATA_WIDTH", test_param )
+    
+    # random test
+    def test_tree_adder(IN_DATA_NS, IN_DATA_WIDTH):
+        print(f'Running with: IN_DATA_NS = {IN_DATA_NS}, IN_DATA_WIDTH = {IN_DATA_WIDTH}')
+>       runner(IN_DATA_NS, IN_DATA_WIDTH)
+
+/src/test_runner.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+IN_DATA_NS = 414, IN_DATA_WIDTH = 410
+
+    def runner(IN_DATA_NS, IN_DATA_WIDTH):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters= {'IN_DATA_NS': IN_DATA_NS , 'IN_DATA_WIDTH': IN_DATA_WIDTH },
+            always=True,
+            clean=True,
+            verbose=False,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cascaded_adder -g2012 -Pcascaded_adder.IN_DATA_NS=414 -Pcascaded_adder.IN_DATA_WIDTH=410 -f /code/rundir/sim_build/cmds.f /code/rtl/cascaded_adder.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_tree_adder[434-297] ___________________________
+
+IN_DATA_NS = 434, IN_DATA_WIDTH = 297
+
+    @pytest.mark.parametrize("IN_DATA_NS ,IN_DATA_WIDTH", test_param )
+    
+    # random test
+    def test_tree_adder(IN_DATA_NS, IN_DATA_WIDTH):
+        print(f'Running with: IN_DATA_NS = {IN_DATA_NS}, IN_DATA_WIDTH = {IN_DATA_WIDTH}')
+>       runner(IN_DATA_NS, IN_DATA_WIDTH)
+
+/src/test_runner.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+IN_DATA_NS = 434, IN_DATA_WIDTH = 297
+
+    def runner(IN_DATA_NS, IN_DATA_WIDTH):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters= {'IN_DATA_NS': IN_DATA_NS , 'IN_DATA_WIDTH': IN_DATA_WIDTH },
+            always=True,
+            clean=True,
+            verbose=False,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cascaded_adder -g2012 -Pcascaded_adder.IN_DATA_NS=434 -Pcascaded_adder.IN_DATA_WIDTH=297 -f /code/rundir/sim_build/cmds.f /code/rtl/cascaded_adder.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_tree_adder[36-286] ____________________________
+
+IN_DATA_NS = 36, IN_DATA_WIDTH = 286
+
+    @pytest.mark.parametrize("IN_DATA_NS ,IN_DATA_WIDTH", test_param )
+    
+    # random test
+    def test_tree_adder(IN_DATA_NS, IN_DATA_WIDTH):
+        print(f'Running with: IN_DATA_NS = {IN_DATA_NS}, IN_DATA_WIDTH = {IN_DATA_WIDTH}')
+>       runner(IN_DATA_NS, IN_DATA_WIDTH)
+
+/src/test_runner.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+IN_DATA_NS = 36, IN_DATA_WIDTH = 286
+
+    def runner(IN_DATA_NS, IN_DATA_WIDTH):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters= {'IN_DATA_NS': IN_DATA_NS , 'IN_DATA_WIDTH': IN_DATA_WIDTH },
+            always=True,
+            clean=True,
+            verbose=False,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cascaded_adder -g2012 -Pcascaded_adder.IN_DATA_NS=36 -Pcascaded_adder.IN_DATA_WIDTH=286 -f /code/rundir/sim_build/cmds.f /code/rtl/cascaded_adder.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_tree_adder[95-172] ____________________________
+
+IN_DATA_NS = 95, IN_DATA_WIDTH = 172
+
+    @pytest.mark.parametrize("IN_DATA_NS ,IN_DATA_WIDTH", test_param )
+    
+    # random test
+    def test_tree_adder(IN_DATA_NS, IN_DATA_WIDTH):
+        print(f'Running with: IN_DATA_NS = {IN_DATA_NS}, IN_DATA_WIDTH = {IN_DATA_WIDTH}')
+>       runner(IN_DATA_NS, IN_DATA_WIDTH)
+
+/src/test_runner.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+IN_DATA_NS = 95, IN_DATA_WIDTH = 172
+
+    def runner(IN_DATA_NS, IN_DATA_WIDTH):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters= {'IN_DATA_NS': IN_DATA_NS , 'IN_DATA_WIDTH': IN_DATA_WIDTH },
+            always=True,
+            clean=True,
+            verbose=False,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cascaded_adder -g2012 -Pcascaded_adder.IN_DATA_NS=95 -Pcascaded_adder.IN_DATA_WIDTH=172 -f /code/rundir/sim_build/cmds.f /code/rtl/cascaded_adder.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+___________________________ test_tree_adder[166-424] ___________________________
+
+IN_DATA_NS = 166, IN_DATA_WIDTH = 424
+
+    @pytest.mark.parametrize("IN_DATA_NS ,IN_DATA_WIDTH", test_param )
+    
+    # random test
+    def test_tree_adder(IN_DATA_NS, IN_DATA_WIDTH):
+        print(f'Running with: IN_DATA_NS = {IN_DATA_NS}, IN_DATA_WIDTH = {IN_DATA_WIDTH}')
+>       runner(IN_DATA_NS, IN_DATA_WIDTH)
+
+/src/test_runner.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+IN_DATA_NS = 166, IN_DATA_WIDTH = 424
+
+    def runner(IN_DATA_NS, IN_DATA_WIDTH):
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters= {'IN_DATA_NS': IN_DATA_NS , 'IN_DATA_WIDTH': IN_DATA_WIDTH },
+            always=True,
+            clean=True,
+            verbose=False,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:24: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cascaded_adder -g2012 -Pcascaded_adder.IN_DATA_NS=166 -Pcascaded_adder.IN_DATA_WIDTH=424 -f /code/rundir/sim_build/cmds.f /code/rtl/cascaded_adder.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-g8i9yzf8'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-b5wrjmxs'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-fil_xbnn'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_tree_adder[414-410] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_tree_adder[434-297] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_tree_adder[36-286] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_tree_adder[95-172] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_tree_adder[166-424] - SystemExit: 1
+======================== 5 failed, 3 warnings in 1.80s =========================
+Cleaning up Docker resources...

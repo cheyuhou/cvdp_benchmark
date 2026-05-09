@@ -1,0 +1,15 @@
+/code/rtl/16qam_demapper.sv:28: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:29: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:30: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:46: syntax error
+/code/rtl/16qam_demapper.sv:46: error: Malformed statement
+/code/rtl/16qam_demapper.sv:51: syntax error
+/code/rtl/16qam_demapper.sv:51: error: Malformed statement
+/code/rtl/16qam_demapper.sv:57: syntax error
+/code/rtl/16qam_demapper.sv:57: error: Malformed statement
+/code/rtl/16qam_demapper.sv:62: syntax error
+/code/rtl/16qam_demapper.sv:62: error: Malformed statement
+/code/rtl/16qam_demapper.sv:74: syntax error
+/code/rtl/16qam_demapper.sv:74: Syntax in assignment statement l-value.
+/code/rtl/16qam_demapper.sv:76: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:77: warning: Static variable initialization requires explicit lifetime in this context.

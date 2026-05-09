@@ -1,0 +1,5 @@
+/code/rtl/16qam_mapper.sv:49: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_mapper.sv:22: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sym[3:0]').
+/code/rtl/16qam_mapper.sv:30: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sym[3:0]').
+/code/rtl/16qam_mapper.sv:51: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'I_interpolated[word=+k[31:0]][3:0]').
+/code/rtl/16qam_mapper.sv:55: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'Q_interpolated[word=+k[31:0]][3:0]').

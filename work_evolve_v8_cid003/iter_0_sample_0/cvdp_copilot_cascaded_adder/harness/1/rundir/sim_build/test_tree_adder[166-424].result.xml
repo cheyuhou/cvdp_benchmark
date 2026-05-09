@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778038801" />
+    <testcase name="cascaded_adder" classname="test_cascaded_adder" file="/src/test_cascaded_adder.py" lineno="7" time="0.02834296226501465" sim_time_ns="60.0" ratio_time="2116.9276322983874">
+      <failure error_type="AssertionError" error_msg="Valid output should have latency of 2 clk cycles&#10;assert 1 == 2" />
+    </testcase>
+  </testsuite>
+</testsuites>

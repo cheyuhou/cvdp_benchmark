@@ -1,0 +1,2 @@
+/code/rtl/axis_upscale.sv:41: syntax error
+/code/rtl/axis_upscale.sv:41: error: Syntax error between internal '}' and closing '}' of repeat concatenation.

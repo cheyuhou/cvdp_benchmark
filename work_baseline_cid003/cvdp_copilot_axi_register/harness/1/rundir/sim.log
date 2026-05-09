@@ -1,0 +1,8 @@
+/code/rtl/axi_register.sv:158: syntax error
+/code/rtl/axi_register.sv:158: error: Syntax error between internal '}' and closing '}' of repeat concatenation.
+/code/rtl/axi_register.sv:159: syntax error
+/code/rtl/axi_register.sv:159: error: Syntax error between internal '}' and closing '}' of repeat concatenation.
+/code/rtl/axi_register.sv:160: syntax error
+/code/rtl/axi_register.sv:160: error: Syntax error between internal '}' and closing '}' of repeat concatenation.
+/code/rtl/axi_register.sv:161: syntax error
+/code/rtl/axi_register.sv:161: error: Syntax error between internal '}' and closing '}' of repeat concatenation.

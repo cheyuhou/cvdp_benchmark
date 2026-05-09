@@ -1,0 +1,35 @@
+{
+  "primary": {
+    "root_cause": "Icarus Verilog syntax error triggered by using `logic` type for arrays and procedural variables without the `var` keyword, which violates strict SV-2012 parser rules in the target environment.",
+    "evidence": [
+      "iverilog ... returned non-zero exit status 8.",
+      "logic [OUT_WIDTH - 1 : 0] i_map [0:N-1];",
+      "logic [IN_WIDTH-1:0] sym = bits[k * IN_WIDTH +: IN_WIDTH];"
+    ],
+    "affected_signals": [
+      "i_map",
+      "q_map",
+      "i_int",
+      "q_int",
+      "sym"
+    ],
+    "proposed_fix": "Replace all `logic` declarations inside procedural blocks and for unpacked arrays with the `var` keyword (e.g., `var logic [...]`). This aligns with SV-2012 scoping rules and resolves the parser rejection.",
+    "confidence": 0.85
+  },
+  "alternative": {
+    "root_cause": "Dynamic part-selects on the left-hand side of assignments are unsupported or cause semantic failures in the simulator's LHS evaluation, leading to compilation abort.",
+    "evidence": [
+      "I[i_idx +: OUT_WIDTH] = i_map[2*k];",
+      "i_idx += OUT_WIDTH;",
+      "iverilog ... returned non-zero exit status 8."
+    ],
+    "affected_signals": [
+      "I",
+      "Q",
+      "i_idx",
+      "q_idx"
+    ],
+    "proposed_fix": "Eliminate variable-based LHS part-selects by using direct indexed assignments (e.g., `I[k * 3 * OUT_WIDTH +: OUT_WIDTH] = ...`) or constructing the output via concatenation to ensure constant or simulator-friendly indexing.",
+    "confidence": 0.65
+  }
+}

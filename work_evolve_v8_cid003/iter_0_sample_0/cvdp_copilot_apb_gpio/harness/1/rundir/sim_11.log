@@ -1,0 +1,11 @@
+/code/rtl/cvdp_copilot_apb_gpio.sv:37: warning: Numeric constant truncated to 2 bits.
+/code/rtl/cvdp_copilot_apb_gpio.sv:38: warning: Numeric constant truncated to 2 bits.
+/code/rtl/cvdp_copilot_apb_gpio.sv:39: warning: Numeric constant truncated to 2 bits.
+/code/rtl/cvdp_copilot_apb_gpio.sv:136: error: Cannot perform procedural assignment to variable 'prdata_d' because it is also continuously assigned.
+/code/rtl/cvdp_copilot_apb_gpio.sv:137: error: Cannot perform procedural assignment to variable 'prdata_d' because it is also continuously assigned.
+/code/rtl/cvdp_copilot_apb_gpio.sv:138: error: Cannot perform procedural assignment to variable 'prdata_d' because it is also continuously assigned.
+/code/rtl/cvdp_copilot_apb_gpio.sv:139: error: Cannot perform procedural assignment to variable 'prdata_d' because it is also continuously assigned.
+/code/rtl/cvdp_copilot_apb_gpio.sv:140: error: Cannot perform procedural assignment to variable 'prdata_d' because it is also continuously assigned.
+/code/rtl/cvdp_copilot_apb_gpio.sv:141: error: Cannot perform procedural assignment to variable 'prdata_d' because it is also continuously assigned.
+/code/rtl/cvdp_copilot_apb_gpio.sv:142: error: Cannot perform procedural assignment to variable 'prdata_d' because it is also continuously assigned.
+7 error(s) during elaboration.

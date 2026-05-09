@@ -1,0 +1,28 @@
+{
+  "primary": {
+    "root_cause": "The internal read data buffer is hardcoded to 32 bits, causing out-of-bounds slicing when DATA_WIDTH exceeds 32, which triggers simulation errors or undefined behavior.",
+    "evidence": [
+      "logic [31:0] rdata_int;",
+      "rdata_int[DATA_WIDTH-1:0]"
+    ],
+    "affected_signals": [
+      "rdata_int",
+      "rdata_o"
+    ],
+    "proposed_fix": "Change the rdata_int declaration to logic [DATA_WIDTH-1:0] rdata_int and initialize it with '0 to ensure proper width scaling. This prevents out-of-bounds access and aligns the read data path with the configurable data width.",
+    "confidence": 0.95
+  },
+  "alternative": {
+    "root_cause": "Fixed-width concatenation literals used to pad register values do not scale with DATA_WIDTH, causing incorrect zero-padding or simulation mismatches for non-32-bit data buses.",
+    "evidence": [
+      "rdata_int = {12'b0, beat_reg};",
+      "rdata_int = {31'b0, start_reg};"
+    ],
+    "affected_signals": [
+      "rdata_int",
+      "rdata_o"
+    ],
+    "proposed_fix": "Replace hardcoded padding widths with parameterized expressions like {(DATA_WIDTH-20){1'b0}} to dynamically match the configured DATA_WIDTH. This ensures read data is correctly aligned and padded for all supported bus widths.",
+    "confidence": 0.6
+  }
+}

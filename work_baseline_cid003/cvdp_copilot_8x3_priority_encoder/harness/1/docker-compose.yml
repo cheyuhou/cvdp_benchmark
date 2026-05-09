@@ -1,0 +1,12 @@
+networks:
+  default:
+    external: true
+    name: cvdp-bridge-cid003_subset_20-1e72741e
+services:
+  pytest:
+    command: pytest -s -o cache_dir=/rundir/harness/.cache /src/test_runner.py -v
+    env_file: ./src/.env
+    image: nvidia/cvdp-sim:v1.0.0
+    volumes:
+    - ./src/:/src/:ro
+    working_dir: /code/rundir

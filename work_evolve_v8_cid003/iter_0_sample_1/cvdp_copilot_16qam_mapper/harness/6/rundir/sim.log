@@ -1,0 +1,28 @@
+/code/rtl/16qam_demapper.sv:25: syntax error
+/code/rtl/16qam_demapper.sv:25: Syntax in assignment statement l-value.
+/code/rtl/16qam_demapper.sv:26: syntax error
+/code/rtl/16qam_demapper.sv:26: Syntax in assignment statement l-value.
+/code/rtl/16qam_demapper.sv:27: syntax error
+/code/rtl/16qam_demapper.sv:27: Syntax in assignment statement l-value.
+/code/rtl/16qam_demapper.sv:30: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:31: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:48: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:49: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:50: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:51: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:54: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:55: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:58: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:59: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:62: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:63: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:73: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:74: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_demapper.sv:81: syntax error
+/code/rtl/16qam_demapper.sv:81: error: Incomprehensible case expression.
+/code/rtl/16qam_demapper.sv:82: syntax error
+/code/rtl/16qam_demapper.sv:82: error: Incomprehensible case expression.
+/code/rtl/16qam_demapper.sv:90: syntax error
+/code/rtl/16qam_demapper.sv:90: error: Incomprehensible case expression.
+/code/rtl/16qam_demapper.sv:91: syntax error
+/code/rtl/16qam_demapper.sv:91: error: Incomprehensible case expression.

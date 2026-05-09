@@ -1,0 +1,779 @@
+Running harness with project name: cvdp_copilot_apb_gpio_1_1778043256
+#1 [internal] load local bake definitions
+#1 reading from stdin 739B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 180B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/nvidia/cvdp-sim:v1.0.0
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/1] FROM docker.io/nvidia/cvdp-sim:v1.0.0@sha256:ffa7619ebbb53b017eb40a29b21152679d75d2b29a16244a54fda1b742957ddb
+#5 resolve docker.io/nvidia/cvdp-sim:v1.0.0@sha256:ffa7619ebbb53b017eb40a29b21152679d75d2b29a16244a54fda1b742957ddb done
+#5 CACHED
+
+#6 exporting to image
+#6 exporting layers done
+#6 exporting manifest sha256:f31548f788a766fc6acf6104ecfc7916af88d1cf653c77e66ff78f31dfc7f9e0 done
+#6 exporting config sha256:fb85ac0fbafdf064c794bf62bfd17b87c7b9d0a116b5a3fa19499f42d30541d3 done
+#6 exporting attestation manifest sha256:7dea357ac7a18f895e671da3c8e3398564bb957c42593de6c29507cb2ce6ab69 done
+#6 exporting manifest list sha256:931e2b641943e1a6d9213c773eab51d42497ea1cb0bcda3aa5e230fe3d8b743e done
+#6 naming to docker.io/library/cvdp_copilot_apb_gpio_1_1778043256-direct:latest done
+#6 unpacking to docker.io/library/cvdp_copilot_apb_gpio_1_1778043256-direct:latest done
+#6 DONE 0.0s
+
+#7 resolving provenance for metadata file
+#7 DONE 0.0s
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 3 items
+
+../../src/test_runner.py::test_cvdp_copilot_apb_gpio[8] FAILED           [ 33%]
+../../src/test_runner.py::test_cvdp_copilot_apb_gpio[11] FAILED          [ 66%]
+../../src/test_runner.py::test_cvdp_copilot_apb_gpio[30] FAILED          [100%]
+
+=================================== FAILURES ===================================
+________________________ test_cvdp_copilot_apb_gpio[8] _________________________
+
+gpio_width = 8
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+>           runner(gpio_width)
+
+/src/test_runner.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+gpio_width = 8
+
+    def runner(gpio_width):
+        """
+        Runs the cocotb simulation with the specified GPIO_WIDTH parameter.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        logger.info(f"Starting simulation with GPIO_WIDTH = {gpio_width}")
+    
+        # Initialize the simulator runner
+        runner = get_runner(sim)
+    
+        # Build the simulation with the specified GPIO_WIDTH parameter
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters={"GPIO_WIDTH": gpio_width},  # Pass GPIO_WIDTH parameter
+            # Simulator Arguments
+            always=True,
+            clean=True,
+            waves=False,        # Disable waveform generation for faster runs
+            verbose=False,      # Set to True for detailed simulator logs
+            timescale=("1ns", "1ps"),
+            log_file=f"sim_{gpio_width}.log"
+        )
+    
+        # Run the simulation
+>       runner.test(
+            hdl_toplevel=toplevel,
+            test_module=module,
+            waves=False
+        )
+E       SystemExit: 1
+
+/src/test_runner.py:46: SystemExit
+----------------------------- Captured stdout call -----------------------------
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043256
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gpio_harness.test1_write_read_data_output (1/10)
+                                                            Test 1: Write and Read Data Output Register (reg_dout)
+     0.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 1: Write and Read Data Output Register
+   140.00ns WARNING  ..put.test1_write_read_data_output Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 97, in test1_write_read_data_output
+                                                            read_data = await apb_read(dut, APB_ADDRESSES['DATA_OUT'])
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/test_gpio_harness.py", line 53, in apb_read
+                                                            read_data = int(dut.prdata.value)
+                                                                        ^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 787, in __int__
+                                                            return self.to_unsigned()
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 655, in to_unsigned
+                                                            return self._get_int()
+                                                                   ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+   140.00ns WARNING  cocotb.regression                  test_gpio_harness.test1_write_read_data_output failed
+   140.00ns INFO     cocotb.regression                  running test_gpio_harness.test2_write_read_output_enable (2/10)
+                                                            Test 2: Write and Read Output Enable Register (reg_dout_en)
+   140.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 2: Write and Read Output Enable Register
+   300.00ns ERROR    root                               FAIL: Output Enable Register mismatch. Expected: 0xFF, Got: 0x00
+   300.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 2 completed with failures:
+                                                        FAIL: Output Enable Register mismatch. Expected: 0xFF, Got: 0x00
+   300.00ns WARNING  ..e.test2_write_read_output_enable Some test cases failed. Check the log for details:
+                                                          FAIL: Output Enable Register mismatch. Expected: 0xFF, Got: 0x00
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 181, in test2_write_read_output_enable
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Output Enable Register mismatch. Expected: 0xFF, Got: 0x00
+                                                        assert False
+   300.00ns WARNING  cocotb.regression                  test_gpio_harness.test2_write_read_output_enable failed
+   300.00ns INFO     cocotb.regression                  running test_gpio_harness.test3_gpio_input_synchronization (3/10)
+                                                            Test 3: Test GPIO Input Synchronization
+   300.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 3: GPIO Input Synchronization
+   520.00ns ERROR    root                               FAIL: GPIO Input Data mismatch. Expected: 0x3C, Got: 0xFF
+   520.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 3 completed with failures:
+                                                        FAIL: GPIO Input Data mismatch. Expected: 0x3C, Got: 0xFF
+   520.00ns WARNING  ..test3_gpio_input_synchronization Some test cases failed. Check the log for details:
+                                                          FAIL: GPIO Input Data mismatch. Expected: 0x3C, Got: 0xFF
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 238, in test3_gpio_input_synchronization
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: GPIO Input Data mismatch. Expected: 0x3C, Got: 0xFF
+                                                        assert False
+   520.00ns WARNING  cocotb.regression                  test_gpio_harness.test3_gpio_input_synchronization failed
+   520.00ns INFO     cocotb.regression                  running test_gpio_harness.test4_configure_level_triggered_interrupts (4/10)
+                                                            Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   520.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   860.00ns ERROR    root                               FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x55, Got: 0x3C
+   860.00ns WARNING  ..igure_level_triggered_interrupts Cannot convert Logic('X') to int
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 295, in test4_configure_level_triggered_interrupts
+                                                            comb_int = int(dut.comb_int.value)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic.py", line 250, in __int__
+                                                            raise ValueError(f"Cannot convert {self!r} to int")
+                                                        ValueError: Cannot convert Logic('X') to int
+   860.00ns WARNING  cocotb.regression                  test_gpio_harness.test4_configure_level_triggered_interrupts failed
+   860.00ns INFO     cocotb.regression                  running test_gpio_harness.test5_clear_level_triggered_interrupts (5/10)
+                                                            Test 5: Clear Level-Triggered Interrupts by Changing Input
+   860.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 5: Clear Level-Triggered Interrupts by Changing Input
+  1260.00ns ERROR    root                               FAIL: Level-triggered interrupts not cleared. Expected: 0x00, Got: 0x3C
+  1260.00ns WARNING  ..clear_level_triggered_interrupts Cannot convert Logic('X') to int
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 372, in test5_clear_level_triggered_interrupts
+                                                            comb_int = int(dut.comb_int.value)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic.py", line 250, in __int__
+                                                            raise ValueError(f"Cannot convert {self!r} to int")
+                                                        ValueError: Cannot convert Logic('X') to int
+  1260.00ns WARNING  cocotb.regression                  test_gpio_harness.test5_clear_level_triggered_interrupts failed
+  1260.00ns INFO     cocotb.regression                  running test_gpio_harness.test6_configure_edge_triggered_interrupts (6/10)
+                                                            Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1260.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1700.01ns ERROR    root                               FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x55, Got: 0x3C
+  1800.01ns ERROR    root                               FAIL: Edge-triggered interrupts not cleared. Expected: 0x00, Got: 0x3C
+  1800.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 6 completed with failures:
+                                                        FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x55, Got: 0x3C
+                                                        FAIL: Edge-triggered interrupts not cleared. Expected: 0x00, Got: 0x3C
+  1800.01ns WARNING  ..figure_edge_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x55, Got: 0x3C
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x00, Got: 0x3C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 472, in test6_configure_edge_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x55, Got: 0x3C
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x00, Got: 0x3C
+                                                        assert False
+  1800.01ns WARNING  cocotb.regression                  test_gpio_harness.test6_configure_edge_triggered_interrupts failed
+  1800.01ns INFO     cocotb.regression                  running test_gpio_harness.test7_mask_interrupts (7/10)
+                                                            Test 7: Mask Interrupts Using Interrupt Enable Register
+  1800.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 7: Mask Interrupts Using Interrupt Enable Register
+  2260.01ns ERROR    root                               FAIL: Interrupts not masked correctly. Expected: 0x0F, Got: 0x3C
+  2260.01ns WARNING  ..interrupts.test7_mask_interrupts Cannot convert Logic('X') to int
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 535, in test7_mask_interrupts
+                                                            comb_int = int(dut.comb_int.value)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic.py", line 250, in __int__
+                                                            raise ValueError(f"Cannot convert {self!r} to int")
+                                                        ValueError: Cannot convert Logic('X') to int
+  2260.01ns WARNING  cocotb.regression                  test_gpio_harness.test7_mask_interrupts failed
+  2260.01ns INFO     cocotb.regression                  running test_gpio_harness.test8_invalid_address_access (8/10)
+                                                            Test 8: Attempt to Access Invalid Address
+  2260.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 8: Attempt to Access Invalid Address
+  2380.01ns ERROR    root                               FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+  2380.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 8 completed with failures:
+                                                        FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+  2380.01ns WARNING  ..ess.test8_invalid_address_access Some test cases failed. Check the log for details:
+                                                          FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 621, in test8_invalid_address_access
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+                                                        assert False
+  2380.01ns WARNING  cocotb.regression                  test_gpio_harness.test8_invalid_address_access failed
+  2380.01ns INFO     cocotb.regression                  running test_gpio_harness.test9_multiple_simultaneous_interrupts (9/10)
+                                                            Test 9: Multiple Interrupts Occurring Simultaneously
+  2380.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 9: Multiple Interrupts Occurring Simultaneously
+  2820.01ns ERROR    root                               FAIL: Not all interrupts captured. Expected: 0xFF, Got: 0x3C
+  2820.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 9 completed with failures:
+                                                        FAIL: Not all interrupts captured. Expected: 0xFF, Got: 0x3C
+  2820.01ns WARNING  ..multiple_simultaneous_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Not all interrupts captured. Expected: 0xFF, Got: 0x3C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 691, in test9_multiple_simultaneous_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Not all interrupts captured. Expected: 0xFF, Got: 0x3C
+                                                        assert False
+  2820.01ns WARNING  cocotb.regression                  test_gpio_harness.test9_multiple_simultaneous_interrupts failed
+  2820.01ns INFO     cocotb.regression                  running test_gpio_harness.test10_reset_conditions (10/10)
+                                                            Test 10: Reset Conditions
+  2820.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 10: Reset Conditions
+  3140.01ns ERROR    root                               FAIL: Data Output Register not reset. Expected: 0x00, Got: 0x3C
+  3260.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 10 completed with failures:
+                                                        FAIL: Data Output Register not reset. Expected: 0x00, Got: 0x3C
+  3260.01ns WARNING  ..nditions.test10_reset_conditions Some test cases failed. Check the log for details:
+                                                          FAIL: Data Output Register not reset. Expected: 0x00, Got: 0x3C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 788, in test10_reset_conditions
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Data Output Register not reset. Expected: 0x00, Got: 0x3C
+                                                        assert False
+  3260.01ns WARNING  cocotb.regression                  test_gpio_harness.test10_reset_conditions failed
+  3260.01ns INFO     cocotb.regression                  **********************************************************************************************************************
+                                                        ** TEST                                                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **********************************************************************************************************************
+                                                        ** test_gpio_harness.test1_write_read_data_output                 FAIL         140.00           0.00     134248.41  **
+                                                        ** test_gpio_harness.test2_write_read_output_enable               FAIL         160.00           0.00     227487.67  **
+                                                        ** test_gpio_harness.test3_gpio_input_synchronization             FAIL         220.00           0.00     338374.36  **
+                                                        ** test_gpio_harness.test4_configure_level_triggered_interrupts   FAIL         340.00           0.00     366974.62  **
+                                                        ** test_gpio_harness.test5_clear_level_triggered_interrupts       FAIL         400.00           0.00     419220.79  **
+                                                        ** test_gpio_harness.test6_configure_edge_triggered_interrupts    FAIL         540.00           0.00     436485.67  **
+                                                        ** test_gpio_harness.test7_mask_interrupts                        FAIL         460.00           0.00     443535.60  **
+                                                        ** test_gpio_harness.test8_invalid_address_access                 FAIL         120.00           0.00     275789.85  **
+                                                        ** test_gpio_harness.test9_multiple_simultaneous_interrupts       FAIL         440.00           0.00     440662.31  **
+                                                        ** test_gpio_harness.test10_reset_conditions                      FAIL         440.00           0.00     414531.39  **
+                                                        **********************************************************************************************************************
+                                                        ** TESTS=10 PASS=0 FAIL=10 SKIP=0                                             3260.01           0.02     186694.00  **
+                                                        **********************************************************************************************************************
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cvdp_copilot_apb_gpio -g2012 -Pcvdp_copilot_apb_gpio.GPIO_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/cvdp_copilot_apb_gpio.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -none in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 10 of 10 tests.
+________________________ test_cvdp_copilot_apb_gpio[11] ________________________
+
+gpio_width = 11
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+>           runner(gpio_width)
+
+/src/test_runner.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+gpio_width = 11
+
+    def runner(gpio_width):
+        """
+        Runs the cocotb simulation with the specified GPIO_WIDTH parameter.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        logger.info(f"Starting simulation with GPIO_WIDTH = {gpio_width}")
+    
+        # Initialize the simulator runner
+        runner = get_runner(sim)
+    
+        # Build the simulation with the specified GPIO_WIDTH parameter
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters={"GPIO_WIDTH": gpio_width},  # Pass GPIO_WIDTH parameter
+            # Simulator Arguments
+            always=True,
+            clean=True,
+            waves=False,        # Disable waveform generation for faster runs
+            verbose=False,      # Set to True for detailed simulator logs
+            timescale=("1ns", "1ps"),
+            log_file=f"sim_{gpio_width}.log"
+        )
+    
+        # Run the simulation
+>       runner.test(
+            hdl_toplevel=toplevel,
+            test_module=module,
+            waves=False
+        )
+E       SystemExit: 1
+
+/src/test_runner.py:46: SystemExit
+----------------------------- Captured stdout call -----------------------------
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043257
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gpio_harness.test1_write_read_data_output (1/10)
+                                                            Test 1: Write and Read Data Output Register (reg_dout)
+     0.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 1: Write and Read Data Output Register
+   140.00ns WARNING  ..put.test1_write_read_data_output Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 97, in test1_write_read_data_output
+                                                            read_data = await apb_read(dut, APB_ADDRESSES['DATA_OUT'])
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/test_gpio_harness.py", line 53, in apb_read
+                                                            read_data = int(dut.prdata.value)
+                                                                        ^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 787, in __int__
+                                                            return self.to_unsigned()
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 655, in to_unsigned
+                                                            return self._get_int()
+                                                                   ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+   140.00ns WARNING  cocotb.regression                  test_gpio_harness.test1_write_read_data_output failed
+   140.00ns INFO     cocotb.regression                  running test_gpio_harness.test2_write_read_output_enable (2/10)
+                                                            Test 2: Write and Read Output Enable Register (reg_dout_en)
+   140.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 2: Write and Read Output Enable Register
+   300.00ns ERROR    root                               FAIL: Output Enable Register mismatch. Expected: 0x7FF, Got: 0x000
+   300.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 2 completed with failures:
+                                                        FAIL: Output Enable Register mismatch. Expected: 0x7FF, Got: 0x000
+   300.00ns WARNING  ..e.test2_write_read_output_enable Some test cases failed. Check the log for details:
+                                                          FAIL: Output Enable Register mismatch. Expected: 0x7FF, Got: 0x000
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 181, in test2_write_read_output_enable
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Output Enable Register mismatch. Expected: 0x7FF, Got: 0x000
+                                                        assert False
+   300.00ns WARNING  cocotb.regression                  test_gpio_harness.test2_write_read_output_enable failed
+   300.00ns INFO     cocotb.regression                  running test_gpio_harness.test3_gpio_input_synchronization (3/10)
+                                                            Test 3: Test GPIO Input Synchronization
+   300.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 3: GPIO Input Synchronization
+   520.00ns ERROR    root                               FAIL: GPIO Input Data mismatch. Expected: 0x03C, Got: 0x7FF
+   520.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 3 completed with failures:
+                                                        FAIL: GPIO Input Data mismatch. Expected: 0x03C, Got: 0x7FF
+   520.00ns WARNING  ..test3_gpio_input_synchronization Some test cases failed. Check the log for details:
+                                                          FAIL: GPIO Input Data mismatch. Expected: 0x03C, Got: 0x7FF
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 238, in test3_gpio_input_synchronization
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: GPIO Input Data mismatch. Expected: 0x03C, Got: 0x7FF
+                                                        assert False
+   520.00ns WARNING  cocotb.regression                  test_gpio_harness.test3_gpio_input_synchronization failed
+   520.00ns INFO     cocotb.regression                  running test_gpio_harness.test4_configure_level_triggered_interrupts (4/10)
+                                                            Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   520.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   860.00ns ERROR    root                               FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x055, Got: 0x03C
+   860.00ns WARNING  ..igure_level_triggered_interrupts Cannot convert Logic('X') to int
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 295, in test4_configure_level_triggered_interrupts
+                                                            comb_int = int(dut.comb_int.value)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic.py", line 250, in __int__
+                                                            raise ValueError(f"Cannot convert {self!r} to int")
+                                                        ValueError: Cannot convert Logic('X') to int
+   860.00ns WARNING  cocotb.regression                  test_gpio_harness.test4_configure_level_triggered_interrupts failed
+   860.00ns INFO     cocotb.regression                  running test_gpio_harness.test5_clear_level_triggered_interrupts (5/10)
+                                                            Test 5: Clear Level-Triggered Interrupts by Changing Input
+   860.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 5: Clear Level-Triggered Interrupts by Changing Input
+  1260.00ns ERROR    root                               FAIL: Level-triggered interrupts not cleared. Expected: 0x000, Got: 0x03C
+  1260.00ns WARNING  ..clear_level_triggered_interrupts Cannot convert Logic('X') to int
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 372, in test5_clear_level_triggered_interrupts
+                                                            comb_int = int(dut.comb_int.value)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic.py", line 250, in __int__
+                                                            raise ValueError(f"Cannot convert {self!r} to int")
+                                                        ValueError: Cannot convert Logic('X') to int
+  1260.00ns WARNING  cocotb.regression                  test_gpio_harness.test5_clear_level_triggered_interrupts failed
+  1260.00ns INFO     cocotb.regression                  running test_gpio_harness.test6_configure_edge_triggered_interrupts (6/10)
+                                                            Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1260.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1700.01ns ERROR    root                               FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x555, Got: 0x03C
+  1800.01ns ERROR    root                               FAIL: Edge-triggered interrupts not cleared. Expected: 0x000, Got: 0x03C
+  1800.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 6 completed with failures:
+                                                        FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x555, Got: 0x03C
+                                                        FAIL: Edge-triggered interrupts not cleared. Expected: 0x000, Got: 0x03C
+  1800.01ns WARNING  ..figure_edge_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x555, Got: 0x03C
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x000, Got: 0x03C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 472, in test6_configure_edge_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x555, Got: 0x03C
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x000, Got: 0x03C
+                                                        assert False
+  1800.01ns WARNING  cocotb.regression                  test_gpio_harness.test6_configure_edge_triggered_interrupts failed
+  1800.01ns INFO     cocotb.regression                  running test_gpio_harness.test7_mask_interrupts (7/10)
+                                                            Test 7: Mask Interrupts Using Interrupt Enable Register
+  1800.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 7: Mask Interrupts Using Interrupt Enable Register
+  2260.01ns ERROR    root                               FAIL: Interrupts not masked correctly. Expected: 0x00F, Got: 0x03C
+  2260.01ns WARNING  ..interrupts.test7_mask_interrupts Cannot convert Logic('X') to int
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 535, in test7_mask_interrupts
+                                                            comb_int = int(dut.comb_int.value)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic.py", line 250, in __int__
+                                                            raise ValueError(f"Cannot convert {self!r} to int")
+                                                        ValueError: Cannot convert Logic('X') to int
+  2260.01ns WARNING  cocotb.regression                  test_gpio_harness.test7_mask_interrupts failed
+  2260.01ns INFO     cocotb.regression                  running test_gpio_harness.test8_invalid_address_access (8/10)
+                                                            Test 8: Attempt to Access Invalid Address
+  2260.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 8: Attempt to Access Invalid Address
+  2380.01ns ERROR    root                               FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+  2380.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 8 completed with failures:
+                                                        FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+  2380.01ns WARNING  ..ess.test8_invalid_address_access Some test cases failed. Check the log for details:
+                                                          FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 621, in test8_invalid_address_access
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+                                                        assert False
+  2380.01ns WARNING  cocotb.regression                  test_gpio_harness.test8_invalid_address_access failed
+  2380.01ns INFO     cocotb.regression                  running test_gpio_harness.test9_multiple_simultaneous_interrupts (9/10)
+                                                            Test 9: Multiple Interrupts Occurring Simultaneously
+  2380.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 9: Multiple Interrupts Occurring Simultaneously
+  2820.01ns ERROR    root                               FAIL: Not all interrupts captured. Expected: 0x0FF, Got: 0x03C
+  2820.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 9 completed with failures:
+                                                        FAIL: Not all interrupts captured. Expected: 0x0FF, Got: 0x03C
+  2820.01ns WARNING  ..multiple_simultaneous_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Not all interrupts captured. Expected: 0x0FF, Got: 0x03C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 691, in test9_multiple_simultaneous_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Not all interrupts captured. Expected: 0x0FF, Got: 0x03C
+                                                        assert False
+  2820.01ns WARNING  cocotb.regression                  test_gpio_harness.test9_multiple_simultaneous_interrupts failed
+  2820.01ns INFO     cocotb.regression                  running test_gpio_harness.test10_reset_conditions (10/10)
+                                                            Test 10: Reset Conditions
+  2820.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 10: Reset Conditions
+  3140.01ns ERROR    root                               FAIL: Data Output Register not reset. Expected: 0x000, Got: 0x03C
+  3260.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 10 completed with failures:
+                                                        FAIL: Data Output Register not reset. Expected: 0x000, Got: 0x03C
+  3260.01ns WARNING  ..nditions.test10_reset_conditions Some test cases failed. Check the log for details:
+                                                          FAIL: Data Output Register not reset. Expected: 0x000, Got: 0x03C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 788, in test10_reset_conditions
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Data Output Register not reset. Expected: 0x000, Got: 0x03C
+                                                        assert False
+  3260.01ns WARNING  cocotb.regression                  test_gpio_harness.test10_reset_conditions failed
+  3260.01ns INFO     cocotb.regression                  **********************************************************************************************************************
+                                                        ** TEST                                                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **********************************************************************************************************************
+                                                        ** test_gpio_harness.test1_write_read_data_output                 FAIL         140.00           0.00     134095.13  **
+                                                        ** test_gpio_harness.test2_write_read_output_enable               FAIL         160.00           0.00     230773.26  **
+                                                        ** test_gpio_harness.test3_gpio_input_synchronization             FAIL         220.00           0.00     332881.27  **
+                                                        ** test_gpio_harness.test4_configure_level_triggered_interrupts   FAIL         340.00           0.00     339538.90  **
+                                                        ** test_gpio_harness.test5_clear_level_triggered_interrupts       FAIL         400.00           0.00     416411.42  **
+                                                        ** test_gpio_harness.test6_configure_edge_triggered_interrupts    FAIL         540.00           0.00     443233.69  **
+                                                        ** test_gpio_harness.test7_mask_interrupts                        FAIL         460.00           0.00     437104.63  **
+                                                        ** test_gpio_harness.test8_invalid_address_access                 FAIL         120.00           0.00     273096.30  **
+                                                        ** test_gpio_harness.test9_multiple_simultaneous_interrupts       FAIL         440.00           0.00     442458.35  **
+                                                        ** test_gpio_harness.test10_reset_conditions                      FAIL         440.00           0.00     417249.32  **
+                                                        **********************************************************************************************************************
+                                                        ** TESTS=10 PASS=0 FAIL=10 SKIP=0                                             3260.01           0.02     187187.27  **
+                                                        **********************************************************************************************************************
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cvdp_copilot_apb_gpio -g2012 -Pcvdp_copilot_apb_gpio.GPIO_WIDTH=11 -f /code/rundir/sim_build/cmds.f /code/rtl/cvdp_copilot_apb_gpio.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -none in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 10 of 10 tests.
+________________________ test_cvdp_copilot_apb_gpio[30] ________________________
+
+gpio_width = 30
+
+    @pytest.mark.parametrize("gpio_width", [8, 11, 30])  # Add desired GPIO_WIDTH values here
+    def test_cvdp_copilot_apb_gpio(gpio_width):
+        """
+        Pytest function to run cocotb simulations with different GPIO_WIDTH parameters.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        try:
+>           runner(gpio_width)
+
+/src/test_runner.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+gpio_width = 30
+
+    def runner(gpio_width):
+        """
+        Runs the cocotb simulation with the specified GPIO_WIDTH parameter.
+    
+        Args:
+            gpio_width (int): The GPIO_WIDTH value to test.
+        """
+        logger.info(f"Starting simulation with GPIO_WIDTH = {gpio_width}")
+    
+        # Initialize the simulator runner
+        runner = get_runner(sim)
+    
+        # Build the simulation with the specified GPIO_WIDTH parameter
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters={"GPIO_WIDTH": gpio_width},  # Pass GPIO_WIDTH parameter
+            # Simulator Arguments
+            always=True,
+            clean=True,
+            waves=False,        # Disable waveform generation for faster runs
+            verbose=False,      # Set to True for detailed simulator logs
+            timescale=("1ns", "1ps"),
+            log_file=f"sim_{gpio_width}.log"
+        )
+    
+        # Run the simulation
+>       runner.test(
+            hdl_toplevel=toplevel,
+            test_module=module,
+            waves=False
+        )
+E       SystemExit: 1
+
+/src/test_runner.py:46: SystemExit
+----------------------------- Captured stdout call -----------------------------
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043257
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gpio_harness.test1_write_read_data_output (1/10)
+                                                            Test 1: Write and Read Data Output Register (reg_dout)
+     0.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 1: Write and Read Data Output Register
+   140.00ns WARNING  ..put.test1_write_read_data_output Can't convert LogicArray to int: it contains non-0/1 values
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 97, in test1_write_read_data_output
+                                                            read_data = await apb_read(dut, APB_ADDRESSES['DATA_OUT'])
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/src/test_gpio_harness.py", line 53, in apb_read
+                                                            read_data = int(dut.prdata.value)
+                                                                        ^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 787, in __int__
+                                                            return self.to_unsigned()
+                                                                   ^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 655, in to_unsigned
+                                                            return self._get_int()
+                                                                   ^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic_array.py", line 304, in _get_int
+                                                            raise ValueError(
+                                                        ValueError: Can't convert LogicArray to int: it contains non-0/1 values
+   140.00ns WARNING  cocotb.regression                  test_gpio_harness.test1_write_read_data_output failed
+   140.00ns INFO     cocotb.regression                  running test_gpio_harness.test2_write_read_output_enable (2/10)
+                                                            Test 2: Write and Read Output Enable Register (reg_dout_en)
+   140.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 2: Write and Read Output Enable Register
+   300.00ns ERROR    root                               FAIL: Output Enable Register mismatch. Expected: 0x3FFFFFFF, Got: 0x00000000
+   300.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 2 completed with failures:
+                                                        FAIL: Output Enable Register mismatch. Expected: 0x3FFFFFFF, Got: 0x00000000
+   300.00ns WARNING  ..e.test2_write_read_output_enable Some test cases failed. Check the log for details:
+                                                          FAIL: Output Enable Register mismatch. Expected: 0x3FFFFFFF, Got: 0x00000000
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 181, in test2_write_read_output_enable
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Output Enable Register mismatch. Expected: 0x3FFFFFFF, Got: 0x00000000
+                                                        assert False
+   300.00ns WARNING  cocotb.regression                  test_gpio_harness.test2_write_read_output_enable failed
+   300.00ns INFO     cocotb.regression                  running test_gpio_harness.test3_gpio_input_synchronization (3/10)
+                                                            Test 3: Test GPIO Input Synchronization
+   300.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 3: GPIO Input Synchronization
+   520.00ns ERROR    root                               FAIL: GPIO Input Data mismatch. Expected: 0x0000003C, Got: 0x3FFFFFFF
+   520.00ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 3 completed with failures:
+                                                        FAIL: GPIO Input Data mismatch. Expected: 0x0000003C, Got: 0x3FFFFFFF
+   520.00ns WARNING  ..test3_gpio_input_synchronization Some test cases failed. Check the log for details:
+                                                          FAIL: GPIO Input Data mismatch. Expected: 0x0000003C, Got: 0x3FFFFFFF
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 238, in test3_gpio_input_synchronization
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: GPIO Input Data mismatch. Expected: 0x0000003C, Got: 0x3FFFFFFF
+                                                        assert False
+   520.00ns WARNING  cocotb.regression                  test_gpio_harness.test3_gpio_input_synchronization failed
+   520.00ns INFO     cocotb.regression                  running test_gpio_harness.test4_configure_level_triggered_interrupts (4/10)
+                                                            Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   520.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 4: Configure Level-Triggered Interrupts (Positive Polarity)
+   860.00ns ERROR    root                               FAIL: Interrupt State Register mismatch (Level-Triggered). Expected: 0x00000055, Got: 0x0000003C
+   860.00ns WARNING  ..igure_level_triggered_interrupts Cannot convert Logic('X') to int
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 295, in test4_configure_level_triggered_interrupts
+                                                            comb_int = int(dut.comb_int.value)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic.py", line 250, in __int__
+                                                            raise ValueError(f"Cannot convert {self!r} to int")
+                                                        ValueError: Cannot convert Logic('X') to int
+   860.00ns WARNING  cocotb.regression                  test_gpio_harness.test4_configure_level_triggered_interrupts failed
+   860.00ns INFO     cocotb.regression                  running test_gpio_harness.test5_clear_level_triggered_interrupts (5/10)
+                                                            Test 5: Clear Level-Triggered Interrupts by Changing Input
+   860.00ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 5: Clear Level-Triggered Interrupts by Changing Input
+  1260.00ns ERROR    root                               FAIL: Level-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x0000003C
+  1260.00ns WARNING  ..clear_level_triggered_interrupts Cannot convert Logic('X') to int
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 372, in test5_clear_level_triggered_interrupts
+                                                            comb_int = int(dut.comb_int.value)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic.py", line 250, in __int__
+                                                            raise ValueError(f"Cannot convert {self!r} to int")
+                                                        ValueError: Cannot convert Logic('X') to int
+  1260.00ns WARNING  cocotb.regression                  test_gpio_harness.test5_clear_level_triggered_interrupts failed
+  1260.00ns INFO     cocotb.regression                  running test_gpio_harness.test6_configure_edge_triggered_interrupts (6/10)
+                                                            Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1260.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 6: Configure Edge-Triggered Interrupts (Negative Polarity)
+  1700.01ns ERROR    root                               FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x3FFF5555, Got: 0x0000003C
+  1800.01ns ERROR    root                               FAIL: Edge-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x0000003C
+  1800.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 6 completed with failures:
+                                                        FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x3FFF5555, Got: 0x0000003C
+                                                        FAIL: Edge-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x0000003C
+  1800.01ns WARNING  ..figure_edge_triggered_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x3FFF5555, Got: 0x0000003C
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x0000003C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 472, in test6_configure_edge_triggered_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x3FFF5555, Got: 0x0000003C
+                                                          FAIL: Edge-triggered interrupts not cleared. Expected: 0x00000000, Got: 0x0000003C
+                                                        assert False
+  1800.01ns WARNING  cocotb.regression                  test_gpio_harness.test6_configure_edge_triggered_interrupts failed
+  1800.01ns INFO     cocotb.regression                  running test_gpio_harness.test7_mask_interrupts (7/10)
+                                                            Test 7: Mask Interrupts Using Interrupt Enable Register
+  1800.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 7: Mask Interrupts Using Interrupt Enable Register
+  2260.01ns ERROR    root                               FAIL: Interrupts not masked correctly. Expected: 0x0000000F, Got: 0x0000003C
+  2260.01ns WARNING  ..interrupts.test7_mask_interrupts Cannot convert Logic('X') to int
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 535, in test7_mask_interrupts
+                                                            comb_int = int(dut.comb_int.value)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/venv/lib/python3.12/site-packages/cocotb/types/_logic.py", line 250, in __int__
+                                                            raise ValueError(f"Cannot convert {self!r} to int")
+                                                        ValueError: Cannot convert Logic('X') to int
+  2260.01ns WARNING  cocotb.regression                  test_gpio_harness.test7_mask_interrupts failed
+  2260.01ns INFO     cocotb.regression                  running test_gpio_harness.test8_invalid_address_access (8/10)
+                                                            Test 8: Attempt to Access Invalid Address
+  2260.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 8: Attempt to Access Invalid Address
+  2380.01ns ERROR    root                               FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+  2380.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 8 completed with failures:
+                                                        FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+  2380.01ns WARNING  ..ess.test8_invalid_address_access Some test cases failed. Check the log for details:
+                                                          FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 621, in test8_invalid_address_access
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Invalid address should return zero data. Expected: 0x00000000, Got: 0x0000003C
+                                                        assert False
+  2380.01ns WARNING  cocotb.regression                  test_gpio_harness.test8_invalid_address_access failed
+  2380.01ns INFO     cocotb.regression                  running test_gpio_harness.test9_multiple_simultaneous_interrupts (9/10)
+                                                            Test 9: Multiple Interrupts Occurring Simultaneously
+  2380.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 9: Multiple Interrupts Occurring Simultaneously
+  2820.01ns ERROR    root                               FAIL: Not all interrupts captured. Expected: 0x000000FF, Got: 0x0000003C
+  2820.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 9 completed with failures:
+                                                        FAIL: Not all interrupts captured. Expected: 0x000000FF, Got: 0x0000003C
+  2820.01ns WARNING  ..multiple_simultaneous_interrupts Some test cases failed. Check the log for details:
+                                                          FAIL: Not all interrupts captured. Expected: 0x000000FF, Got: 0x0000003C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 691, in test9_multiple_simultaneous_interrupts
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Not all interrupts captured. Expected: 0x000000FF, Got: 0x0000003C
+                                                        assert False
+  2820.01ns WARNING  cocotb.regression                  test_gpio_harness.test9_multiple_simultaneous_interrupts failed
+  2820.01ns INFO     cocotb.regression                  running test_gpio_harness.test10_reset_conditions (10/10)
+                                                            Test 10: Reset Conditions
+  2820.01ns INFO     cocotb.cvdp_copilot_apb_gpio       Test 10: Reset Conditions
+  3140.01ns ERROR    root                               FAIL: Data Output Register not reset. Expected: 0x00000000, Got: 0x0000003C
+  3260.01ns ERROR    cocotb.cvdp_copilot_apb_gpio       Test 10 completed with failures:
+                                                        FAIL: Data Output Register not reset. Expected: 0x00000000, Got: 0x0000003C
+  3260.01ns WARNING  ..nditions.test10_reset_conditions Some test cases failed. Check the log for details:
+                                                          FAIL: Data Output Register not reset. Expected: 0x00000000, Got: 0x0000003C
+                                                        assert False
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_gpio_harness.py", line 788, in test10_reset_conditions
+                                                            assert False, f"Some test cases failed. Check the log for details:\n{failure_message}"
+                                                        AssertionError: Some test cases failed. Check the log for details:
+                                                          FAIL: Data Output Register not reset. Expected: 0x00000000, Got: 0x0000003C
+                                                        assert False
+  3260.01ns WARNING  cocotb.regression                  test_gpio_harness.test10_reset_conditions failed
+  3260.01ns INFO     cocotb.regression                  **********************************************************************************************************************
+                                                        ** TEST                                                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **********************************************************************************************************************
+                                                        ** test_gpio_harness.test1_write_read_data_output                 FAIL         140.00           0.00     128490.71  **
+                                                        ** test_gpio_harness.test2_write_read_output_enable               FAIL         160.00           0.00     227796.55  **
+                                                        ** test_gpio_harness.test3_gpio_input_synchronization             FAIL         220.00           0.00     335056.96  **
+                                                        ** test_gpio_harness.test4_configure_level_triggered_interrupts   FAIL         340.00           0.00     370021.63  **
+                                                        ** test_gpio_harness.test5_clear_level_triggered_interrupts       FAIL         400.00           0.00     417967.51  **
+                                                        ** test_gpio_harness.test6_configure_edge_triggered_interrupts    FAIL         540.00           0.00     430921.64  **
+                                                        ** test_gpio_harness.test7_mask_interrupts                        FAIL         460.00           0.00     444557.57  **
+                                                        ** test_gpio_harness.test8_invalid_address_access                 FAIL         120.00           0.00     275337.24  **
+                                                        ** test_gpio_harness.test9_multiple_simultaneous_interrupts       FAIL         440.00           0.00     440557.12  **
+                                                        ** test_gpio_harness.test10_reset_conditions                      FAIL         440.00           0.00     419907.57  **
+                                                        **********************************************************************************************************************
+                                                        ** TESTS=10 PASS=0 FAIL=10 SKIP=0                                             3260.01           0.02     187218.03  **
+                                                        **********************************************************************************************************************
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s cvdp_copilot_apb_gpio -g2012 -Pcvdp_copilot_apb_gpio.GPIO_WIDTH=30 -f /code/rundir/sim_build/cmds.f /code/rtl/cvdp_copilot_apb_gpio.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -none in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 10 of 10 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_cvdp_copilot_apb_gpio[8] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_cvdp_copilot_apb_gpio[11] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_cvdp_copilot_apb_gpio[30] - SystemExit: 1
+============================== 3 failed in 0.92s ===============================
+Cleaning up Docker resources...
+Untagged: cvdp_copilot_apb_gpio_1_1778043256-direct:latest
+Deleted: sha256:931e2b641943e1a6d9213c773eab51d42497ea1cb0bcda3aa5e230fe3d8b743e

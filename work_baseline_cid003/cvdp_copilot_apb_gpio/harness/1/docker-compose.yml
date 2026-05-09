@@ -1,0 +1,12 @@
+networks:
+  default:
+    external: true
+    name: cvdp-bridge-cid003_subset_20-1e72741e
+services:
+  direct:
+    build: .
+    command: pytest -o cache_dir=/code/rundir/.cache /src/test_runner.py -v
+    env_file: ./src/.env
+    volumes:
+    - ./src/:/src/:ro
+    working_dir: /code/rundir

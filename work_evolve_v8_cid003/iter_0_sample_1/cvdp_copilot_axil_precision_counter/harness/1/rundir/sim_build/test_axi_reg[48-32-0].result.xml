@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778039509" />
+    <testcase name="test_precision_counter_axi" classname="test_precision_counter_axi" file="/src/test_precision_counter_axi.py" lineno="131" time="0.0038928985595703125" sim_time_ns="820.0" ratio_time="210639.96080352768">
+      <failure error_type="AssertionError" error_msg="Random countdown value 94891219623195: got 53610329096265&#10;assert (94891219623195 - 10) &lt;= 53610329096265" />
+    </testcase>
+  </testsuite>
+</testsuites>

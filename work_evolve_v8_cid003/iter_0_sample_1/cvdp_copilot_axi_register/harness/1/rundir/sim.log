@@ -1,0 +1,8 @@
+/code/rtl/axi_register.sv:80: error: This assignment requires an explicit cast.
+/code/rtl/axi_register.sv:81: error: This assignment requires an explicit cast.
+/code/rtl/axi_register.sv:82: error: This assignment requires an explicit cast.
+/code/rtl/axi_register.sv:83: error: This assignment requires an explicit cast.
+/code/rtl/axi_register.sv:89: error: This assignment requires an explicit cast.
+/code/rtl/axi_register.sv:90: error: This assignment requires an explicit cast.
+/code/rtl/axi_register.sv:91: error: Unable to bind wire/reg/memory `rready_i' in `axi_register'
+Segmentation fault (core dumped)

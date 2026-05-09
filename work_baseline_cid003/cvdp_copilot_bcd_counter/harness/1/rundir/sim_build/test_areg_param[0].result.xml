@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777977964" />
+    <testcase name="test_bcd_counter" classname="test_bcd_counter" file="/src/test_bcd_counter.py" lineno="6" time="2.0496089458465576" sim_time_ns="86401000000000.0" ratio_time="42154870652320.2">
+      <failure error_type="AssertionError" error_msg="24-hour reset failed&#10;assert (1 == 0)&#10; +  where 1 = int(LogicArrayObject(bcd_counter.ms_min))&#10; +    where LogicArrayObject(bcd_counter.ms_min) = HierarchyObject(bcd_counter).ms_min" />
+    </testcase>
+  </testsuite>
+</testsuites>

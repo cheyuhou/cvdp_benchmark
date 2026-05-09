@@ -1,0 +1,29 @@
+{
+  "primary": {
+    "root_cause": "Compilation failure due to a width mismatch in the interrupt polarity XOR operation, where a parameterized-width signal is XORed with a fixed 32-bit inverted signal.",
+    "evidence": [
+      "assign gpio_int = int_detect ^ (~reg_int_polarity);"
+    ],
+    "affected_signals": [
+      "gpio_int",
+      "int_detect",
+      "reg_int_polarity"
+    ],
+    "proposed_fix": "Truncate reg_int_polarity to GPIO_WIDTH bits before the XOR operation to match the width of int_detect, e.g., assign gpio_int = int_detect ^ reg_int_polarity[GPIO_WIDTH-1:0];",
+    "confidence": 0.9
+  },
+  "alternative": {
+    "root_cause": "Multiple driver conflict on prdata_d caused by driving the same variable in both a clocked always_ff block and a combinatorial assign statement.",
+    "evidence": [
+      "always_ff @(posedge pclk) begin ... prdata_d <= ... end",
+      "assign prdata_d[GPIO_WIDTH-1:0] = (paddr == ADDR_IN_DATA) ? gpio_in_sync : prdata_d[GPIO_WIDTH-1:0];"
+    ],
+    "affected_signals": [
+      "prdata_d",
+      "paddr",
+      "gpio_in_sync"
+    ],
+    "proposed_fix": "Consolidate all prdata_d assignments into a single always_ff block by adding an ADDR_IN_DATA case, and remove the continuous assign statement to eliminate the multiple driver error.",
+    "confidence": 0.75
+  }
+}

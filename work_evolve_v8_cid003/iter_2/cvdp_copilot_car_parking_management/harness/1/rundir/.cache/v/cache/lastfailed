@@ -1,0 +1,6 @@
+{
+  "test_runner.py::test_runner": true,
+  "test_runner.py::test_car_parking_system[14]": true,
+  "test_runner.py::test_car_parking_system[12]": true,
+  "test_runner.py::test_car_parking_system[9]": true
+}

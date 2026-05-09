@@ -1,0 +1,49 @@
+/code/rtl/axis_joiner.sv:54: error: 'mux_data' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:45:      : 'mux_data' is declared here as a wire.
+/code/rtl/axis_joiner.sv:55: error: 'mux_tlast' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:46:      : 'mux_tlast' is declared here as a wire.
+/code/rtl/axis_joiner.sv:56: error: 'mux_user' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:47:      : 'mux_user' is declared here as a wire.
+/code/rtl/axis_joiner.sv:58: error: 'mux_data' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:45:      : 'mux_data' is declared here as a wire.
+/code/rtl/axis_joiner.sv:59: error: 'mux_tlast' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:46:      : 'mux_tlast' is declared here as a wire.
+/code/rtl/axis_joiner.sv:60: error: 'mux_user' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:47:      : 'mux_user' is declared here as a wire.
+/code/rtl/axis_joiner.sv:62: error: 'mux_data' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:45:      : 'mux_data' is declared here as a wire.
+/code/rtl/axis_joiner.sv:63: error: 'mux_tlast' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:46:      : 'mux_tlast' is declared here as a wire.
+/code/rtl/axis_joiner.sv:64: error: 'mux_user' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:47:      : 'mux_user' is declared here as a wire.
+/code/rtl/axis_joiner.sv:66: error: 'mux_data' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:45:      : 'mux_data' is declared here as a wire.
+/code/rtl/axis_joiner.sv:67: error: 'mux_tlast' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:46:      : 'mux_tlast' is declared here as a wire.
+/code/rtl/axis_joiner.sv:68: error: 'mux_user' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:47:      : 'mux_user' is declared here as a wire.
+/code/rtl/axis_joiner.sv:72: error: 'mux_data' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:45:      : 'mux_data' is declared here as a wire.
+/code/rtl/axis_joiner.sv:73: error: 'mux_tlast' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:46:      : 'mux_tlast' is declared here as a wire.
+/code/rtl/axis_joiner.sv:74: error: 'mux_user' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:47:      : 'mux_user' is declared here as a wire.
+/code/rtl/axis_joiner.sv:77: error: 'mux_data' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:45:      : 'mux_data' is declared here as a wire.
+/code/rtl/axis_joiner.sv:78: error: 'mux_tlast' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:46:      : 'mux_tlast' is declared here as a wire.
+/code/rtl/axis_joiner.sv:79: error: 'mux_user' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:47:      : 'mux_user' is declared here as a wire.
+/code/rtl/axis_joiner.sv:82: error: 'mux_data' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:45:      : 'mux_data' is declared here as a wire.
+/code/rtl/axis_joiner.sv:83: error: 'mux_tlast' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:46:      : 'mux_tlast' is declared here as a wire.
+/code/rtl/axis_joiner.sv:84: error: 'mux_user' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:47:      : 'mux_user' is declared here as a wire.
+/code/rtl/axis_joiner.sv:87: error: 'mux_data' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:45:      : 'mux_data' is declared here as a wire.
+/code/rtl/axis_joiner.sv:88: error: 'mux_tlast' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:46:      : 'mux_tlast' is declared here as a wire.
+/code/rtl/axis_joiner.sv:89: error: 'mux_user' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:47:      : 'mux_user' is declared here as a wire.
+24 error(s) during elaboration.

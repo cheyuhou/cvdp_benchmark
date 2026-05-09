@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778045758" />
+    <testcase name="test_APBGlobalHistoryRegister" classname="test_APBGlobalHistoryRegister" file="/src/test_APBGlobalHistoryRegister.py" lineno="62" time="0.0015206336975097656" sim_time_ns="181.0" ratio_time="119029.32329883976">
+      <failure error_type="AssertionError" error_msg="control_register readback mismatch: Expected 0xb, got 0x0&#10;assert 0 == 11" />
+    </testcase>
+  </testsuite>
+</testsuites>

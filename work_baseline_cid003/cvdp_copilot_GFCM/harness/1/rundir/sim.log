@@ -1,0 +1,4 @@
+/code/rtl/glitch_free_mux.sv:56: warning: Numeric constant truncated to 2 bits.
+/code/rtl/glitch_free_mux.sv:58: warning: Numeric constant truncated to 2 bits.
+/code/rtl/glitch_free_mux.sv:60: warning: Numeric constant truncated to 2 bits.
+/code/rtl/glitch_free_mux.sv:62: warning: Numeric constant truncated to 2 bits.

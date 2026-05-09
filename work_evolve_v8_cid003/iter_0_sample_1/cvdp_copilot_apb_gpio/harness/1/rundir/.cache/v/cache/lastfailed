@@ -1,0 +1,5 @@
+{
+  "test_runner.py::test_cvdp_copilot_apb_gpio[8]": true,
+  "test_runner.py::test_cvdp_copilot_apb_gpio[11]": true,
+  "test_runner.py::test_cvdp_copilot_apb_gpio[30]": true
+}

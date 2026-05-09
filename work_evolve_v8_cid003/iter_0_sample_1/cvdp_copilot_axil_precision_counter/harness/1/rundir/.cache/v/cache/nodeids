@@ -1,0 +1,11 @@
+[
+  "test_runner.py::test_axi_reg[32-16-0]",
+  "test_runner.py::test_axi_reg[32-32-0]",
+  "test_runner.py::test_axi_reg[32-8-0]",
+  "test_runner.py::test_axi_reg[48-16-0]",
+  "test_runner.py::test_axi_reg[48-32-0]",
+  "test_runner.py::test_axi_reg[48-8-0]",
+  "test_runner.py::test_axi_reg[64-16-0]",
+  "test_runner.py::test_axi_reg[64-32-0]",
+  "test_runner.py::test_axi_reg[64-8-0]"
+]

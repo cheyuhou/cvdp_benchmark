@@ -1,0 +1,23 @@
+/code/rtl/precision_counter_axi.sv:126: error: 'slv_reg_v' is not a valid l-value for a procedural assignment.
+/code/rtl/precision_counter_axi.sv:66:      : 'slv_reg_v' is declared here as a wire.
+/code/rtl/precision_counter_axi.sv:128: error: 'slv_reg_v' is not a valid l-value for a procedural assignment.
+/code/rtl/precision_counter_axi.sv:66:      : 'slv_reg_v' is declared here as a wire.
+/code/rtl/precision_counter_axi.sv:130: error: 'slv_reg_v' is not a valid l-value for a procedural assignment.
+/code/rtl/precision_counter_axi.sv:66:      : 'slv_reg_v' is declared here as a wire.
+/code/rtl/precision_counter_axi.sv:135: error: 'slv_reg_t' is not a valid l-value for a procedural assignment.
+/code/rtl/precision_counter_axi.sv:65:      : 'slv_reg_t' is declared here as a wire.
+/code/rtl/precision_counter_axi.sv:137: error: 'slv_reg_t' is not a valid l-value for a procedural assignment.
+/code/rtl/precision_counter_axi.sv:65:      : 'slv_reg_t' is declared here as a wire.
+/code/rtl/precision_counter_axi.sv:199: error: 'axi_rdata' is not a valid l-value for a procedural assignment.
+/code/rtl/precision_counter_axi.sv:32:      : 'axi_rdata' is declared here as a wire.
+/code/rtl/precision_counter_axi.sv:200: error: 'axi_rdata' is not a valid l-value for a procedural assignment.
+/code/rtl/precision_counter_axi.sv:32:      : 'axi_rdata' is declared here as a wire.
+/code/rtl/precision_counter_axi.sv:201: error: 'axi_rdata' is not a valid l-value for a procedural assignment.
+/code/rtl/precision_counter_axi.sv:32:      : 'axi_rdata' is declared here as a wire.
+/code/rtl/precision_counter_axi.sv:202: error: 'axi_rdata' is not a valid l-value for a procedural assignment.
+/code/rtl/precision_counter_axi.sv:32:      : 'axi_rdata' is declared here as a wire.
+/code/rtl/precision_counter_axi.sv:203: error: 'axi_rdata' is not a valid l-value for a procedural assignment.
+/code/rtl/precision_counter_axi.sv:32:      : 'axi_rdata' is declared here as a wire.
+/code/rtl/precision_counter_axi.sv:204: error: 'axi_rdata' is not a valid l-value for a procedural assignment.
+/code/rtl/precision_counter_axi.sv:32:      : 'axi_rdata' is declared here as a wire.
+11 error(s) during elaboration.

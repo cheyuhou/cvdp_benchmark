@@ -1,0 +1,33 @@
+{
+  "primary": {
+    "root_cause": "The output ports m_axis_tdata, m_axis_tvalid, m_axis_tlast, and m_axis_tuser are declared as output wire but driven procedurally in an always_ff block, triggering a fatal compiler/simulator crash.",
+    "evidence": [
+      "output wire [7:0] m_axis_tdata,",
+      "m_axis_tdata <= 8'b0;"
+    ],
+    "affected_signals": [
+      "m_axis_tdata",
+      "m_axis_tvalid",
+      "m_axis_tlast",
+      "m_axis_tuser"
+    ],
+    "proposed_fix": "Change the port declarations for these four signals from output wire to output logic to permit procedural assignment. This resolves the illegal port direction conflict that causes the simulator to abort.",
+    "confidence": 0.95
+  },
+  "alternative": {
+    "root_cause": "The FSM next-state logic incorrectly references the module's own output handshake signals (s_axis_tready_X) to determine state transitions, creating a combinational loop and simulation race conditions.",
+    "evidence": [
+      "if (s_axis_tready_1 && s_axis_tlast_1) next_state = STATE_IDLE;",
+      "assign s_axis_tready_1 = (curr_state == STATE_1) ? 1'b1 : 1'b0;"
+    ],
+    "affected_signals": [
+      "s_axis_tready_1",
+      "s_axis_tready_2",
+      "s_axis_tready_3",
+      "curr_state",
+      "next_state"
+    ],
+    "proposed_fix": "Remove the s_axis_tready_X checks from the next-state conditions and rely solely on s_axis_tlast_X or an internal transfer-complete flag. This eliminates the feedback loop and ensures deterministic state transitions.",
+    "confidence": 0.65
+  }
+}

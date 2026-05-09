@@ -1,0 +1,1166 @@
+Running harness with project name: cvdp_copilot_16qam_mapper_1_1778039491
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collected 15 items
+
+../../src/test_runner.py      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039492
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    30.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 2: I mismatch: DUT=[3, -4, -3], Expected=[3, 0, -3]
+                                                        assert [3, -4, -3] == [3, 0, -3]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 2: I mismatch: DUT=[3, -4, -3], Expected=[3, 0, -3]
+                                                        assert [3, -4, -3] == [3, 0, -3]
+    30.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    30.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          30.00           0.00      36398.36  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  30.00           0.00       6453.44  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=2
+[DEBUG] Parameters: {'N': 2}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039492
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, -3, -3, -3] == [-3, -3, -3, -3, -3, -3]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, -3, -3, -3] == [-3, -3, -3, -3, -3, -3]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00      12350.72  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2172.20  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039492
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00       8960.27  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2085.27  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=12
+[DEBUG] Parameters: {'N': 12}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039493
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00      11166.94  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2159.90  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039493
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00       9364.38  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2058.35  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=10
+[DEBUG] Parameters: {'N': 10}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039493
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    30.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 2: I mismatch: DUT=[1, 3, -3], Expected=[1, -1, -3]
+                                                        assert [1, 3, -3] == [1, -1, -3]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 2: I mismatch: DUT=[1, 3, -3], Expected=[1, -1, -3]
+                                                        assert [1, 3, -3] == [1, -1, -3]
+    30.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    30.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          30.00           0.00      35295.69  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  30.00           0.00       6443.19  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=2
+[DEBUG] Parameters: {'N': 2}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039493
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, -3, -3, -3] == [-3, -3, -3, -3, -3, -3]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, -3, -3, -3] == [-3, -3, -3, -3, -3, -3]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00      12865.96  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2171.30  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039494
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00       8907.00  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2062.81  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=12
+[DEBUG] Parameters: {'N': 12}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039494
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00      11332.89  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2173.33  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039494
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00       9688.85  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2108.96  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=10
+[DEBUG] Parameters: {'N': 10}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039495
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    40.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 3: Q mismatch: DUT=[1, 3, -3], Expected=[1, -1, -3]
+                                                        assert [1, 3, -3] == [1, -1, -3]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 71, in test_qam16_mapper_interpolated
+                                                            assert dut_Q == expected_Q, f"Test {test_num}: Q mismatch: DUT={dut_Q}, Expected={expected_Q}"
+                                                        AssertionError: Test 3: Q mismatch: DUT=[1, 3, -3], Expected=[1, -1, -3]
+                                                        assert [1, 3, -3] == [1, -1, -3]
+    40.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    40.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          40.00           0.00      43873.47  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  40.00           0.00       8394.90  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=2
+[DEBUG] Parameters: {'N': 2}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039495
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, -3, -3, -3] == [-3, -3, -3, -3, -3, -3]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, -3, -3, -3] == [-3, -3, -3, -3, -3, -3]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00      12347.08  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2161.90  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=4
+[DEBUG] Parameters: {'N': 4}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039495
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00       8890.00  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2027.21  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=12
+[DEBUG] Parameters: {'N': 12}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039495
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00      11567.30  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2206.25  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=6
+[DEBUG] Parameters: {'N': 6}
+F     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039496
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_qam16_mapper_interpolated.test_qam16_mapper_interpolated (1/1)
+                                                            Test the 16-QAM mapper with interpolation.
+    10.00ns WARNING  py.warnings                        /src/harness_library.py:17: DeprecationWarning: `logic_array.signed_integer` getter is deprecated. Use `logic_array.to_signed()` instead.
+                                                          unsigned_value = (signal.value.signed_integer >> (width * i)) & ((1 << width) - 1)
+    10.00ns WARNING  ..d.test_qam16_mapper_interpolated Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_qam16_mapper_interpolated.py", line 70, in test_qam16_mapper_interpolated
+                                                            assert dut_I == expected_I, f"Test {test_num}: I mismatch: DUT={dut_I}, Expected={expected_I}"
+                                                        AssertionError: Test 0: I mismatch: DUT=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3], Expected=[-3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
+                                                        assert [0, 0, 0, 0, 0, 0, ...] == [-3, -3, -3, -3, -3, -3, ...]
+    10.00ns WARNING  cocotb.regression                  test_qam16_mapper_interpolated.test_qam16_mapper_interpolated failed
+    10.00ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_qam16_mapper_interpolated.test_qam16_mapper_interpolated   FAIL          10.00           0.00       9513.05  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                                                  10.00           0.00       2087.65  **
+                                                        ***********************************************************************************************************************
+[DEBUG] Running simulation with N=10
+[DEBUG] Parameters: {'N': 10}
+F
+
+=================================== FAILURES ===================================
+________________________________ test_data[0-2] ________________________________
+
+N = 2, test = 0
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 2
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=2 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[0-4] ________________________________
+
+N = 4, test = 0
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 4
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=4 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[0-12] ________________________________
+
+N = 12, test = 0
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 12
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=12 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[0-6] ________________________________
+
+N = 6, test = 0
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 6
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=6 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[0-10] ________________________________
+
+N = 10, test = 0
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 10
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=10 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[1-2] ________________________________
+
+N = 2, test = 1
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 2
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=2 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[1-4] ________________________________
+
+N = 4, test = 1
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 4
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=4 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[1-12] ________________________________
+
+N = 12, test = 1
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 12
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=12 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[1-6] ________________________________
+
+N = 6, test = 1
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 6
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=6 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[1-10] ________________________________
+
+N = 10, test = 1
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 10
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=10 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[2-2] ________________________________
+
+N = 2, test = 2
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 2
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=2 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[2-4] ________________________________
+
+N = 4, test = 2
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 4
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=4 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[2-12] ________________________________
+
+N = 12, test = 2
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 12
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=12 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+________________________________ test_data[2-6] ________________________________
+
+N = 6, test = 2
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 6
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=6 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_______________________________ test_data[2-10] ________________________________
+
+N = 10, test = 2
+
+    @pytest.mark.parametrize("N", random_n_values)
+    @pytest.mark.parametrize("test", range(3))
+    def test_data(N, test):
+        # Run the simulation with specified parameters
+>       runner(N=N)
+
+/src/test_runner.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+N = 10
+
+    def runner(N: int = 4):
+        # Simulation parameters
+        parameter = {
+            "N": N
+        }
+    
+        # Debug information
+        print(f"[DEBUG] Running simulation with N={N}")
+        print(f"[DEBUG] Parameters: {parameter}")
+    
+        # Configure and run the simulation
+        sim_runner = get_runner(sim)
+        sim_runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log"
+        )
+    
+        # Run the test
+>       sim_runner.test(hdl_toplevel=toplevel, test_module=module, waves=True)
+E       SystemExit: 1
+
+/src/test_runner.py:38: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s qam16_mapper_interpolated -g2012 -Pqam16_mapper_interpolated.N=10 -f /code/rundir/sim_build/cmds.f /code/rtl/16qam_mapper.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-zhnrpxex'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/lastfailed: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-k4r8yok9'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-pt0s81ab'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_data[0-2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-4] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-12] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-6] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[0-10] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-4] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-12] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-6] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[1-10] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-2] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-4] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-12] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-6] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_data[2-10] - SystemExit: 1
+======================== 15 failed, 3 warnings in 4.15s ========================
+Cleaning up Docker resources...

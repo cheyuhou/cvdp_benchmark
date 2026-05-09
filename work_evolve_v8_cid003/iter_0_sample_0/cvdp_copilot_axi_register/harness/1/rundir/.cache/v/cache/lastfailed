@@ -1,0 +1,14 @@
+{
+  "test_runner.py::test_axi_reg[8-12-0]": true,
+  "test_runner.py::test_axi_reg[8-16-0]": true,
+  "test_runner.py::test_axi_reg[8-32-0]": true,
+  "test_runner.py::test_axi_reg[16-12-0]": true,
+  "test_runner.py::test_axi_reg[16-16-0]": true,
+  "test_runner.py::test_axi_reg[16-32-0]": true,
+  "test_runner.py::test_axi_reg[32-12-0]": true,
+  "test_runner.py::test_axi_reg[32-16-0]": true,
+  "test_runner.py::test_axi_reg[32-32-0]": true,
+  "test_runner.py::test_axi_reg[64-12-0]": true,
+  "test_runner.py::test_axi_reg[64-16-0]": true,
+  "test_runner.py::test_axi_reg[64-32-0]": true
+}

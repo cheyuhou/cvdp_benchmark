@@ -1,0 +1,863 @@
+Running harness with project name: cvdp_copilot_axi_register_1_1778043258
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 12 items
+
+../../src/test_runner.py::test_axi_reg[8-12-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043259
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x89, strb=0b1
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x0 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x89, Got: 0x0
+                                                        assert 0 == 137
+                                                         +  where 0 = int(LogicArray('00000000', Range(7, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x89, Got: 0x0
+                                                        assert 0 == 137
+                                                         +  where 0 = int(LogicArray('00000000', Range(7, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      87183.19  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.01      21131.93  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 12, 'DATA_WIDTH': 8}
+FAILED
+../../src/test_runner.py::test_axi_reg[8-16-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043259
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x89, strb=0b1
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x0 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x89, Got: 0x0
+                                                        assert 0 == 137
+                                                         +  where 0 = int(LogicArray('00000000', Range(7, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x89, Got: 0x0
+                                                        assert 0 == 137
+                                                         +  where 0 = int(LogicArray('00000000', Range(7, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      88674.50  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.01      21795.80  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 16, 'DATA_WIDTH': 8}
+FAILED
+../../src/test_runner.py::test_axi_reg[8-32-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043260
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x48, strb=0b1
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x0 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x48, Got: 0x0
+                                                        assert 0 == 72
+                                                         +  where 0 = int(LogicArray('00000000', Range(7, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x48, Got: 0x0
+                                                        assert 0 == 72
+                                                         +  where 0 = int(LogicArray('00000000', Range(7, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      87117.34  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.00      22136.72  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 32, 'DATA_WIDTH': 8}
+FAILED
+../../src/test_runner.py::test_axi_reg[16-12-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043260
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x4831, strb=0b11
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x0 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x4831, Got: 0x0
+                                                        assert 0 == 18481
+                                                         +  where 0 = int(LogicArray('0000000000000000', Range(15, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x4831, Got: 0x0
+                                                        assert 0 == 18481
+                                                         +  where 0 = int(LogicArray('0000000000000000', Range(15, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      88318.04  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.00      22689.75  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 12, 'DATA_WIDTH': 16}
+FAILED
+../../src/test_runner.py::test_axi_reg[16-16-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043260
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x4831, strb=0b11
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x0 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x4831, Got: 0x0
+                                                        assert 0 == 18481
+                                                         +  where 0 = int(LogicArray('0000000000000000', Range(15, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x4831, Got: 0x0
+                                                        assert 0 == 18481
+                                                         +  where 0 = int(LogicArray('0000000000000000', Range(15, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      88982.34  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.01      21996.35  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 16, 'DATA_WIDTH': 16}
+FAILED
+../../src/test_runner.py::test_axi_reg[16-32-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043260
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x4831, strb=0b11
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x0 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x4831, Got: 0x0
+                                                        assert 0 == 18481
+                                                         +  where 0 = int(LogicArray('0000000000000000', Range(15, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x4831, Got: 0x0
+                                                        assert 0 == 18481
+                                                         +  where 0 = int(LogicArray('0000000000000000', Range(15, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      85360.49  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.00      22081.62  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 32, 'DATA_WIDTH': 16}
+FAILED
+../../src/test_runner.py::test_axi_reg[32-12-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043261
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x48f6b705, strb=0b1111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x2000000 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x48f6b705, Got: 0x2000000
+                                                        assert 33554432 == 440069
+                                                         +  where 33554432 = int(LogicArray('00000010000000000000000000000000', Range(31, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x48f6b705, Got: 0x2000000
+                                                        assert 33554432 == 440069
+                                                         +  where 33554432 = int(LogicArray('00000010000000000000000000000000', Range(31, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      87414.44  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.00      22061.56  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 12, 'DATA_WIDTH': 32}
+FAILED
+../../src/test_runner.py::test_axi_reg[32-16-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043261
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x48f6b705, strb=0b1111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x2000000 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x48f6b705, Got: 0x2000000
+                                                        assert 33554432 == 440069
+                                                         +  where 33554432 = int(LogicArray('00000010000000000000000000000000', Range(31, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x48f6b705, Got: 0x2000000
+                                                        assert 33554432 == 440069
+                                                         +  where 33554432 = int(LogicArray('00000010000000000000000000000000', Range(31, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      88267.35  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.00      22694.22  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 16, 'DATA_WIDTH': 32}
+FAILED
+../../src/test_runner.py::test_axi_reg[32-32-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043261
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x48f6b705, strb=0b1111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x2000000 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x48f6b705, Got: 0x2000000
+                                                        assert 33554432 == 440069
+                                                         +  where 33554432 = int(LogicArray('00000010000000000000000000000000', Range(31, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x48f6b705, Got: 0x2000000
+                                                        assert 33554432 == 440069
+                                                         +  where 33554432 = int(LogicArray('00000010000000000000000000000000', Range(31, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      88334.95  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.00      22357.70  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 32, 'DATA_WIDTH': 32}
+FAILED
+../../src/test_runner.py::test_axi_reg[64-12-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043262
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x80ddec2809fa89f9, strb=0b11111111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x4000000 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x80ddec2809fa89f9, Got: 0x4000000
+                                                        assert 67108864 == 690681
+                                                         +  where 67108864 = int(LogicArray('0000000000000000000000000000000000000100000000000000000000000000', Range(63, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x80ddec2809fa89f9, Got: 0x4000000
+                                                        assert 67108864 == 690681
+                                                         +  where 67108864 = int(LogicArray('0000000000000000000000000000000000000100000000000000000000000000', Range(63, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      85884.85  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.01      21731.12  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 12, 'DATA_WIDTH': 64}
+FAILED
+../../src/test_runner.py::test_axi_reg[64-16-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043262
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x80ddec2809fa89f9, strb=0b11111111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x4000000 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x80ddec2809fa89f9, Got: 0x4000000
+                                                        assert 67108864 == 690681
+                                                         +  where 67108864 = int(LogicArray('0000000000000000000000000000000000000100000000000000000000000000', Range(63, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x80ddec2809fa89f9, Got: 0x4000000
+                                                        assert 67108864 == 690681
+                                                         +  where 67108864 = int(LogicArray('0000000000000000000000000000000000000100000000000000000000000000', Range(63, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      85328.91  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.01      21559.51  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 16, 'DATA_WIDTH': 64}
+FAILED
+../../src/test_runner.py::test_axi_reg[64-32-0]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043262
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_axi_register.test_axi_register (1/1)
+    40.00ns INFO     cocotb.axi_register                Write operation succeeded: addr=0x100, data=0x80ddec2809fa89f9, strb=0b11111111
+   110.00ns INFO     cocotb.axi_register                Test 0: Read Data: 0x4000000 from Address: 0x100
+   110.00ns WARNING  ..t_axi_register.test_axi_register Test 0: Mismatch! Expected: 0x80ddec2809fa89f9, Got: 0x4000000
+                                                        assert 67108864 == 690681
+                                                         +  where 67108864 = int(LogicArray('0000000000000000000000000000000000000100000000000000000000000000', Range(63, 'downto', 0)))
+                                                        Traceback (most recent call last):
+                                                          File "/src/test_axi_register.py", line 206, in test_axi_register
+                                                            assert (
+                                                        AssertionError: Test 0: Mismatch! Expected: 0x80ddec2809fa89f9, Got: 0x4000000
+                                                        assert 67108864 == 690681
+                                                         +  where 67108864 = int(LogicArray('0000000000000000000000000000000000000100000000000000000000000000', Range(63, 'downto', 0)))
+   110.00ns WARNING  cocotb.regression                  test_axi_register.test_axi_register failed
+   110.00ns INFO     cocotb.regression                  *********************************************************************************************
+                                                        ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************
+                                                        ** test_axi_register.test_axi_register   FAIL         110.00           0.00      78907.72  **
+                                                        *********************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                       110.00           0.01      21271.25  **
+                                                        *********************************************************************************************
+[DEBUG] Parameters: {'ADDR_WIDTH': 32, 'DATA_WIDTH': 64}
+FAILED
+
+=================================== FAILURES ===================================
+_____________________________ test_axi_reg[8-12-0] _____________________________
+
+test = 0, ADDR_WIDTH = 12, DATA_WIDTH = 8
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 12, DATA_WIDTH = 8
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=12 -Paxi_register.DATA_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_axi_reg[8-16-0] _____________________________
+
+test = 0, ADDR_WIDTH = 16, DATA_WIDTH = 8
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 16, DATA_WIDTH = 8
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=16 -Paxi_register.DATA_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_____________________________ test_axi_reg[8-32-0] _____________________________
+
+test = 0, ADDR_WIDTH = 32, DATA_WIDTH = 8
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 32, DATA_WIDTH = 8
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=32 -Paxi_register.DATA_WIDTH=8 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[16-12-0] _____________________________
+
+test = 0, ADDR_WIDTH = 12, DATA_WIDTH = 16
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 12, DATA_WIDTH = 16
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=12 -Paxi_register.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[16-16-0] _____________________________
+
+test = 0, ADDR_WIDTH = 16, DATA_WIDTH = 16
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 16, DATA_WIDTH = 16
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=16 -Paxi_register.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[16-32-0] _____________________________
+
+test = 0, ADDR_WIDTH = 32, DATA_WIDTH = 16
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 32, DATA_WIDTH = 16
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=32 -Paxi_register.DATA_WIDTH=16 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[32-12-0] _____________________________
+
+test = 0, ADDR_WIDTH = 12, DATA_WIDTH = 32
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 12, DATA_WIDTH = 32
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=12 -Paxi_register.DATA_WIDTH=32 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[32-16-0] _____________________________
+
+test = 0, ADDR_WIDTH = 16, DATA_WIDTH = 32
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 16, DATA_WIDTH = 32
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=16 -Paxi_register.DATA_WIDTH=32 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[32-32-0] _____________________________
+
+test = 0, ADDR_WIDTH = 32, DATA_WIDTH = 32
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 32, DATA_WIDTH = 32
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=32 -Paxi_register.DATA_WIDTH=32 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[64-12-0] _____________________________
+
+test = 0, ADDR_WIDTH = 12, DATA_WIDTH = 64
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 12, DATA_WIDTH = 64
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=12 -Paxi_register.DATA_WIDTH=64 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[64-16-0] _____________________________
+
+test = 0, ADDR_WIDTH = 16, DATA_WIDTH = 64
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 16, DATA_WIDTH = 64
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=16 -Paxi_register.DATA_WIDTH=64 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+____________________________ test_axi_reg[64-32-0] _____________________________
+
+test = 0, ADDR_WIDTH = 32, DATA_WIDTH = 64
+
+    @pytest.mark.parametrize("test", range(1))
+    @pytest.mark.parametrize("ADDR_WIDTH", [12,16,32])
+    @pytest.mark.parametrize("DATA_WIDTH", [8,16,32,64])
+    def test_axi_reg(test,ADDR_WIDTH,DATA_WIDTH):
+>           runner(DATA_WIDTH = DATA_WIDTH ,ADDR_WIDTH = ADDR_WIDTH )
+
+/src/test_runner.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ADDR_WIDTH = 32, DATA_WIDTH = 64
+
+    def runner(ADDR_WIDTH : int = 32 ,DATA_WIDTH: int= 32 ):
+    
+        parameter = {
+            "ADDR_WIDTH": ADDR_WIDTH,
+            "DATA_WIDTH": DATA_WIDTH
+        }
+        print(f"[DEBUG] Parameters: {parameter}")
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            # Arguments
+            parameters=parameter,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ns"),
+            log_file="sim.log")
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=wave)
+E       SystemExit: 1
+
+/src/test_runner.py:29: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s axi_register -g2012 -Paxi_register.ADDR_WIDTH=32 -Paxi_register.DATA_WIDTH=64 -f /code/rundir/sim_build/cmds.f /code/rtl/axi_register.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_axi_reg[8-12-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[8-16-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[8-32-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[16-12-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[16-16-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[16-32-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[32-12-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[32-16-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[32-32-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[64-12-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[64-16-0] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_axi_reg[64-32-0] - SystemExit: 1
+============================== 12 failed in 3.39s ==============================
+Cleaning up Docker resources...

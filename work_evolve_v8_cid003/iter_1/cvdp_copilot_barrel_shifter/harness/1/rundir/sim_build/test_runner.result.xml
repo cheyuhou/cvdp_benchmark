@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778043385" />
+    <testcase name="test_barrel_1" classname="test_barrel_shifter" file="/src/test_barrel_shifter.py" lineno="11" time="0.00021696090698242188" sim_time_ns="10.0" ratio_time="46091.25274725275" />
+    <testcase name="test_barrel_2" classname="test_barrel_shifter" file="/src/test_barrel_shifter.py" lineno="30" time="6.747245788574219e-05" sim_time_ns="10.0" ratio_time="148208.6219081272" />
+    <testcase name="test_barrel_3" classname="test_barrel_shifter" file="/src/test_barrel_shifter.py" lineno="50" time="5.459785461425781e-05" sim_time_ns="10.0" ratio_time="183157.37991266375" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,30 @@
+{
+  "primary": {
+    "root_cause": "The TOTAL_SPACES parameter is declared after the port list where it is used for width calculation, causing a compilation failure.",
+    "evidence": [
+      "output logic [$clog2(TOTAL_SPACES)-1:0] available_spaces,",
+      "parameter TOTAL_SPACES = 12;"
+    ],
+    "affected_signals": [
+      "TOTAL_SPACES",
+      "available_spaces",
+      "count_car"
+    ],
+    "proposed_fix": "Relocate the parameter and localparam declarations to the top of the module body, immediately following the port list, to ensure they are defined before port width evaluation.",
+    "confidence": 0.95
+  },
+  "alternative": {
+    "root_cause": "External sensor inputs are sampled directly in combinational logic without synchronization, risking metastability and incorrect FSM transitions.",
+    "evidence": [
+      "if (vehicle_entry_sensor) begin",
+      "if (vehicle_exit_sensor) begin"
+    ],
+    "affected_signals": [
+      "vehicle_entry_sensor",
+      "vehicle_exit_sensor",
+      "current_state"
+    ],
+    "proposed_fix": "Insert a two-flip-flop synchronizer chain for both sensor inputs before they are evaluated in the combinational next-state logic.",
+    "confidence": 0.6
+  }
+}

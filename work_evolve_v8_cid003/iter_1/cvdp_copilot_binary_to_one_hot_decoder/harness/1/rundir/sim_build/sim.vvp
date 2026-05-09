@@ -1,0 +1,43 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x60bfa3aa45c0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x60bfa3aa4750 .scope module, "binary_to_one_hot_decoder" "binary_to_one_hot_decoder" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 5 "binary_in";
+    .port_info 1 /OUTPUT 32 "one_hot_out";
+P_0x60bfa3ac9960 .param/l "BINARY_WIDTH" 0 3 2, +C4<00000000000000000000000000000101>;
+P_0x60bfa3ac99a0 .param/l "OUTPUT_WIDTH" 0 3 3, +C4<00000000000000000000000000100000>;
+o0x7c9431094018 .functor BUFZ 5, c4<zzzzz>; HiZ drive
+v0x60bfa3ab57c0_0 .net "binary_in", 4 0, o0x7c9431094018;  0 drivers
+v0x60bfa3aecf00_0 .var "one_hot_out", 31 0;
+E_0x60bfa3ab85e0 .event anyedge, v0x60bfa3ab57c0_0;
+    .scope S_0x60bfa3aa4750;
+T_0 ;
+    %wait E_0x60bfa3ab85e0;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x60bfa3aecf00_0, 0, 32;
+    %load/vec4 v0x60bfa3ab57c0_0;
+    %pad/u 32;
+    %cmpi/u 32, 0, 32;
+    %jmp/0xz  T_0.0, 5;
+    %pushi/vec4 1, 0, 1;
+    %ix/getv 4, v0x60bfa3ab57c0_0;
+    %store/vec4 v0x60bfa3aecf00_0, 4, 1;
+T_0.0 ;
+    %jmp T_0;
+    .thread T_0, $push;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/binary_to_one_hot_decoder.v";

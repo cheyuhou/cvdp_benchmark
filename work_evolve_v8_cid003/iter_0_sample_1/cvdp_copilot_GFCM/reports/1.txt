@@ -1,0 +1,243 @@
+Running harness with project name: cvdp_copilot_gfcm_1_1778039499
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 1 item
+
+../../src/test_runner.py::test_gfcm      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039500
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_glitch_free_mux.test_glitch_free_mux (1/1)
+     0.00ns WARNING  py.warnings                        /src/test_glitch_free_mux.py:11: DeprecationWarning: Use ``cocotb.start_soon`` instead.
+                                                          await cocotb.start(util.phase_shifted_clock(dut.clk1, clk1_period, 0, "ns"))
+     0.00ns INFO     cocotb.glitch_free_mux             clk1 STARTED, period: 12, phase: 0
+     0.00ns WARNING  py.warnings                        /src/test_glitch_free_mux.py:16: DeprecationWarning: Use ``cocotb.start_soon`` instead.
+                                                          await cocotb.start(util.phase_shifted_clock(dut.clk2,clk2_period,clk2_phase, "ns"))
+     0.00ns INFO     cocotb.glitch_free_mux             clk2 STARTED, period: 72, phase: 16
+    18.00ns INFO     cocotb.glitch_free_mux             DUT IS OUT OF RESET
+    48.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+    48.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+    54.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+   124.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+   204.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+   204.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+   268.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+   270.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+   492.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+   492.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+   498.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+   556.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+   972.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+   972.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+   988.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+   990.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  1224.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  1224.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  1230.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  1276.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  1488.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  1488.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  1492.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  1494.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  1716.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  1716.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  1722.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  1780.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  2124.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  2124.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  2140.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  2142.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  2628.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  2628.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  2634.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  2644.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  3108.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  3108.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  3148.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  3150.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  3468.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  3468.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  3474.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  3508.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  3864.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  3864.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  3868.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  3870.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  4080.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  4080.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  4086.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  4156.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  4584.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  4584.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  4588.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  4590.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  4980.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  4980.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  4986.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  5020.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  5220.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  5220.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  5236.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  5238.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  5712.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  5712.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  5718.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  5740.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  5856.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  5856.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  5884.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  5886.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  6396.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  6396.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  6402.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  6460.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  6768.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  6768.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  6820.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  6822.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  7092.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  7092.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  7098.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  7108.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  7320.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  7320.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  7324.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  7326.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  7800.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  7800.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  7806.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  7828.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  8256.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  8256.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  8260.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  8262.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  8772.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  8772.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  8778.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  8836.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  8916.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  8916.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  8980.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  8982.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  9480.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  9480.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  9486.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  9556.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  9660.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  9660.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+  9700.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+  9702.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  9864.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+  9864.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+  9870.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+  9916.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 10212.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 10212.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+ 10276.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 10278.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 10740.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 10740.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+ 10746.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 10780.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 11040.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 11040.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+ 11068.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 11070.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 11184.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 11184.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+ 11190.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 11212.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 11700.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 11700.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+ 11716.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 11718.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 12156.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 12156.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+ 12162.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 12220.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 12312.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 12312.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+ 12364.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 12366.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 12576.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 12576.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+ 12582.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 12652.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 13008.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 13008.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+ 13012.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 13014.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 13236.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 13236.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+ 13242.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 13300.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 13560.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 13560.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+ 13588.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 13590.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 13860.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 13860.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+ 13866.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 13876.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 14292.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 14292.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+ 14308.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 14310.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 14652.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 14652.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+ 14658.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 14668.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 14820.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 14820.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+ 14884.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 14886.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 15312.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 15312.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+ 15318.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 15388.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 15576.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 15576.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+ 15604.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 15606.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 16092.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 16092.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+ 16098.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 16108.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 16260.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 16260.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+ 16324.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 16326.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 16404.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 16404.00ns INFO     cocotb.glitch_free_mux             SEL 0->1
+ 16410.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 16468.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 16752.00ns INFO     cocotb.glitch_free_mux             SEL EDGE
+ 16752.00ns INFO     cocotb.glitch_free_mux             SEL 1->0
+ 16756.00ns INFO     cocotb.glitch_free_mux             CLK2 POSEEDGE
+ 16758.00ns INFO     cocotb.glitch_free_mux             CLK1 POSEEDGE
+ 17150.00ns INFO     cocotb.regression                  test_glitch_free_mux.test_glitch_free_mux passed
+ 17150.00ns INFO     cocotb.regression                  ***************************************************************************************************
+                                                        ** TEST                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************
+                                                        ** test_glitch_free_mux.test_glitch_free_mux   PASS       17150.00           0.14     125640.26  **
+                                                        ***************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                           17150.00           0.14     125080.97  **
+                                                        ***************************************************************************************************
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-essru6e8'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-zagi_8bl'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 2 warnings in 0.43s =========================
+Cleaning up Docker resources...

@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778039500" />
+    <testcase name="test_glitch_free_mux" classname="test_glitch_free_mux" file="/src/test_glitch_free_mux.py" lineno="7" time="0.13650083541870117" sim_time_ns="17150.0" ratio_time="125640.25668703255" />
+  </testsuite>
+</testsuites>

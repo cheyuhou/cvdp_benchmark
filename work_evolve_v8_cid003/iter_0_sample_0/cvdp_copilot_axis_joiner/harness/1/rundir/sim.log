@@ -1,0 +1,27 @@
+/code/rtl/axis_joiner.sv:101: error: 'm_axis_tdata' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:28:      : 'm_axis_tdata' is declared here as a wire.
+/code/rtl/axis_joiner.sv:102: error: 'm_axis_tvalid' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:29:      : 'm_axis_tvalid' is declared here as a wire.
+/code/rtl/axis_joiner.sv:103: error: 'm_axis_tlast' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:31:      : 'm_axis_tlast' is declared here as a wire.
+/code/rtl/axis_joiner.sv:104: error: 'm_axis_tuser' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:32:      : 'm_axis_tuser' is declared here as a wire.
+/code/rtl/axis_joiner.sv:112: error: 'm_axis_tdata' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:28:      : 'm_axis_tdata' is declared here as a wire.
+/code/rtl/axis_joiner.sv:113: error: 'm_axis_tvalid' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:29:      : 'm_axis_tvalid' is declared here as a wire.
+/code/rtl/axis_joiner.sv:114: error: 'm_axis_tlast' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:31:      : 'm_axis_tlast' is declared here as a wire.
+/code/rtl/axis_joiner.sv:115: error: 'm_axis_tuser' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:32:      : 'm_axis_tuser' is declared here as a wire.
+/code/rtl/axis_joiner.sv:120: error: 'm_axis_tdata' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:28:      : 'm_axis_tdata' is declared here as a wire.
+/code/rtl/axis_joiner.sv:121: error: 'm_axis_tvalid' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:29:      : 'm_axis_tvalid' is declared here as a wire.
+/code/rtl/axis_joiner.sv:122: error: 'm_axis_tlast' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:31:      : 'm_axis_tlast' is declared here as a wire.
+/code/rtl/axis_joiner.sv:123: error: 'm_axis_tuser' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:32:      : 'm_axis_tuser' is declared here as a wire.
+/code/rtl/axis_joiner.sv:126: error: 'm_axis_tvalid' is not a valid l-value for a procedural assignment.
+/code/rtl/axis_joiner.sv:29:      : 'm_axis_tvalid' is declared here as a wire.
+13 error(s) during elaboration.

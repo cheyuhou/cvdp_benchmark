@@ -1,0 +1,41 @@
+[
+  {
+    "iteration": 0,
+    "submitted_pass": 10,
+    "best_pass": 10,
+    "total": 20,
+    "best_pass_rate": 0.5,
+    "fixed_this_iter": [],
+    "fixed_via_alternative": [],
+    "rejected_all": [],
+    "skipped_low_confidence": []
+  },
+  {
+    "iteration": 1,
+    "submitted_pass": 11,
+    "best_pass": 11,
+    "total": 20,
+    "best_pass_rate": 0.55,
+    "fixed_this_iter": [
+      "cvdp_copilot_apb_dsp_unit_0001"
+    ],
+    "fixed_via_alternative": [],
+    "rejected_all": [],
+    "skipped_low_confidence": []
+  },
+  {
+    "iteration": 2,
+    "submitted_pass": 12,
+    "best_pass": 12,
+    "total": 20,
+    "best_pass_rate": 0.6,
+    "fixed_this_iter": [
+      "cvdp_copilot_axi_stream_upscale_0001"
+    ],
+    "fixed_via_alternative": [],
+    "rejected_all": [],
+    "skipped_low_confidence": [
+      "cvdp_copilot_apb_history_shift_register_0001"
+    ]
+  }
+]

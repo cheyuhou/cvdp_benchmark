@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1777977971" />
+    <testcase name="test_car_parking_system" classname="car_parking_control" file="/src/car_parking_control.py" lineno="144" time="0.001094818115234375" sim_time_ns="185.0" ratio_time="168977.83972125436">
+      <failure error_type="AssertionError" error_msg="Count car did not increment as expected&#10;assert LogicArray('0000', Range(3, 'downto', 0)) == 1&#10; +  where LogicArray('0000', Range(3, 'downto', 0)) = LogicArrayObject(car_parking_system.count_car).value&#10; +    where LogicArrayObject(car_parking_system.count_car) = HierarchyObject(car_parking_system).count_car" />
+    </testcase>
+  </testsuite>
+</testsuites>

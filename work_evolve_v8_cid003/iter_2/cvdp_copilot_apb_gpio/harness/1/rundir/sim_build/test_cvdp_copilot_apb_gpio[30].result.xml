@@ -1,0 +1,25 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778045757" />
+    <testcase name="test1_write_read_data_output" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="69" time="0.0006310939788818359" sim_time_ns="140.0" ratio_time="221837.00793350962" />
+    <testcase name="test2_write_read_output_enable" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="110" time="0.0004630088806152344" sim_time_ns="159.99999999999997" ratio_time="345565.72605561273" />
+    <testcase name="test3_gpio_input_synchronization" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="185" time="0.0004973411560058594" sim_time_ns="219.99999999999994" ratio_time="442352.2914669222" />
+    <testcase name="test4_configure_level_triggered_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="242" time="0.0010218620300292969" sim_time_ns="340.0" ratio_time="332725.9356042931">
+      <failure error_type="ValueError" error_msg="Cannot convert Logic('X') to int" />
+    </testcase>
+    <testcase name="test5_clear_level_triggered_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="312" time="0.00099945068359375" sim_time_ns="399.9999999999999" ratio_time="400219.8473282442">
+      <failure error_type="ValueError" error_msg="Cannot convert Logic('X') to int" />
+    </testcase>
+    <testcase name="test6_configure_edge_triggered_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="389" time="0.0012693405151367188" sim_time_ns="540.0" ratio_time="425417.7610818933">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Interrupt State Register mismatch (Edge-Triggered). Expected: 0x3FFF5555, Got: 0x00000000&#10;assert False" />
+    </testcase>
+    <testcase name="test7_mask_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="476" time="0.001043081283569336" sim_time_ns="459.9999999999998" ratio_time="441001.1062857141">
+      <failure error_type="ValueError" error_msg="Cannot convert Logic('X') to int" />
+    </testcase>
+    <testcase name="test8_invalid_address_access" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="578" time="0.0003101825714111328" sim_time_ns="120.0" ratio_time="386868.93159108376" />
+    <testcase name="test9_multiple_simultaneous_interrupts" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="625" time="0.0010097026824951172" sim_time_ns="440.0" ratio_time="435771.8441558442">
+      <failure error_type="AssertionError" error_msg="Some test cases failed. Check the log for details:&#10;  FAIL: Not all interrupts captured. Expected: 0x000000FF, Got: 0x00000000&#10;assert False" />
+    </testcase>
+    <testcase name="test10_reset_conditions" classname="test_gpio_harness" file="/src/test_gpio_harness.py" lineno="695" time="0.0008883476257324219" sim_time_ns="440.0" ratio_time="495301.59957058507" />
+  </testsuite>
+</testsuites>

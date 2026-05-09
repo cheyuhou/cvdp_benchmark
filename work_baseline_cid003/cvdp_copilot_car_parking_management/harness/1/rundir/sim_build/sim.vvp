@@ -1,0 +1,339 @@
+#! /usr/local/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x65188b799f50 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x65188b7504e0 .scope module, "car_parking_system" "car_parking_system" 3 3;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "vehicle_entry_sensor";
+    .port_info 3 /INPUT 1 "vehicle_exit_sensor";
+    .port_info 4 /OUTPUT 4 "available_spaces";
+    .port_info 5 /OUTPUT 4 "count_car";
+    .port_info 6 /OUTPUT 1 "led_status";
+    .port_info 7 /OUTPUT 7 "seven_seg_display_available_tens";
+    .port_info 8 /OUTPUT 7 "seven_seg_display_available_units";
+    .port_info 9 /OUTPUT 7 "seven_seg_display_count_tens";
+    .port_info 10 /OUTPUT 7 "seven_seg_display_count_units";
+P_0x65188b7510a0 .param/l "TOTAL_SPACES" 0 3 5, +C4<00000000000000000000000000001001>;
+enum0x65188b764650 .enum4 (2)
+   "Idle" 2'b00,
+   "Entry" 2'b01,
+   "Exit" 2'b10,
+   "Full" 2'b11
+ ;
+v0x65188b7c1580_0 .net *"_ivl_0", 31 0, L_0x65188b7c36f0;  1 drivers
+v0x65188b7c1680_0 .net *"_ivl_10", 31 0, L_0x65188b7d3a20;  1 drivers
+L_0x76de962950a8 .functor BUFT 1, C4<0000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x65188b7c1760_0 .net *"_ivl_13", 27 0, L_0x76de962950a8;  1 drivers
+L_0x76de962950f0 .functor BUFT 1, C4<00000000000000000000000000001010>, C4<0>, C4<0>, C4<0>;
+v0x65188b7c1820_0 .net/2u *"_ivl_14", 31 0, L_0x76de962950f0;  1 drivers
+v0x65188b7c1900_0 .net *"_ivl_16", 31 0, L_0x65188b7d3b90;  1 drivers
+v0x65188b7c1a30_0 .net *"_ivl_20", 31 0, L_0x65188b7d3e30;  1 drivers
+L_0x76de96295138 .functor BUFT 1, C4<0000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x65188b7c1b10_0 .net *"_ivl_23", 27 0, L_0x76de96295138;  1 drivers
+L_0x76de96295180 .functor BUFT 1, C4<00000000000000000000000000001010>, C4<0>, C4<0>, C4<0>;
+v0x65188b7c1bf0_0 .net/2u *"_ivl_24", 31 0, L_0x76de96295180;  1 drivers
+v0x65188b7c1cd0_0 .net *"_ivl_26", 31 0, L_0x65188b7d3f70;  1 drivers
+L_0x76de96295018 .functor BUFT 1, C4<0000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x65188b7c1db0_0 .net *"_ivl_3", 27 0, L_0x76de96295018;  1 drivers
+v0x65188b7c1e90_0 .net *"_ivl_30", 31 0, L_0x65188b7d41f0;  1 drivers
+L_0x76de962951c8 .functor BUFT 1, C4<0000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x65188b7c1f70_0 .net *"_ivl_33", 27 0, L_0x76de962951c8;  1 drivers
+L_0x76de96295210 .functor BUFT 1, C4<00000000000000000000000000001010>, C4<0>, C4<0>, C4<0>;
+v0x65188b7c2050_0 .net/2u *"_ivl_34", 31 0, L_0x76de96295210;  1 drivers
+v0x65188b7c2130_0 .net *"_ivl_36", 31 0, L_0x65188b7d4340;  1 drivers
+L_0x76de96295060 .functor BUFT 1, C4<00000000000000000000000000001010>, C4<0>, C4<0>, C4<0>;
+v0x65188b7c2210_0 .net/2u *"_ivl_4", 31 0, L_0x76de96295060;  1 drivers
+v0x65188b7c22f0_0 .net *"_ivl_6", 31 0, L_0x65188b7d37c0;  1 drivers
+v0x65188b7c23d0_0 .net "avail_tens", 3 0, L_0x65188b7d3930;  1 drivers
+v0x65188b7c25c0_0 .net "avail_units", 3 0, L_0x65188b7d3d00;  1 drivers
+v0x65188b7c26a0_0 .var "available_spaces", 3 0;
+o0x76de962de408 .functor BUFZ 1, c4<z>; HiZ drive
+v0x65188b7c2780_0 .net "clk", 0 0, o0x76de962de408;  0 drivers
+v0x65188b7c2840_0 .var "count_car", 3 0;
+v0x65188b7c2920_0 .net "count_tens", 3 0, L_0x65188b7d4100;  1 drivers
+v0x65188b7c2a00_0 .net "count_units", 3 0, L_0x65188b7d4480;  1 drivers
+v0x65188b7c2ae0_0 .var "current_state", 1 0;
+v0x65188b7c2bc0_0 .var "led_status", 0 0;
+v0x65188b7c2c80_0 .var "next_state", 1 0;
+o0x76de962de558 .functor BUFZ 1, c4<z>; HiZ drive
+v0x65188b7c2d60_0 .net "reset", 0 0, o0x76de962de558;  0 drivers
+v0x65188b7c2e20_0 .net "seven_seg_display_available_tens", 6 0, L_0x65188b7d45e0;  1 drivers
+v0x65188b7c2f00_0 .net "seven_seg_display_available_units", 6 0, L_0x65188b7d46d0;  1 drivers
+v0x65188b7c2fe0_0 .net "seven_seg_display_count_tens", 6 0, L_0x65188b7d4840;  1 drivers
+v0x65188b7c30c0_0 .net "seven_seg_display_count_units", 6 0, L_0x65188b7d4930;  1 drivers
+o0x76de962de648 .functor BUFZ 1, c4<z>; HiZ drive
+v0x65188b7c31a0_0 .net "vehicle_entry_sensor", 0 0, o0x76de962de648;  0 drivers
+o0x76de962de678 .functor BUFZ 1, c4<z>; HiZ drive
+v0x65188b7c3260_0 .net "vehicle_exit_sensor", 0 0, o0x76de962de678;  0 drivers
+E_0x65188b78c230 .event posedge, v0x65188b7c2d60_0, v0x65188b7c2780_0;
+L_0x65188b7c36f0 .concat [ 4 28 0 0], v0x65188b7c26a0_0, L_0x76de96295018;
+L_0x65188b7d37c0 .arith/div 32, L_0x65188b7c36f0, L_0x76de96295060;
+L_0x65188b7d3930 .part L_0x65188b7d37c0, 0, 4;
+L_0x65188b7d3a20 .concat [ 4 28 0 0], v0x65188b7c26a0_0, L_0x76de962950a8;
+L_0x65188b7d3b90 .arith/mod 32, L_0x65188b7d3a20, L_0x76de962950f0;
+L_0x65188b7d3d00 .part L_0x65188b7d3b90, 0, 4;
+L_0x65188b7d3e30 .concat [ 4 28 0 0], v0x65188b7c2840_0, L_0x76de96295138;
+L_0x65188b7d3f70 .arith/div 32, L_0x65188b7d3e30, L_0x76de96295180;
+L_0x65188b7d4100 .part L_0x65188b7d3f70, 0, 4;
+L_0x65188b7d41f0 .concat [ 4 28 0 0], v0x65188b7c2840_0, L_0x76de962951c8;
+L_0x65188b7d4340 .arith/mod 32, L_0x65188b7d41f0, L_0x76de96295210;
+L_0x65188b7d4480 .part L_0x65188b7d4340, 0, 4;
+L_0x65188b7d45e0 .ufunc/vec4 TD_car_parking_system.encode_digit, 7, L_0x65188b7d3930 (v0x65188b750a80_0) S_0x65188b7507e0;
+L_0x65188b7d46d0 .ufunc/vec4 TD_car_parking_system.encode_digit, 7, L_0x65188b7d3d00 (v0x65188b750a80_0) S_0x65188b7507e0;
+L_0x65188b7d4840 .ufunc/vec4 TD_car_parking_system.encode_digit, 7, L_0x65188b7d4100 (v0x65188b750a80_0) S_0x65188b7507e0;
+L_0x65188b7d4930 .ufunc/vec4 TD_car_parking_system.encode_digit, 7, L_0x65188b7d4480 (v0x65188b750a80_0) S_0x65188b7507e0;
+S_0x65188b7507e0 .scope autofunction.vec4.s7, "encode_digit" "encode_digit" 3 33, 3 33 0, S_0x65188b7504e0;
+ .timescale -9 -12;
+v0x65188b750a80_0 .var "digit", 3 0;
+; Variable encode_digit is vec4 return value of scope S_0x65188b7507e0
+TD_car_parking_system.encode_digit ;
+    %load/vec4 v0x65188b750a80_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 4;
+    %cmp/u;
+    %jmp/1 T_0.0, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 4;
+    %cmp/u;
+    %jmp/1 T_0.1, 6;
+    %dup/vec4;
+    %pushi/vec4 2, 0, 4;
+    %cmp/u;
+    %jmp/1 T_0.2, 6;
+    %dup/vec4;
+    %pushi/vec4 3, 0, 4;
+    %cmp/u;
+    %jmp/1 T_0.3, 6;
+    %dup/vec4;
+    %pushi/vec4 4, 0, 4;
+    %cmp/u;
+    %jmp/1 T_0.4, 6;
+    %dup/vec4;
+    %pushi/vec4 5, 0, 4;
+    %cmp/u;
+    %jmp/1 T_0.5, 6;
+    %dup/vec4;
+    %pushi/vec4 6, 0, 4;
+    %cmp/u;
+    %jmp/1 T_0.6, 6;
+    %dup/vec4;
+    %pushi/vec4 7, 0, 4;
+    %cmp/u;
+    %jmp/1 T_0.7, 6;
+    %dup/vec4;
+    %pushi/vec4 8, 0, 4;
+    %cmp/u;
+    %jmp/1 T_0.8, 6;
+    %dup/vec4;
+    %pushi/vec4 9, 0, 4;
+    %cmp/u;
+    %jmp/1 T_0.9, 6;
+    %pushi/vec4 0, 0, 7;
+    %ret/vec4 0, 0, 7;  Assign to encode_digit (store_vec4_to_lval)
+    %jmp T_0.11;
+T_0.0 ;
+    %pushi/vec4 126, 0, 7;
+    %ret/vec4 0, 0, 7;  Assign to encode_digit (store_vec4_to_lval)
+    %jmp T_0.11;
+T_0.1 ;
+    %pushi/vec4 48, 0, 7;
+    %ret/vec4 0, 0, 7;  Assign to encode_digit (store_vec4_to_lval)
+    %jmp T_0.11;
+T_0.2 ;
+    %pushi/vec4 109, 0, 7;
+    %ret/vec4 0, 0, 7;  Assign to encode_digit (store_vec4_to_lval)
+    %jmp T_0.11;
+T_0.3 ;
+    %pushi/vec4 121, 0, 7;
+    %ret/vec4 0, 0, 7;  Assign to encode_digit (store_vec4_to_lval)
+    %jmp T_0.11;
+T_0.4 ;
+    %pushi/vec4 51, 0, 7;
+    %ret/vec4 0, 0, 7;  Assign to encode_digit (store_vec4_to_lval)
+    %jmp T_0.11;
+T_0.5 ;
+    %pushi/vec4 91, 0, 7;
+    %ret/vec4 0, 0, 7;  Assign to encode_digit (store_vec4_to_lval)
+    %jmp T_0.11;
+T_0.6 ;
+    %pushi/vec4 95, 0, 7;
+    %ret/vec4 0, 0, 7;  Assign to encode_digit (store_vec4_to_lval)
+    %jmp T_0.11;
+T_0.7 ;
+    %pushi/vec4 112, 0, 7;
+    %ret/vec4 0, 0, 7;  Assign to encode_digit (store_vec4_to_lval)
+    %jmp T_0.11;
+T_0.8 ;
+    %pushi/vec4 127, 0, 7;
+    %ret/vec4 0, 0, 7;  Assign to encode_digit (store_vec4_to_lval)
+    %jmp T_0.11;
+T_0.9 ;
+    %pushi/vec4 123, 0, 7;
+    %ret/vec4 0, 0, 7;  Assign to encode_digit (store_vec4_to_lval)
+    %jmp T_0.11;
+T_0.11 ;
+    %pop/vec4 1;
+    %end;
+    .scope S_0x65188b7504e0;
+T_1 ;
+    %wait E_0x65188b78c230;
+    %load/vec4 v0x65188b7c2d60_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x65188b7c2ae0_0, 0;
+    %pushi/vec4 9, 0, 4;
+    %assign/vec4 v0x65188b7c26a0_0, 0;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v0x65188b7c2840_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x65188b7c2bc0_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v0x65188b7c2ae0_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.2, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.3, 6;
+    %dup/vec4;
+    %pushi/vec4 2, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.4, 6;
+    %dup/vec4;
+    %pushi/vec4 3, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.5, 6;
+    %jmp T_1.6;
+T_1.2 ;
+    %load/vec4 v0x65188b7c31a0_0;
+    %flag_set/vec4 9;
+    %flag_get/vec4 9;
+    %jmp/0 T_1.9, 9;
+    %pushi/vec4 0, 0, 32;
+    %load/vec4 v0x65188b7c26a0_0;
+    %pad/u 32;
+    %cmp/u;
+    %flag_get/vec4 5;
+    %and;
+T_1.9;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.7, 8;
+    %pushi/vec4 1, 0, 2;
+    %assign/vec4 v0x65188b7c2c80_0, 0;
+    %jmp T_1.8;
+T_1.7 ;
+    %load/vec4 v0x65188b7c3260_0;
+    %flag_set/vec4 9;
+    %flag_get/vec4 9;
+    %jmp/0 T_1.12, 9;
+    %pushi/vec4 0, 0, 32;
+    %load/vec4 v0x65188b7c2840_0;
+    %pad/u 32;
+    %cmp/u;
+    %flag_get/vec4 5;
+    %and;
+T_1.12;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.10, 8;
+    %pushi/vec4 2, 0, 2;
+    %assign/vec4 v0x65188b7c2c80_0, 0;
+    %jmp T_1.11;
+T_1.10 ;
+    %load/vec4 v0x65188b7c2840_0;
+    %pad/u 32;
+    %cmpi/e 9, 0, 32;
+    %jmp/0xz  T_1.13, 4;
+    %pushi/vec4 3, 0, 2;
+    %assign/vec4 v0x65188b7c2c80_0, 0;
+    %jmp T_1.14;
+T_1.13 ;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x65188b7c2c80_0, 0;
+T_1.14 ;
+T_1.11 ;
+T_1.8 ;
+    %jmp T_1.6;
+T_1.3 ;
+    %load/vec4 v0x65188b7c26a0_0;
+    %subi 1, 0, 4;
+    %assign/vec4 v0x65188b7c26a0_0, 0;
+    %load/vec4 v0x65188b7c2840_0;
+    %addi 1, 0, 4;
+    %assign/vec4 v0x65188b7c2840_0, 0;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x65188b7c2c80_0, 0;
+    %jmp T_1.6;
+T_1.4 ;
+    %load/vec4 v0x65188b7c26a0_0;
+    %addi 1, 0, 4;
+    %assign/vec4 v0x65188b7c26a0_0, 0;
+    %load/vec4 v0x65188b7c2840_0;
+    %subi 1, 0, 4;
+    %assign/vec4 v0x65188b7c2840_0, 0;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v0x65188b7c2c80_0, 0;
+    %jmp T_1.6;
+T_1.5 ;
+    %load/vec4 v0x65188b7c3260_0;
+    %flag_set/vec4 9;
+    %flag_get/vec4 9;
+    %jmp/0 T_1.17, 9;
+    %pushi/vec4 0, 0, 32;
+    %load/vec4 v0x65188b7c2840_0;
+    %pad/u 32;
+    %cmp/u;
+    %flag_get/vec4 5;
+    %and;
+T_1.17;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.15, 8;
+    %pushi/vec4 2, 0, 2;
+    %assign/vec4 v0x65188b7c2c80_0, 0;
+    %jmp T_1.16;
+T_1.15 ;
+    %pushi/vec4 3, 0, 2;
+    %assign/vec4 v0x65188b7c2c80_0, 0;
+T_1.16 ;
+    %jmp T_1.6;
+T_1.6 ;
+    %pop/vec4 1;
+    %load/vec4 v0x65188b7c26a0_0;
+    %pad/u 32;
+    %cmpi/u 0, 0, 32;
+    %flag_or 5, 4; GT is !LE
+    %flag_inv 5;
+    %flag_mov 8, 5;
+    %jmp/0 T_1.18, 8;
+    %pushi/vec4 1, 0, 2;
+    %jmp/1 T_1.19, 8;
+T_1.18 ; End of true expr.
+    %pushi/vec4 0, 0, 2;
+    %jmp/0 T_1.19, 8;
+ ; End of false expr.
+    %blend;
+T_1.19;
+    %pad/s 1;
+    %assign/vec4 v0x65188b7c2bc0_0, 0;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/code/rtl/car_parking_system.sv";

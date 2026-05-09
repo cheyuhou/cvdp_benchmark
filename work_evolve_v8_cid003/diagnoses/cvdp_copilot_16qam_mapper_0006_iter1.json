@@ -1,0 +1,28 @@
+{
+  "primary": {
+    "root_cause": "Compilation fails because Icarus Verilog does not support parameterized logic arrays or `int unsigned` in SV2012 mode.",
+    "evidence": [
+      "Command '['iverilog', '-o', '/code/rundir/sim_build/sim.vvp', '-s', 'qam16_mapper_interpolated', '-g2012', '-Pqam16_mapper_interpolated.N=4', '-f', '/code/rundir/sim_build/cmds.f', '/code/rtl/16qam_mapper.sv']' returned non-zero exit status 8."
+    ],
+    "affected_signals": [
+      "N/A (RTL compilation)"
+    ],
+    "proposed_fix": "Replace parameterized logic arrays with fixed-size arrays or generate blocks, and replace `int unsigned` with `int` or `logic` to ensure Icarus Verilog compatibility.",
+    "confidence": 0.95
+  },
+  "alternative": {
+    "root_cause": "The interpolation stage truncates the 4-bit arithmetic sum to 3 bits after shifting, causing overflow/wrap-around for extreme mapped values that exceed the 3-bit signed range.",
+    "evidence": [
+      "logic signed [OUT_WIDTH:0] sum_i = $signed(i_map[2*k]) + $signed(i_map[2*k+1]);",
+      "i_int[k] = $unsigned(sum_i >>> 1);"
+    ],
+    "affected_signals": [
+      "sum_i",
+      "sum_q",
+      "i_int",
+      "q_int"
+    ],
+    "proposed_fix": "Extend the intermediate sum width to `OUT_WIDTH + 2` bits to safely accommodate the full range of two 3-bit signed additions before shifting and truncating.",
+    "confidence": 0.6
+  }
+}

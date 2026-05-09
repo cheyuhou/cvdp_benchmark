@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778045763" />
+    <testcase name="test_axis_upscale" classname="test_axis_upscale" file="/src/test_axis_upscale.py" lineno="8" time="0.0007557868957519531" sim_time_ns="550.0" ratio_time="727718.3596214511" />
+  </testsuite>
+</testsuites>

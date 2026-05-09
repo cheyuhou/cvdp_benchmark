@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778039512" />
+    <testcase name="test_car_parking_system" classname="car_parking_control" file="/src/car_parking_control.py" lineno="144" time="0.0012464523315429688" sim_time_ns="185.0" ratio_time="148421.23947972455">
+      <failure error_type="AssertionError" error_msg="Available Spaces Tens Mismatch: Expected 0b1111110, Got 0b111111&#10;assert 63 == 126&#10; +  where 63 = int(LogicArray('0111111', Range(6, 'downto', 0)))&#10; +    where LogicArray('0111111', Range(6, 'downto', 0)) = LogicArrayObject(car_parking_system.seven_seg_display_available_tens).value&#10; +      where LogicArrayObject(car_parking_system.seven_seg_display_available_tens) = HierarchyObject(car_parking_system).seven_seg_display_available_tens&#10; +  and   126 = seven_segment_encoding(0)" />
+    </testcase>
+  </testsuite>
+</testsuites>

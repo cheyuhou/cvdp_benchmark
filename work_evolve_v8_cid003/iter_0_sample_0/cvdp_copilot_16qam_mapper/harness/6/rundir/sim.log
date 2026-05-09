@@ -1,0 +1,4 @@
+/code/rtl/16qam_demapper.sv:71: error: Array err_I needs an array index here.
+/code/rtl/16qam_demapper.sv:71: error: Array err_Q needs an array index here.
+/code/rtl/16qam_demapper.sv:71: error: Unable to elaborate r-value: (|(err_I))|(|(err_Q))
+3 error(s) during elaboration.

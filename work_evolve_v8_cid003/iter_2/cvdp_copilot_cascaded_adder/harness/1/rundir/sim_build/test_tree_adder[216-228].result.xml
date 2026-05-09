@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778045895" />
+    <testcase name="cascaded_adder" classname="test_cascaded_adder" file="/src/test_cascaded_adder.py" lineno="7" time="0.11180663108825684" sim_time_ns="3250.0" ratio_time="29068.043356342132" />
+  </testsuite>
+</testsuites>

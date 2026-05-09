@@ -1,0 +1,229 @@
+
+=== Starting Preparation Phase ===
+Starting cvdp_copilot_16qam_mapper_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_16qam_mapper_0001
+Requesting valid response to model...
+Starting cvdp_copilot_16qam_mapper_0006 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_16qam_mapper_0006
+Requesting valid response to model...
+Starting cvdp_copilot_64b66b_encoder_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_64b66b_encoder_0001
+Requesting valid response to model...
+Starting cvdp_copilot_8x3_priority_encoder_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_8x3_priority_encoder_0001
+Requesting valid response to model...
+Starting cvdp_copilot_Carry_Lookahead_Adder_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_Carry_Lookahead_Adder_0001
+Requesting valid response to model...
+Starting cvdp_copilot_GFCM_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_GFCM_0001
+Requesting valid response to model...
+Starting cvdp_copilot_apb_dsp_unit_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_apb_dsp_unit_0001
+Requesting valid response to model...
+Starting cvdp_copilot_apb_gpio_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_apb_gpio_0001
+Requesting valid response to model...
+Starting cvdp_copilot_apb_history_shift_register_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_apb_history_shift_register_0001
+Requesting valid response to model...
+Starting cvdp_copilot_axi_register_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axi_register_0001
+Requesting valid response to model...
+Starting cvdp_copilot_axi_stream_upscale_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axi_stream_upscale_0001
+Requesting valid response to model...
+Starting cvdp_copilot_axil_precision_counter_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axil_precision_counter_0001
+Requesting valid response to model...
+Starting cvdp_copilot_axis_joiner_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axis_joiner_0001
+Requesting valid response to model...
+Starting cvdp_copilot_barrel_shifter_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_barrel_shifter_0001
+Requesting valid response to model...
+Starting cvdp_copilot_bcd_counter_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_bcd_counter_0001
+Requesting valid response to model...
+Starting cvdp_copilot_bcd_to_excess_3_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_bcd_to_excess_3_0001
+Requesting valid response to model...
+Starting cvdp_copilot_binary_to_one_hot_decoder_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_binary_to_one_hot_decoder_0001
+Requesting valid response to model...
+Starting cvdp_copilot_caesar_cipher_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_caesar_cipher_0001
+Requesting valid response to model...
+Starting cvdp_copilot_car_parking_management_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_car_parking_management_0001
+Requesting valid response to model...
+Starting cvdp_copilot_cascaded_adder_0001 repository execution...
+Creating harness environment for datapoint: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_cascaded_adder_0001
+Requesting valid response to model...
+All preparation tasks completed successfully
+=== Preparation Phase Complete ===
+
+Writing preparation results...
+
+=== Starting Execution Phase ===
+Starting cvdp_copilot_16qam_mapper_0001 harness execution...
+Running service: direct:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_16qam_mapper/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_16qam_mapper/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_16qam_mapper_0006 harness execution...
+Running service: direct:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_16qam_mapper/harness/6/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_16qam_mapper/harness/6/docker-compose.yml, not modifying
+Starting cvdp_copilot_64b66b_encoder_0001 harness execution...
+Running service: direct:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_64b66b_encoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_64b66b_encoder/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_8x3_priority_encoder_0001 harness execution...
+Running service: pytest:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_8x3_priority_encoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_8x3_priority_encoder/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_Carry_Lookahead_Adder_0001 harness execution...
+Running service: 07-new-tb:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_Carry_Lookahead_Adder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_Carry_Lookahead_Adder/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_GFCM_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_GFCM/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_GFCM/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_apb_dsp_unit_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_apb_dsp_unit/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_apb_dsp_unit/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_apb_gpio_0001 harness execution...
+Running service: direct:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_apb_gpio/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_apb_gpio/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_apb_history_shift_register_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_apb_history_shift_register/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_apb_history_shift_register/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_axi_register_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axi_register/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axi_register/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_axi_stream_upscale_0001 harness execution...
+Running service: direct:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axi_stream_upscale/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axi_stream_upscale/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_axil_precision_counter_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axil_precision_counter/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axil_precision_counter/harness/1/docker-compose.yml, not modifying
+Timeout for /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axil_precision_counter/harness/1/run_docker_harness_01-new-tb.sh (120s) expired
+[ERROR] Failed to execute None harness...
+Starting cvdp_copilot_axis_joiner_0001 harness execution...
+Running service: direct:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axis_joiner/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_axis_joiner/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_barrel_shifter_0001 harness execution...
+Running service: direct:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_barrel_shifter/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_barrel_shifter/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_bcd_counter_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_bcd_counter/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_bcd_counter/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_bcd_to_excess_3_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_bcd_to_excess_3/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_bcd_to_excess_3/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_binary_to_one_hot_decoder_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_binary_to_one_hot_decoder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_binary_to_one_hot_decoder/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_caesar_cipher_0001 harness execution...
+Running service: direct:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_caesar_cipher/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_caesar_cipher/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_car_parking_management_0001 harness execution...
+Running service: direct:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_car_parking_management/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_car_parking_management/harness/1/docker-compose.yml, not modifying
+Starting cvdp_copilot_cascaded_adder_0001 harness execution...
+Running service: 01-new-tb:
+
+Ensuring /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_cascaded_adder/harness/1/docker-compose.yml has correct network configuration
+Default network already exists in /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/cvdp_copilot_cascaded_adder/harness/1/docker-compose.yml, not modifying
+All execution tasks completed successfully
+=== Execution Phase Complete ===
+
+
+=== Benchmark Report ===
+Dataset: /workspace/cvdp_benchmark/cid003_subset_20.jsonl
+Generated: 2026-05-06 13:38:15
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: local_import
+=======================
+
+Generating text report: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/report.txt
+Text report generated: /workspace/cvdp_benchmark/work_evolve_v8_cid003/iter_2/report.txt
+Benchmark execution time: Min: 0 - Max: 3.969482660293579 - Avg: 1.3852494478225708
+Using existing raw_result.json from /home/howard/projects/cvdp/cvdp_benchmark/work_evolve_v8_cid003/iter_2/raw_result.json
+
+=== Benchmark Report ===
+Dataset: /home/howard/projects/cvdp/cvdp_benchmark/cid003_subset_20.jsonl
+Generated: 2026-05-08 13:18:30
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: local_import
+=======================
+
+Generating text report: /home/howard/projects/cvdp/cvdp_benchmark/work_evolve_v8_cid003/iter_2/report.txt
+Text report generated: /home/howard/projects/cvdp/cvdp_benchmark/work_evolve_v8_cid003/iter_2/report.txt
+Benchmark execution time: Min: 0 - Max: 3.969482660293579 - Avg: 1.3852494478225708
+Using existing raw_result.json from /home/howard/projects/cvdp/cvdp_benchmark/work_evolve_v8_cid003/iter_2/raw_result.json
+
+=== Benchmark Report ===
+Dataset: /home/howard/projects/cvdp/cvdp_benchmark/cid003_subset_20.jsonl
+Generated: 2026-05-08 14:36:42
+
+=== Run Configuration ===
+Golden Mode: No
+Patches Disabled: No
+Force Agentic: No
+Force Copilot: No
+Include Golden Patch: No
+Include Harness: No
+Model/Agent: local_import
+=======================
+
+Generating text report: /home/howard/projects/cvdp/cvdp_benchmark/work_evolve_v8_cid003/iter_2/report.txt
+Text report generated: /home/howard/projects/cvdp/cvdp_benchmark/work_evolve_v8_cid003/iter_2/report.txt
+Benchmark execution time: Min: 0 - Max: 3.969482660293579 - Avg: 1.3852494478225708

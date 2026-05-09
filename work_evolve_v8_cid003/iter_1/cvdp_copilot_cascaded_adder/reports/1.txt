@@ -1,0 +1,125 @@
+Running harness with project name: cvdp_copilot_cascaded_adder_1_1778043393
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /rundir/harness/.cache
+rootdir: /src
+collecting ... collected 5 items
+
+../../src/test_runner.py::test_tree_adder[453-391]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043394
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+  3250.00ns INFO     cocotb.regression                  test_cascaded_adder.cascaded_adder passed
+  3250.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   PASS        3250.00           0.41       7911.33  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                     3250.00           0.41       7888.80  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 453, IN_DATA_WIDTH = 391
+PASSED
+../../src/test_runner.py::test_tree_adder[308-288]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043394
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+  3250.00ns INFO     cocotb.regression                  test_cascaded_adder.cascaded_adder passed
+  3250.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   PASS        3250.00           0.20      16537.99  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                     3250.00           0.20      16445.41  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 308, IN_DATA_WIDTH = 288
+PASSED
+../../src/test_runner.py::test_tree_adder[45-103]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043395
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+  3250.00ns INFO     cocotb.regression                  test_cascaded_adder.cascaded_adder passed
+  3250.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   PASS        3250.00           0.02     148062.13  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                     3250.00           0.02     141561.14  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 45, IN_DATA_WIDTH = 103
+PASSED
+../../src/test_runner.py::test_tree_adder[439-106]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043395
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+  3250.00ns INFO     cocotb.regression                  test_cascaded_adder.cascaded_adder passed
+  3250.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   PASS        3250.00           0.15      21758.06  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                     3250.00           0.15      21607.61  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 439, IN_DATA_WIDTH = 106
+PASSED
+../../src/test_runner.py::test_tree_adder[42-429]      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778043396
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cascaded_adder.cascaded_adder (1/1)
+     0.00ns INFO     cocotb.cascaded_adder              DUT_CLK STARTED
+     0.00ns WARNING  gpi                                VPI: Not able to map type vpiNamedBegin(33) to object.
+     0.00ns WARNING  gpi                                Unable to create $ivl_for_loop0 via any registered implementation
+    35.00ns INFO     cocotb.cascaded_adder              DUT IS OUT OF RESET
+  3250.00ns INFO     cocotb.regression                  test_cascaded_adder.cascaded_adder passed
+  3250.00ns INFO     cocotb.regression                  ********************************************************************************************
+                                                        ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************
+                                                        ** test_cascaded_adder.cascaded_adder   PASS        3250.00           0.04      84409.16  **
+                                                        ********************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                     3250.00           0.04      82266.07  **
+                                                        ********************************************************************************************
+Running with: IN_DATA_NS = 42, IN_DATA_WIDTH = 429
+PASSED
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477
+  /venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:477: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/nodeids: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-qxm1e0bn'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../../venv/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /venv/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /rundir/harness/.cache/v/cache/stepwise: [Errno 13] Permission denied: '/rundir/harness/pytest-cache-files-e275hkns'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 5 passed, 2 warnings in 2.23s =========================
+Cleaning up Docker resources...

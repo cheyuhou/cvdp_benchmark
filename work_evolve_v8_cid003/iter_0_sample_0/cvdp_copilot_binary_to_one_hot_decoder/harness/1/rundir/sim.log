@@ -1,0 +1,5 @@
+/code/rtl/binary_to_one_hot_decoder.v:10: error: 'one_hot_out' is not a valid l-value for a procedural assignment.
+/code/rtl/binary_to_one_hot_decoder.v:6:      : 'one_hot_out' is declared here as a wire.
+/code/rtl/binary_to_one_hot_decoder.v:12: error: 'one_hot_out[binary_in]' is not a valid l-value for a procedural assignment.
+/code/rtl/binary_to_one_hot_decoder.v:6:      : 'one_hot_out[binary_in]' is declared here as a wire.
+2 error(s) during elaboration.

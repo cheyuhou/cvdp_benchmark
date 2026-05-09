@@ -1,0 +1,9 @@
+/code/rtl/binary_to_one_hot_decoder.v:4: error: Unable to bind parameter `BINARY_WIDTH' in `binary_to_one_hot_decoder'
+/code/rtl/binary_to_one_hot_decoder.v:7:      : A symbol with that name was declared here. Check for declaration after use.
+/code/rtl/binary_to_one_hot_decoder.v:4: error: Dimensions must be constant.
+/code/rtl/binary_to_one_hot_decoder.v:4       : This MSB expression violates the rule: (BINARY_WIDTH)-('sd1)
+/code/rtl/binary_to_one_hot_decoder.v:5: error: Unable to bind parameter `OUTPUT_WIDTH' in `binary_to_one_hot_decoder'
+/code/rtl/binary_to_one_hot_decoder.v:8:      : A symbol with that name was declared here. Check for declaration after use.
+/code/rtl/binary_to_one_hot_decoder.v:5: error: Dimensions must be constant.
+/code/rtl/binary_to_one_hot_decoder.v:5       : This MSB expression violates the rule: (OUTPUT_WIDTH)-('sd1)
+4 error(s) during elaboration.

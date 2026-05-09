@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Evolve-Agent contributors
+# SPDX-License-Identifier: Apache-2.0
+FROM cvdp-evolve-agent-base
+
+WORKDIR /app
+
+# /code is mounted by the harness; ensure it exists with permissive mode for
+# the harness uid mapping.
+RUN mkdir -p /code && chmod 777 /code
+
+COPY agent.py /app/agent.py
+
+# QWEN_API_KEY (or DASHSCOPE_API_KEY) must be passed at run time via
+# `docker run -e QWEN_API_KEY=...` / docker-compose environment.
+ENV PYTHONUNBUFFERED=1
+
+ENTRYPOINT ["python3.12", "/app/agent.py"]

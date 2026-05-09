@@ -1,0 +1,3 @@
+/code/rtl/cvdp_copilot_apb_gpio.sv:37: warning: Numeric constant truncated to 2 bits.
+/code/rtl/cvdp_copilot_apb_gpio.sv:38: warning: Numeric constant truncated to 2 bits.
+/code/rtl/cvdp_copilot_apb_gpio.sv:39: warning: Numeric constant truncated to 2 bits.

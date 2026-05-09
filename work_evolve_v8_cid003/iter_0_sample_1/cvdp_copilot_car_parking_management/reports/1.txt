@@ -1,0 +1,381 @@
+Running harness with project name: cvdp_copilot_car_parking_management_1_1778039511
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.6.0 -- /venv/bin/python
+cachedir: /code/rundir/.cache
+rootdir: /src
+collecting ... collected 4 items
+
+../../src/test_runner.py::test_runner Running simulation with TOTAL_SPACES=9
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=9 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=9 -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039512
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running car_parking_control.test_car_parking_system (1/1)
+                                                            Main test function for Car Parking System
+   145.00ns INFO     cocotb.car_parking_system          Simulating single vehicle entry
+   185.00ns WARNING  ..g_system.test_car_parking_system Available Spaces Tens Mismatch: Expected 0b1111110, Got 0b111111
+                                                        assert 63 == 126
+                                                         +  where 63 = int(LogicArray('0111111', Range(6, 'downto', 0)))
+                                                         +    where LogicArray('0111111', Range(6, 'downto', 0)) = LogicArrayObject(car_parking_system.seven_seg_display_available_tens).value
+                                                         +      where LogicArrayObject(car_parking_system.seven_seg_display_available_tens) = HierarchyObject(car_parking_system).seven_seg_display_available_tens
+                                                         +  and   126 = seven_segment_encoding(0)
+                                                        Traceback (most recent call last):
+                                                          File "/src/car_parking_control.py", line 167, in test_car_parking_system
+                                                            await test_case_1(dut)
+                                                          File "/src/car_parking_control.py", line 87, in test_case_1
+                                                            await validate_seven_segment(dut, available_spaces=(TOTAL_SPACES - 1), count_car=1)
+                                                          File "/src/car_parking_control.py", line 61, in validate_seven_segment
+                                                            assert int(dut.seven_seg_display_available_tens.value) == seven_segment_encoding(available_tens), \
+                                                        AssertionError: Available Spaces Tens Mismatch: Expected 0b1111110, Got 0b111111
+                                                        assert 63 == 126
+                                                         +  where 63 = int(LogicArray('0111111', Range(6, 'downto', 0)))
+                                                         +    where LogicArray('0111111', Range(6, 'downto', 0)) = LogicArrayObject(car_parking_system.seven_seg_display_available_tens).value
+                                                         +      where LogicArrayObject(car_parking_system.seven_seg_display_available_tens) = HierarchyObject(car_parking_system).seven_seg_display_available_tens
+                                                         +  and   126 = seven_segment_encoding(0)
+   185.00ns WARNING  cocotb.regression                  car_parking_control.test_car_parking_system failed
+   185.00ns INFO     cocotb.regression                  *****************************************************************************************************
+                                                        ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************
+                                                        ** car_parking_control.test_car_parking_system   FAIL         185.00           0.00     149680.99  **
+                                                        *****************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                               185.00           0.00      38994.23  **
+                                                        *****************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+../../src/test_runner.py::test_car_parking_system[14] Test Runner: TOTAL_SPACES=14
+Running simulation with TOTAL_SPACES=14
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=14 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=14 -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039512
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running car_parking_control.test_car_parking_system (1/1)
+                                                            Main test function for Car Parking System
+   145.00ns INFO     cocotb.car_parking_system          Simulating single vehicle entry
+   185.00ns WARNING  ..g_system.test_car_parking_system Available Spaces Tens Mismatch: Expected 0b110000, Got 0b110
+                                                        assert 6 == 48
+                                                         +  where 6 = int(LogicArray('0000110', Range(6, 'downto', 0)))
+                                                         +    where LogicArray('0000110', Range(6, 'downto', 0)) = LogicArrayObject(car_parking_system.seven_seg_display_available_tens).value
+                                                         +      where LogicArrayObject(car_parking_system.seven_seg_display_available_tens) = HierarchyObject(car_parking_system).seven_seg_display_available_tens
+                                                         +  and   48 = seven_segment_encoding(1)
+                                                        Traceback (most recent call last):
+                                                          File "/src/car_parking_control.py", line 167, in test_car_parking_system
+                                                            await test_case_1(dut)
+                                                          File "/src/car_parking_control.py", line 87, in test_case_1
+                                                            await validate_seven_segment(dut, available_spaces=(TOTAL_SPACES - 1), count_car=1)
+                                                          File "/src/car_parking_control.py", line 61, in validate_seven_segment
+                                                            assert int(dut.seven_seg_display_available_tens.value) == seven_segment_encoding(available_tens), \
+                                                        AssertionError: Available Spaces Tens Mismatch: Expected 0b110000, Got 0b110
+                                                        assert 6 == 48
+                                                         +  where 6 = int(LogicArray('0000110', Range(6, 'downto', 0)))
+                                                         +    where LogicArray('0000110', Range(6, 'downto', 0)) = LogicArrayObject(car_parking_system.seven_seg_display_available_tens).value
+                                                         +      where LogicArrayObject(car_parking_system.seven_seg_display_available_tens) = HierarchyObject(car_parking_system).seven_seg_display_available_tens
+                                                         +  and   48 = seven_segment_encoding(1)
+   185.00ns WARNING  cocotb.regression                  car_parking_control.test_car_parking_system failed
+   185.00ns INFO     cocotb.regression                  *****************************************************************************************************
+                                                        ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************
+                                                        ** car_parking_control.test_car_parking_system   FAIL         185.00           0.00     152625.15  **
+                                                        *****************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                               185.00           0.00      39686.28  **
+                                                        *****************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+../../src/test_runner.py::test_car_parking_system[12] Test Runner: TOTAL_SPACES=12
+Running simulation with TOTAL_SPACES=12
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=12 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=12 -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039512
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running car_parking_control.test_car_parking_system (1/1)
+                                                            Main test function for Car Parking System
+   145.00ns INFO     cocotb.car_parking_system          Simulating single vehicle entry
+   185.00ns WARNING  ..g_system.test_car_parking_system Available Spaces Tens Mismatch: Expected 0b110000, Got 0b110
+                                                        assert 6 == 48
+                                                         +  where 6 = int(LogicArray('0000110', Range(6, 'downto', 0)))
+                                                         +    where LogicArray('0000110', Range(6, 'downto', 0)) = LogicArrayObject(car_parking_system.seven_seg_display_available_tens).value
+                                                         +      where LogicArrayObject(car_parking_system.seven_seg_display_available_tens) = HierarchyObject(car_parking_system).seven_seg_display_available_tens
+                                                         +  and   48 = seven_segment_encoding(1)
+                                                        Traceback (most recent call last):
+                                                          File "/src/car_parking_control.py", line 167, in test_car_parking_system
+                                                            await test_case_1(dut)
+                                                          File "/src/car_parking_control.py", line 87, in test_case_1
+                                                            await validate_seven_segment(dut, available_spaces=(TOTAL_SPACES - 1), count_car=1)
+                                                          File "/src/car_parking_control.py", line 61, in validate_seven_segment
+                                                            assert int(dut.seven_seg_display_available_tens.value) == seven_segment_encoding(available_tens), \
+                                                        AssertionError: Available Spaces Tens Mismatch: Expected 0b110000, Got 0b110
+                                                        assert 6 == 48
+                                                         +  where 6 = int(LogicArray('0000110', Range(6, 'downto', 0)))
+                                                         +    where LogicArray('0000110', Range(6, 'downto', 0)) = LogicArrayObject(car_parking_system.seven_seg_display_available_tens).value
+                                                         +      where LogicArrayObject(car_parking_system.seven_seg_display_available_tens) = HierarchyObject(car_parking_system).seven_seg_display_available_tens
+                                                         +  and   48 = seven_segment_encoding(1)
+   185.00ns WARNING  cocotb.regression                  car_parking_control.test_car_parking_system failed
+   185.00ns INFO     cocotb.regression                  *****************************************************************************************************
+                                                        ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************
+                                                        ** car_parking_control.test_car_parking_system   FAIL         185.00           0.00     151552.00  **
+                                                        *****************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                               185.00           0.00      40096.44  **
+                                                        *****************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+../../src/test_runner.py::test_car_parking_system[9] Test Runner: TOTAL_SPACES=9
+Running simulation with TOTAL_SPACES=9
+
+-------------------------------- live log call ---------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=9 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=9 -fst in directory /code/rundir/sim_build
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:93   in _embed_init_python              Using Python 3.12.4 interpreter at /venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:79   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb                             Seeding Python random module with 1778039512
+     0.00ns INFO     cocotb                             Initialized cocotb v2.0.1 from /venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running car_parking_control.test_car_parking_system (1/1)
+                                                            Main test function for Car Parking System
+   145.00ns INFO     cocotb.car_parking_system          Simulating single vehicle entry
+   185.00ns WARNING  ..g_system.test_car_parking_system Available Spaces Tens Mismatch: Expected 0b1111110, Got 0b111111
+                                                        assert 63 == 126
+                                                         +  where 63 = int(LogicArray('0111111', Range(6, 'downto', 0)))
+                                                         +    where LogicArray('0111111', Range(6, 'downto', 0)) = LogicArrayObject(car_parking_system.seven_seg_display_available_tens).value
+                                                         +      where LogicArrayObject(car_parking_system.seven_seg_display_available_tens) = HierarchyObject(car_parking_system).seven_seg_display_available_tens
+                                                         +  and   126 = seven_segment_encoding(0)
+                                                        Traceback (most recent call last):
+                                                          File "/src/car_parking_control.py", line 167, in test_car_parking_system
+                                                            await test_case_1(dut)
+                                                          File "/src/car_parking_control.py", line 87, in test_case_1
+                                                            await validate_seven_segment(dut, available_spaces=(TOTAL_SPACES - 1), count_car=1)
+                                                          File "/src/car_parking_control.py", line 61, in validate_seven_segment
+                                                            assert int(dut.seven_seg_display_available_tens.value) == seven_segment_encoding(available_tens), \
+                                                        AssertionError: Available Spaces Tens Mismatch: Expected 0b1111110, Got 0b111111
+                                                        assert 63 == 126
+                                                         +  where 63 = int(LogicArray('0111111', Range(6, 'downto', 0)))
+                                                         +    where LogicArray('0111111', Range(6, 'downto', 0)) = LogicArrayObject(car_parking_system.seven_seg_display_available_tens).value
+                                                         +      where LogicArrayObject(car_parking_system.seven_seg_display_available_tens) = HierarchyObject(car_parking_system).seven_seg_display_available_tens
+                                                         +  and   126 = seven_segment_encoding(0)
+   185.00ns WARNING  cocotb.regression                  car_parking_control.test_car_parking_system failed
+   185.00ns INFO     cocotb.regression                  *****************************************************************************************************
+                                                        ** TEST                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************
+                                                        ** car_parking_control.test_car_parking_system   FAIL         185.00           0.00     148421.24  **
+                                                        *****************************************************************************************************
+                                                        ** TESTS=1 PASS=0 FAIL=1 SKIP=0                               185.00           0.00      39480.32  **
+                                                        *****************************************************************************************************
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+FAILED
+
+=================================== FAILURES ===================================
+_________________________________ test_runner __________________________________
+
+TOTAL_SPACES = 9
+
+    def test_runner(TOTAL_SPACES: int = 9):
+        """
+        Test Runner for Car Parking System
+        """
+    
+        # Parameterize the test
+        parameter_defines = {
+            "TOTAL_SPACES": TOTAL_SPACES,
+        }
+        print(f"Running simulation with TOTAL_SPACES={TOTAL_SPACES}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter_defines,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log",
+            defines={"SIMULATION": 1}
+        )
+    
+        plusargs = [f"+TOTAL_SPACES={TOTAL_SPACES}"]
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:42: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=9 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=9 -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_________________________ test_car_parking_system[14] __________________________
+
+TOTAL_SPACES = 14
+
+    @pytest.mark.parametrize("TOTAL_SPACES", [14, 12, 9])
+    def test_car_parking_system(TOTAL_SPACES):
+        """Parameterized test for Car Parking System"""
+    
+        print(f"Test Runner: TOTAL_SPACES={TOTAL_SPACES}")
+>       test_runner(TOTAL_SPACES=TOTAL_SPACES)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+TOTAL_SPACES = 14
+
+    def test_runner(TOTAL_SPACES: int = 9):
+        """
+        Test Runner for Car Parking System
+        """
+    
+        # Parameterize the test
+        parameter_defines = {
+            "TOTAL_SPACES": TOTAL_SPACES,
+        }
+        print(f"Running simulation with TOTAL_SPACES={TOTAL_SPACES}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter_defines,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log",
+            defines={"SIMULATION": 1}
+        )
+    
+        plusargs = [f"+TOTAL_SPACES={TOTAL_SPACES}"]
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:42: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=14 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=14 -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+_________________________ test_car_parking_system[12] __________________________
+
+TOTAL_SPACES = 12
+
+    @pytest.mark.parametrize("TOTAL_SPACES", [14, 12, 9])
+    def test_car_parking_system(TOTAL_SPACES):
+        """Parameterized test for Car Parking System"""
+    
+        print(f"Test Runner: TOTAL_SPACES={TOTAL_SPACES}")
+>       test_runner(TOTAL_SPACES=TOTAL_SPACES)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+TOTAL_SPACES = 12
+
+    def test_runner(TOTAL_SPACES: int = 9):
+        """
+        Test Runner for Car Parking System
+        """
+    
+        # Parameterize the test
+        parameter_defines = {
+            "TOTAL_SPACES": TOTAL_SPACES,
+        }
+        print(f"Running simulation with TOTAL_SPACES={TOTAL_SPACES}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter_defines,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log",
+            defines={"SIMULATION": 1}
+        )
+    
+        plusargs = [f"+TOTAL_SPACES={TOTAL_SPACES}"]
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:42: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=12 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=12 -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+__________________________ test_car_parking_system[9] __________________________
+
+TOTAL_SPACES = 9
+
+    @pytest.mark.parametrize("TOTAL_SPACES", [14, 12, 9])
+    def test_car_parking_system(TOTAL_SPACES):
+        """Parameterized test for Car Parking System"""
+    
+        print(f"Test Runner: TOTAL_SPACES={TOTAL_SPACES}")
+>       test_runner(TOTAL_SPACES=TOTAL_SPACES)
+
+/src/test_runner.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+TOTAL_SPACES = 9
+
+    def test_runner(TOTAL_SPACES: int = 9):
+        """
+        Test Runner for Car Parking System
+        """
+    
+        # Parameterize the test
+        parameter_defines = {
+            "TOTAL_SPACES": TOTAL_SPACES,
+        }
+        print(f"Running simulation with TOTAL_SPACES={TOTAL_SPACES}")
+    
+        runner = get_runner(sim)
+        runner.build(
+            sources=verilog_sources,
+            hdl_toplevel=toplevel,
+            parameters=parameter_defines,
+            always=True,
+            clean=True,
+            verbose=True,
+            timescale=("1ns", "1ps"),
+            log_file="sim.log",
+            defines={"SIMULATION": 1}
+        )
+    
+        plusargs = [f"+TOTAL_SPACES={TOTAL_SPACES}"]
+>       runner.test(hdl_toplevel=toplevel, test_module=module, waves=True, plusargs=plusargs)
+E       SystemExit: 1
+
+/src/test_runner.py:42: SystemExit
+------------------------------ Captured log call -------------------------------
+INFO     Icarus:runner.py:644 Removing: /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command iverilog -o /code/rundir/sim_build/sim.vvp -s car_parking_system -g2012 -DSIMULATION=1 -Pcar_parking_system.TOTAL_SPACES=9 -f /code/rundir/sim_build/cmds.f /code/rtl/car_parking_system.sv in directory /code/rundir/sim_build
+INFO     Icarus:runner.py:632 Running command vvp -M /venv/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus /code/rundir/sim_build/sim.vvp +TOTAL_SPACES=9 -fst in directory /code/rundir/sim_build
+ERROR    Icarus:runner.py:572 ERROR: Failed 1 of 1 tests.
+=========================== short test summary info ============================
+FAILED ../../src/test_runner.py::test_runner - SystemExit: 1
+FAILED ../../src/test_runner.py::test_car_parking_system[14] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_car_parking_system[12] - SystemExit: 1
+FAILED ../../src/test_runner.py::test_car_parking_system[9] - SystemExit: 1
+============================== 4 failed in 1.15s ===============================
+Cleaning up Docker resources...

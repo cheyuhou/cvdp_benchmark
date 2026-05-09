@@ -1,0 +1,33 @@
+{
+  "primary": {
+    "root_cause": "The output register samples combinational MUX outputs driven by `curr_state` instead of `next_state`, causing a 1-cycle delay and glitch because both registers update simultaneously on the clock edge.",
+    "evidence": [
+      "assign mux_tdata = (curr_state == STATE_1) ? s_axis_tdata_1 :",
+      "always_ff @(posedge clk or posedge rst) begin ... m_axis_tdata <= mux_tdata;"
+    ],
+    "affected_signals": [
+      "curr_state",
+      "next_state",
+      "mux_tdata",
+      "m_axis_tdata",
+      "m_axis_tvalid"
+    ],
+    "proposed_fix": "Update the MUX select conditions to use `next_state` instead of `curr_state`, ensuring the combinational logic reflects the upcoming state when the output register samples it.",
+    "confidence": 0.95
+  },
+  "alternative": {
+    "root_cause": "The backpressure stall logic using the `temp` flag deadlocks when `m_axis_tready` is deasserted, as the `temp` flag is never cleared, permanently blocking future output updates.",
+    "evidence": [
+      "if (temp) begin // Stalled: hold previous outputs until ready signal is asserted // temp remains 1 end",
+      "temp <= 1'b1;"
+    ],
+    "affected_signals": [
+      "temp",
+      "m_axis_tready",
+      "m_axis_tdata",
+      "m_axis_tvalid"
+    ],
+    "proposed_fix": "Restructure the stall logic to check `m_axis_tready` independently of `temp`, clearing the `temp` flag and updating outputs when the downstream ready signal is asserted.",
+    "confidence": 0.65
+  }
+}

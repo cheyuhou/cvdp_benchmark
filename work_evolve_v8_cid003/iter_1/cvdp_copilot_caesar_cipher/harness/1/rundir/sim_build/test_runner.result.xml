@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778043392" />
+    <testcase name="test_predefined_cases" classname="test_caesar_cipher" file="/src/test_caesar_cipher.py" lineno="18" time="0.0008876323699951172" sim_time_ns="33.0" ratio_time="37177.55358581789" />
+    <testcase name="test_boundary_conditions" classname="test_caesar_cipher" file="/src/test_caesar_cipher.py" lineno="51" time="0.00020694732666015625" sim_time_ns="4.0" ratio_time="19328.589861751152" />
+    <testcase name="test_random_cases" classname="test_caesar_cipher" file="/src/test_caesar_cipher.py" lineno="83" time="0.0007865428924560547" sim_time_ns="40.0" ratio_time="50855.45923006972" />
+    <testcase name="test_with_numbers_and_symbols" classname="test_caesar_cipher" file="/src/test_caesar_cipher.py" lineno="107" time="0.00028252601623535156" sim_time_ns="16.0" ratio_time="56631.952742616035" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,9 @@
+/code/rtl/16qam_mapper.sv:22: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_mapper.sv:23: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_mapper.sv:24: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_mapper.sv:39: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_mapper.sv:40: warning: Static variable initialization requires explicit lifetime in this context.
+/code/rtl/16qam_mapper.sv:47: syntax error
+/code/rtl/16qam_mapper.sv:47: Syntax in assignment statement l-value.
+/code/rtl/16qam_mapper.sv:48: syntax error
+/code/rtl/16qam_mapper.sv:48: Syntax in assignment statement l-value.

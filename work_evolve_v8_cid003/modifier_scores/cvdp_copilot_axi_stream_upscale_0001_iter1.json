@@ -1,0 +1,41 @@
+{
+  "primary_scores": [
+    {
+      "text": "`default_nettype none\n`timescale 1ns / 1ps\n\nmodule axis_upscale (\n    input  logic clk,\n    input  logic resetn,\n    input  logic dfmt_enable,\n    input  logic dfmt_type,\n    input  logic dfmt_se,\n    input  logic s_axis_valid,\n    input  logic [23:0] s_axis_data,\n    input  logic m_axis_ready,\n    output logic s_axis_ready,\n    output logic m_axis_valid,\n    output logic [31:0] m_axis_data\n);\n\n    logic fill_bit;\n    logic [31:0] m_axis_data_d;\n    logic m_axis_valid_d;\n\n    // AXI Stream Handshake: Pass ready signal upstream\n    assign s_axis_ready = m_axis_ready;\n\n    // Determine padding bit based on data format signals\n    always @(*) begin\n        if (!dfmt_enable) begin\n            // When data format is disabled, pad with zeros\n            fill_bit = 1'b0;\n        end else if (dfmt_se) begin\n            // Sign extension enabled: carry forward MSB or its inverted version\n            fill_bit = dfmt_type ? ~s_axis_data[23] : s_axis_data[23];\n        end else begin\n            // Sign extension disabled: pad with zeros\n            fill_bit = 1'b0;\n        end\n    end\n\n    // Upscale 24-bit input to 32-bit output by concatenating 8 padding bits\n    always @(*) begin\n        m_axis_data_d = {8{fill_bit}, s_axis_data};\n    end\n\n    // Valid signal passes through combinational path\n    always @(*) begin\n        m_axis_valid_d = s_axis_valid;\n    end\n\n    // Single pipeline register stage with active-low synchronous reset\n    always @(posedge clk or negedge resetn) begin\n        if (!resetn) begin\n            m_axis_data <= 32'b0;\n            m_axis_valid <= 1'b0;\n        end else begin\n            m_axis_data <= m_axis_data_d;\n            m_axis_valid <= m_axis_valid_d;\n        end\n    end\n\nendmodule\n`default_nettype wire",
+      "header_locked": true,
+      "parse_ok": null,
+      "touches_affected": false,
+      "length_ratio": 1.0,
+      "total": 5.0,
+      "reasons": [
+        "did_not_touch_diagnosis_signals",
+        "inner_repair_attempts=1"
+      ]
+    },
+    {
+      "text": "`default_nettype none\n`timescale 1ns / 1ps\n\nmodule axis_upscale (\n    input  logic clk,\n    input  logic resetn,\n    input  logic dfmt_enable,\n    input  logic dfmt_type,\n    input  logic dfmt_se,\n    input  logic s_axis_valid,\n    input  logic [23:0] s_axis_data,\n    input  logic m_axis_ready,\n    output logic s_axis_ready,\n    output logic m_axis_valid,\n    output logic [31:0] m_axis_data\n);\n\n    logic fill_bit;\n    logic [31:0] m_axis_data_d;\n    logic m_axis_valid_d;\n\n    // AXI Stream Handshake: Pass ready signal upstream\n    assign s_axis_ready = m_axis_ready;\n\n    // Determine padding bit based on data format signals\n    always @(*) begin\n        if (!dfmt_enable) begin\n            // When data format is disabled, pad with zeros\n            fill_bit = 1'b0;\n        end else if (dfmt_se) begin\n            // Sign extension enabled: carry forward MSB or its inverted version\n            fill_bit = dfmt_type ? ~s_axis_data[23] : s_axis_data[23];\n        end else begin\n            // Sign extension disabled: pad with zeros\n            fill_bit = 1'b0;\n        end\n    end\n\n    // Upscale 24-bit input to 32-bit output by concatenating 8 padding bits\n    always @(*) begin\n        m_axis_data_d = {8{fill_bit}, s_axis_data};\n    end\n\n    // Valid signal passes through combinational path\n    always @(*) begin\n        m_axis_valid_d = s_axis_valid;\n    end\n\n    // Single pipeline register stage with active-low synchronous reset\n    always @(posedge clk or negedge resetn) begin\n        if (!resetn) begin\n            m_axis_data <= 32'b0;\n            m_axis_valid <= 1'b0;\n        end else begin\n            m_axis_data <= m_axis_data_d;\n            m_axis_valid <= m_axis_valid_d;\n        end\n    end\n\nendmodule\n`default_nettype wire",
+      "header_locked": true,
+      "parse_ok": null,
+      "touches_affected": false,
+      "length_ratio": 1.0,
+      "total": 5.0,
+      "reasons": [
+        "did_not_touch_diagnosis_signals",
+        "inner_repair_attempts=1"
+      ]
+    },
+    {
+      "text": "`default_nettype none\n`timescale 1ns / 1ps\n\nmodule axis_upscale (\n    input  logic clk,\n    input  logic resetn,\n    input  logic dfmt_enable,\n    input  logic dfmt_type,\n    input  logic dfmt_se,\n    input  logic s_axis_valid,\n    input  logic [23:0] s_axis_data,\n    input  logic m_axis_ready,\n    output logic s_axis_ready,\n    output logic m_axis_valid,\n    output logic [31:0] m_axis_data\n);\n\n    logic fill_bit;\n    logic [31:0] m_axis_data_d;\n    logic m_axis_valid_d;\n\n    // AXI Stream Handshake: Pass ready signal upstream\n    assign s_axis_ready = m_axis_ready;\n\n    // Determine padding bit based on data format signals\n    always @(*) begin\n        if (!dfmt_enable) begin\n            // When data format is disabled, pad with zeros\n            fill_bit = 1'b0;\n        end else if (dfmt_se) begin\n            // Sign extension enabled: carry forward MSB or its inverted version\n            fill_bit = dfmt_type ? ~s_axis_data[23] : s_axis_data[23];\n        end else begin\n            // Sign extension disabled: pad with zeros\n            fill_bit = 1'b0;\n        end\n    end\n\n    // Upscale 24-bit input to 32-bit output by concatenating 8 padding bits\n    always @(*) begin\n        m_axis_data_d = {8{fill_bit}, s_axis_data};\n    end\n\n    // Valid signal passes through combinational path\n    always @(*) begin\n        m_axis_valid_d = s_axis_valid;\n    end\n\n    // Single pipeline register stage with active-low synchronous reset\n    always @(posedge clk or negedge resetn) begin\n        if (!resetn) begin\n            m_axis_data <= 32'b0;\n            m_axis_valid <= 1'b0;\n        end else begin\n            m_axis_data <= m_axis_data_d;\n            m_axis_valid <= m_axis_valid_d;\n        end\n    end\n\nendmodule\n`default_nettype wire",
+      "header_locked": true,
+      "parse_ok": null,
+      "touches_affected": false,
+      "length_ratio": 1.0,
+      "total": 5.0,
+      "reasons": [
+        "did_not_touch_diagnosis_signals",
+        "inner_repair_attempts=1"
+      ]
+    }
+  ],
+  "alternative_scores": []
+}

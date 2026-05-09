@@ -1,0 +1,31 @@
+{
+  "primary": {
+    "root_cause": "The RTL couples the write address and data channels into a single sequential FSM, making axi_awready and axi_wready mutually exclusive and violating AXI4-Lite's independent channel handshaking.",
+    "evidence": [
+      "assign axi_awready = (wr_state == AXI_WR_IDLE);",
+      "assign axi_wready  = (wr_state == AXI_WR_DATA);",
+      "while not (dut.axi_awready.value and dut.axi_wready.value):"
+    ],
+    "affected_signals": [
+      "axi_awready",
+      "axi_wready",
+      "wr_state"
+    ],
+    "proposed_fix": "Decouple the write address and data channels into independent ready signals or a pipelined FSM that asserts axi_wready independently of the address phase state. Allow the slave to accept addresses and data concurrently or out-of-order as permitted by the AXI4-Lite specification.",
+    "confidence": 0.95
+  },
+  "alternative": {
+    "root_cause": "The read channel lacks address latching, using axi_araddr directly for data muxing and response generation, which risks unstable or incorrect data if the master toggles the address bus before the handshake completes.",
+    "evidence": [
+      "case (axi_araddr) axi_rdata = reg_array[0];",
+      "assign axi_rresp   = ((axi_araddr == 'h00) || (axi_araddr == 'h10) || (axi_araddr == 'h20) || (axi_araddr == 'h24) || (axi_araddr == 'h28)) ? 2'b00 : 2'b10;"
+    ],
+    "affected_signals": [
+      "axi_araddr",
+      "axi_rdata",
+      "axi_rresp"
+    ],
+    "proposed_fix": "Latch the read address upon axi_arvalid assertion and use the latched address for all subsequent read data and response logic during the transaction. This ensures protocol stability and prevents combinatorial glitches on the address bus from affecting the response.",
+    "confidence": 0.65
+  }
+}

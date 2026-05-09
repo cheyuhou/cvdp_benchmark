@@ -1,0 +1,36 @@
+{
+  "primary": {
+    "root_cause": "The RTL contains syntax constructs that trigger a compilation error in Icarus Verilog, specifically procedural variable declarations inside `always_comb` blocks and dynamic part-select expressions.",
+    "evidence": [
+      "returned non-zero exit status 8",
+      "logic [IN_WIDTH-1:0] sym = bits[k * IN_WIDTH +: IN_WIDTH];",
+      "logic signed [OUT_WIDTH:0] sum_i = $signed(i_map[2*k]) + $signed(i_map[2*k+1]);"
+    ],
+    "affected_signals": [
+      "bits",
+      "I",
+      "Q",
+      "sym",
+      "sum_i",
+      "sum_q"
+    ],
+    "proposed_fix": "Move all procedural variable declarations outside the `always_comb` blocks or declare them with `var`. Replace dynamic part-selects with concatenation or indexed assignments to ensure simulator compatibility.",
+    "confidence": 0.9
+  },
+  "alternative": {
+    "root_cause": "The interpolation logic violates the specification's bit-width requirement for intermediate samples, causing potential overflow and sign-truncation errors during arithmetic mean calculation.",
+    "evidence": [
+      "The signals holding the interpolated samples need to have 1 bit more than OUT_WIDTH to accommodate the addition of two signed OUT_WIDTH signals.",
+      "logic [OUT_WIDTH - 1 : 0] i_int [0:NUM_INTERP-1];",
+      "i_int[k] = $unsigned(sum_i >>> 1);"
+    ],
+    "affected_signals": [
+      "i_int",
+      "q_int",
+      "I",
+      "Q"
+    ],
+    "proposed_fix": "Expand `i_int` and `q_int` widths to `OUT_WIDTH + 1` bits. Perform the arithmetic shift on the full-width signed sum, then explicitly truncate to `OUT_WIDTH` bits before assigning to the output arrays.",
+    "confidence": 0.75
+  }
+}

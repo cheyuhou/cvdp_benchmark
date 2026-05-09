@@ -1,0 +1,12 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778038776" />
+    <testcase name="reset_test" classname="test_encoder_64b66b" file="/src/test_encoder_64b66b.py" lineno="28" time="0.0005180835723876953" sim_time_ns="60.0" ratio_time="115811.43120110447" />
+    <testcase name="data_encoding_test" classname="test_encoder_64b66b" file="/src/test_encoder_64b66b.py" lineno="53" time="0.00033020973205566406" sim_time_ns="60.0" ratio_time="181702.70036101082" />
+    <testcase name="control_encoding_test" classname="test_encoder_64b66b" file="/src/test_encoder_64b66b.py" lineno="77" time="0.00029158592224121094" sim_time_ns="60.0" ratio_time="205771.25102207687" />
+    <testcase name="mixed_data_control_test" classname="test_encoder_64b66b" file="/src/test_encoder_64b66b.py" lineno="102" time="0.00030159950256347656" sim_time_ns="70.0" ratio_time="232095.87351778656" />
+    <testcase name="all_control_symbols_test" classname="test_encoder_64b66b" file="/src/test_encoder_64b66b.py" lineno="130" time="0.0002715587615966797" sim_time_ns="60.0" ratio_time="220946.65496049167" />
+    <testcase name="random_data_control_test" classname="test_encoder_64b66b" file="/src/test_encoder_64b66b.py" lineno="157" time="0.0006873607635498047" sim_time_ns="150.0" ratio_time="218226.01456815816" />
+    <testcase name="random_data_only_test" classname="test_encoder_64b66b" file="/src/test_encoder_64b66b.py" lineno="195" time="0.0006501674652099609" sim_time_ns="140.0" ratio_time="215329.13824715806" />
+  </testsuite>
+</testsuites>

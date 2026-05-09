@@ -1,0 +1,29 @@
+{
+  "primary": {
+    "root_cause": "The `prdata` port is incorrectly declared as `output reg` but driven by a continuous `assign` statement, creating a procedural/continuous assignment conflict that causes the simulator to ignore the assignment and leave the read data at its default value (0).",
+    "evidence": [
+      "control_register readback mismatch: Expected 0xb, got 0x0",
+      "output reg  [7:0]   prdata,",
+      "assign prdata = pselx ?"
+    ],
+    "affected_signals": [
+      "prdata"
+    ],
+    "proposed_fix": "Change the port declaration for `prdata` from `output reg` to `output wire` (or simply `output`), as it is driven by a continuous assignment. Verilog requires `wire` for continuous assignments and `reg` for procedural assignments.",
+    "confidence": 0.95
+  },
+  "alternative": {
+    "root_cause": "The nested ternary operator in the `prdata` mux lacks explicit parentheses, which can lead to ambiguous parsing or default-to-zero evaluation in Icarus Verilog when `pselx` transitions, preventing the correct address decode from routing data to the output bus.",
+    "evidence": [
+      "control_register readback mismatch: Expected 0xb, got 0x0",
+      "assign prdata = pselx ?\n                    (paddr == 10'h000) ? {1'b0, control_register[3:0], 3'b0} :\n                    (paddr == 10'h001) ? {1'b0, train_history[6:0]}       :\n                    (paddr == 10'h002) ? predict_history                    :\n                    8'h0                                               :\n                    8'h0;"
+    ],
+    "affected_signals": [
+      "prdata",
+      "pselx",
+      "paddr"
+    ],
+    "proposed_fix": "Replace the nested ternary operator with a clear `if-else` block or add explicit parentheses around each condition to ensure deterministic evaluation order and correct data routing during the APB access phase.",
+    "confidence": 0.65
+  }
+}

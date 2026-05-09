@@ -1,0 +1,30 @@
+{
+  "primary": {
+    "root_cause": "The APB FSM does not support reading from SRAM addresses > 5, forcing prdata to 0 and asserting pslverr for any out-of-range access.",
+    "evidence": [
+      "prdata <= 8'b0;",
+      "Expected 85, but got 0"
+    ],
+    "affected_signals": [
+      "paddr",
+      "prdata",
+      "pslverr"
+    ],
+    "proposed_fix": "Extend the APB read case statement to handle addresses > 5 by mapping them to sram_mem[paddr]. Clear pslverr for valid memory accesses and drive prdata with the corresponding SRAM byte.",
+    "confidence": 0.95
+  },
+  "alternative": {
+    "root_cause": "The SRAM write logic ignores the specified sram_valid trigger and writes continuously whenever r_Enable is 2, while sram_valid is incorrectly declared as an output port instead of an input.",
+    "evidence": [
+      "always @(posedge pclk) begin if (r_Enable == 2'b11) begin sram_mem[r_write_address[7:0]] <= r_write_data; end end",
+      "sram_valid: At positive edge of this signal, data in r_write_data is latched to address in r_write_address."
+    ],
+    "affected_signals": [
+      "sram_valid",
+      "r_Enable",
+      "sram_mem"
+    ],
+    "proposed_fix": "Change sram_valid to an input port and use it as a clock enable for the SRAM write logic. Remove the continuous write condition tied to r_Enable.",
+    "confidence": 0.85
+  }
+}

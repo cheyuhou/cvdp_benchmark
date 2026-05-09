@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1778045890" />
+    <testcase name="bcd_to_excess_3" classname="test_bcd_to_excess_3" file="/src/test_bcd_to_excess_3.py" lineno="7" time="0.0004413127899169922" sim_time_ns="130.0" ratio_time="294575.6455969746" />
+  </testsuite>
+</testsuites>
